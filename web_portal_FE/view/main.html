@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Main Portal</title>
+	<link rel="stylesheet" type="text/css" href="../css/main.css">
+	<script src="../js/angular.min.js"></script>
+	<script src="../js/controllers.js"></script>
+</head>
+<body ng-app="myApp">
+	<div class="header">
+		<img class="logo"src="../img/logo.jpeg">
+		<div class="title"> Camberry </div>
+	</div>
+	<div class="main_content" ng-controller="MainCtrl">
+		<div class="personal_cameras">
+			<h1 class="subtitle">My Cameras</h1>
+			<div class="cameras_wrapper">
+				<div class="camera_content" ng-repeat="camera in cameras">
+					<img ng-src={{camera.img}}>
+					<h2 class="camera_site">{{camera.site}}</h2>
+				</div>
+			</div>
+
+		</div>
+		<div class="others_cameras">
+			<h1 class="subtitle">Other's Cameras</h1>
+			<div>
+				<div class="camera_content" ng-repeat="camera in otherCameras">
+					<img ng-src={{camera.img}}>
+					<h2 class="camera_site">{{camera.site}}</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer">footer</div>
+</body>
+</html>

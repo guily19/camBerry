@@ -1,10 +1,15 @@
-.header {
-	width: 100%;
+.header{
 	background-color: grey;
+	overflow:hidden; 
 }
 
+.logo {
+	float: left;
+	width: 10%;
+	height: 10%;
+}
 .title {
-
+	/*float: left;*/
 	text-align: center;
 	font-size: 40px;
 }
@@ -12,4 +17,22 @@
 .form_wrapper {
 	text-align: center;
 	margin-top: 15%;
+}
+
+.form-text {
+	width:200px;
+	margin-bottom:2%;
+}
+
+.cameras_wrapper {
+	width:1500px;
+}
+
+.camera_content {
+	float: left;
+	margin-left: 10px;
+}
+
+.camera_site {
+	text-align: center;
 }

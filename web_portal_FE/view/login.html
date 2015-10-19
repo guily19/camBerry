@@ -5,21 +5,23 @@
 	<link rel="stylesheet" type="text/css" href="../css/main.css">
 </head>
 <body>
-<div class="header">
-	<img src="../img/logo.png">
-	<div class="title"> Welcome to CamBerry Service Registration Form </div>
-</div>
-<div class="main_content">
-	<div class="form_wrapper">
-		<form method="post">
-  			E-mail:<br>
-  			<input type="email" name="email"> <br>
-  			Password:<br>
-  			<input type="password" name="psw"> <br>
-  			<button>Submit</button>
-		</form>
+	<script src="js/angular.min.js"></script>
+	<script src="js/controllers.js"></script>
+	<div class="header">
+		<img class="logo"src="../img/logo.jpeg">
+		<div class="title"> Camberry </div>
 	</div>
-</div>
-<div class="footer"></div>
+	<div class="main_content" ng-controller="RegistrationCtrl">
+		<div class="form_wrapper">
+			<form method="post">
+	  			E-mail:<br>
+	  			<input class="form-text" type="email" name="email"> <br>
+	  			Password:<br>
+	  			<input class="form-text" type="password" name="psw"> <br>
+	  			<button>Submit</button>
+			</form>
+		</div>
+	</div>
+	<div class="footer"></div>
 </body>
 </html>
