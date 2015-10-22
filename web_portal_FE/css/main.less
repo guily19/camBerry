@@ -1,0 +1,118 @@
+.header{
+	background-color: grey;
+	overflow:hidden; 
+}
+
+.logo {
+	float: left;
+	width: 10%;
+	height: 10%;
+}
+.title {
+	/*float: left;*/
+	text-align: center;
+	padding: 10px 0 0;
+	font-size: 40px;
+	margin-left: -10%;
+	float: left;
+	width: 100%;
+}
+
+.form_wrapper {
+	text-align: center;
+	margin-top: 15%;
+}
+
+.form-text {
+	width:200px;
+	margin-bottom:2%;
+}
+
+.personal_cameras {
+	margin-top: 20px;
+	margin-right: 50px;
+	margin-left: 50px;
+	min-width: 90%;
+	min-height: 350px;
+	border: 2px solid black;
+	border-radius: 5px 5px 5px 5px;
+}
+
+.others_cameras {
+	margin-top: 20px;
+	margin-right: 50px;
+	margin-left: 50px;
+	min-width: 90%;
+	min-height: 350px;
+	border: 2px solid black;
+	border-radius: 5px 5px 5px 5px;
+	div {
+		.clearfix();
+	}
+}
+
+.subtitle {
+	text-align: center;
+}
+
+.camera_content {
+	float: left;
+	margin-left: 40px;
+	border: 2px solid black;
+
+}
+
+.camera_content:hover{
+	cursor: pointer;
+	background-color: #F5A9A9;
+}
+
+.cameras_wrapper{
+	text-align: center;
+	.clearfix();
+}
+
+.clearfix() {
+  &:before,
+  &:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.camera_image {
+	width: 225px;
+	height: 175px;
+}
+
+.camera_site {
+	text-align: center;
+}
+
+.close_icon {
+	float: right;
+	cursor: pointer;
+	width: 20px;
+	height: 20px;
+}
+
+.video {
+	width: 100%;
+	height: 100%;
+	z-index: 101;
+}
+
+.video_wrapper {
+	min-height: 400px;
+    min-width: 500px;
+    position: absolute;
+    background-color: black;
+    border-radius: 5px 5px 5px 5px;
+    z-index: 100;
+    top: 30%;
+    left: 30%;
+
+}
