@@ -2,13 +2,13 @@
 <html>
 <head>
 	<title> Main Portal</title>
-	<link rel="stylesheet" type="text/css" href="../css/main.css">
-	<script src="../js/angular.min.js"></script>
-	<script src="../js/controllers.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script src="js/angular.min.js"></script>
+	<script src="js/controllers.js"></script>
 </head>
 <body ng-app="myApp" ng-controller="MainCtrl">
 	<div class="header">
-		<img class="logo"src="../img/logo.jpeg">
+		<img class="logo"src="/img/logo.jpeg">
 		<div class="title"> Camberry </div>
 		<div class="user_menu">
 			<div></div>
@@ -16,7 +16,7 @@
 	</div>
 	<div class="main_content">
 		<div class="video_wrapper" ng-show="showVideo === true" resizer my-draggable>
-			<img class="close_icon"src="../icons/close.png" ng-click="closeVideo()">
+			<img class="close_icon"src="/icons/close.png" ng-click="closeVideo()">
 			<video class="video" ng-src="{{urlVideo}}"></video>
 		</div>
 		<div class="personal_cameras">

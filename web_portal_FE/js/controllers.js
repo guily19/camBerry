@@ -11,22 +11,22 @@
 
 
 		$scope.cameras = [{
-			img: "../img/comedor.jpeg",
+			img: "img/comedor.jpeg",
 			site: "Comedor",
-			video: "../img/movie.mp4"
+			video: "img/movie.mp4"
 		},
 		{
-			img: "../img/entrada.jpeg",
+			img: "img/entrada.jpeg",
 			site: "Entrada",
-			video: "../img/movi.mp4"
+			video: "img/movi.mp4"
 		},{
-			img: "../img/lavabo.jpeg",
+			img: "img/lavabo.jpeg",
 			site: "Lavabo",
-			video: "../img/movi.mp4"
+			video: "img/movi.mp4"
 		},{
-			img: "../img/lavabo.jpeg",
+			img: "img/lavabo.jpeg",
 			site: "Lavabo",
-			video: "../img/movi.mp4"
+			video: "img/movi.mp4"
 		}];
 
 		$scope.otherCameras = [{
