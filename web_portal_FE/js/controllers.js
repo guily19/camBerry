@@ -6,14 +6,18 @@
 	}]);
 
 	myApp.controller('MainCtrl', ['$scope', function($scope) {
-		$scope.showVideo = false;
-		$scope.urlVideo = undefined;
+		$scope.showVideo = [false,false,false,false];
+		$scope.numCameras = 0;
+		$scope.numCamerasOthers = 0;
+		$scope.videoMode = false;
+		$scope.someVideoisShown = false;
+		$scope.videoModeButtonText = "Video Mode";
 
 
 		$scope.cameras = [{
-			img: "img/comedor.jpeg",
-			site: "Comedor",
-			video: "img/movie.mp4"
+			img: "http://pticamberry.duckdns.org:8080/?action=snapshot",
+			site: "Room",
+			video: "http://pticamberry.duckdns.org:8080/?action=stream"
 		},
 		{
 			img: "img/entrada.jpeg",
@@ -24,8 +28,8 @@
 			site: "Lavabo",
 			video: "img/movi.mp4"
 		},{
-			img: "img/lavabo.jpeg",
-			site: "Lavabo",
+			img: "img/comedor.jpeg",
+			site: "Comedor",
 			video: "img/movi.mp4"
 		}];
 
@@ -33,136 +37,72 @@
 			user: "Alberto Preemo",
 			cameras: [{
 				img: "../img/comedor.jpeg",
-				site: "Comedor"
+				site: "Comedor",
+				show: false
 			},{
 				img: "../img/comedor.jpeg",
-				site: "Comedor"
+				site: "Comedor",
+				show: false
 			}]
 
 		},{
 			user: "Sergi Alonso",
 			cameras: [{
 				img: "../img/comedor.jpeg",
-				site: "Comedor"
+				site: "Comedor",
+				show: false
 			}]
 		}];
 
 		$scope.onClickOwnCamera = function (index){
-			if(index !== -1){
+			if(index !== -1 && $scope.numCameras != 3){
 				var selectedCamera = $scope.cameras[index];
 				$scope.urlVideo = selectedCamera.video;
-				$scope.showVideo = true;
+				if($scope.showVideo[index] === false){
+					++$scope.numCameras;
+					$scope.showVideo[index] = true;
+					$scope.someVideoisShown = true;
+				}
+			} else if ($scope.numCameras === 3){
+				//TODO: Show alert masNumCameras = 3;
 			}
 		}
 
-		$scope.onClickOtherCamera = function (index){
-			if(index !== -1){
-				var selectedCamera = $scope.otherCameras[index];
+		$scope.onClickOtherCamera = function (userIndex,cameraIndex){
+			if(cameraIndex !== -1 && $scope.numCamerasOthers != 3){
+				var selectedCamera = $scope.otherCameras[userIndex].cameras[cameraIndex];
 				$scope.urlVideo = selectedCamera.video;
-				$scope.showVideo = true;
+				if($scope.otherCameras[userIndex].cameras[cameraIndex].show === false){
+					++$scope.numCamerasOthers;
+					$scope.otherCameras[userIndex].cameras[cameraIndex].show = true;
+					$scope.someVideoisShown = true;
+				}
 			}
 		}
 
-		$scope.closeVideo = function (){
-			$scope.showVideo = false;
+		$scope.closeVideo = function (index){
+			$scope.showVideo[index] = false;
+			--$scope.numCameras;
+			if($scope.numCameras + $scope.numCamerasOthers === 0){
+				$scope.someVideoisShown = false;
+				$scope.videoMode = false;
+			}
+		}
+
+		$scope.viewControll = function(){
+			if ($scope.videoMode){
+				$scope.videoMode = false;
+				$scope.videoModeButtonText = "Video Mode";
+			} else {
+				$scope.videoMode = true;
+				$scope.videoModeButtonText = "Main Mode";
+			}	
+		}
+
+		$scope.closeVideoOther = function (userIndex, cameraIndex){
+			$scope.otherCameras[userIndex].cameras[cameraIndex].show = false;
+			--$scope.numCamerasOthers;
 		}
 	}]);
-
-	myApp.directive('myDraggable', ['$document', function($document) {
-	  	return {
-	    	link: function(scope, element, attr) {
-	    	var startX = 0, startY = 0, x = 200, y = 200;
-
-      		element.css({
-				position: 'absolute',
-				border: '1px solid black',
-				"border-radius" : '5px 5px 5px 5px',
-				backgroundColor: 'white',
-				cursor: 'pointer'
-			});
-
-			element.on('mousedown', function(event) {
-				// Prevent default dragging of selected content
-				event.preventDefault();
-				startX = event.pageX - x;
-				startY = event.pageY - y;
-				$document.on('mousemove', mousemove);
-				$document.on('mouseup', mouseup);
-			});
-
-			function mousemove(event) {
-				y = event.pageY - startY;
-				x = event.pageX - startX;
-				element.css({
-				  top: y + 'px',
-				  left:  x + 'px'
-				});
-			}
-
-			function mouseup() {
-				$document.off('mousemove', mousemove);
-				$document.off('mouseup', mouseup);
-			}
-		}
-	};
-
-
-	myApp.directive('resizer', function($document) {
-
-    return function($scope, $element, $attrs) {
-
-        $element.on('mousedown', function(event) {
-            event.preventDefault();
-
-            $document.on('mousemove', mousemove);
-            $document.on('mouseup', mouseup);
-        });
-
-        function mousemove(event) {
-
-            if ($attrs.resizer == 'vertical') {
-                // Handle vertical resizer
-                var x = event.pageX;
-
-                if ($attrs.resizerMax && x > $attrs.resizerMax) {
-                    x = parseInt($attrs.resizerMax);
-                }
-
-                $element.css({
-                    left: x + 'px'
-                });
-
-                $($attrs.resizerLeft).css({
-                    width: x + 'px'
-                });
-                $($attrs.resizerRight).css({
-                    left: (x + parseInt($attrs.resizerWidth)) + 'px'
-                });
-
-            } else {
-                // Handle horizontal resizer
-                var y = window.innerHeight - event.pageY;
-
-                $element.css({
-                    bottom: y + 'px'
-                });
-
-                $($attrs.resizerTop).css({
-                    bottom: (y + parseInt($attrs.resizerHeight)) + 'px'
-                });
-                $($attrs.resizerBottom).css({
-                    height: y + 'px'
-                });
-            }
-        }
-
-        function mouseup() {
-            $document.unbind('mousemove', mousemove);
-            $document.unbind('mouseup', mouseup);
-        }
-    };
-});
-
-}]);
 
 })();
