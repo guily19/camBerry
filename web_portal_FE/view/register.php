@@ -67,7 +67,7 @@ include('db_access.php');
     </div>
 </nav>
 <div class="main_content">
-    <h1>Registration Form:</h1>
+    <h1 class="title">Registration Form:</h1>
 	<div class="form_wrapper">
 		<form  class="form-horizontal"action="<?=$_SERVER['PHP_SELF']?>" method="post">
 
