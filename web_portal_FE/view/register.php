@@ -46,7 +46,7 @@ include('db_access.php');
 <html>
 <head>
 	<title> Main Portal</title>
-	<link rel="stylesheet" type="text/css" href="/css/main.css">
+	<link rel="stylesheet" type="text/css" href="/css/register.css">
 </head>
 <body>
 <div class="header">
