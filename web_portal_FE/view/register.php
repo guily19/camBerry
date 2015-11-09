@@ -46,7 +46,8 @@ include('db_access.php');
 <html>
 <head>
 	<title> Main Portal</title>
-	<link rel="stylesheet" type="text/css" href="/css/register.css">
+    <link rel="stylesheet" type="text/css" href="/css/register.css">
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
 </head>
 <body>
 <div class="header">
@@ -58,14 +59,42 @@ include('db_access.php');
 		<form  class="form-horizontal"action="<?=$_SERVER['PHP_SELF']?>" method="post">
 
             <div class="form-group">
-                <label for="inputUser3" class="col-sm-2 control-label">User</label>
+                <label for="inputUser3" class="col-sm-2 control-label">User:</label>
                 <div class="col-sm-10">
                     <input type="text" class="form-control" name="user "id="inputUser3" placeholder="User">
                 </div>
             </div>
-			User:<br>
-            <input class="form-text" type="text" name="user"> <br>
-		        First name:<br>
+            <div class="form-group">
+                <label for="inputUser3" class="col-sm-2 control-label">First Name:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="firstname" id="inputUser3" placeholder="First Name">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputUser3" class="col-sm-2 control-label">Last Name:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="lastname" id="inputUser3" placeholder="Last Name">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label">Email:</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" name="user "id="inputEmail3" placeholder="Email">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputUser3" class="col-sm-2 control-label">Password:</label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" name="user "id="inputPassword3" placeholder="Password">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputUser3" class="col-sm-2 control-label">Repeat Password:</label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" name="user "id="inputPassword3" placeholder="Password">
+                </div>
+            </div>
+<!-- 		        First name:<br>
   			<input class="form-text" type="text" name="firstname"> <br>
   			Last name:<br>
   			<input class="form-text" type="text" name="lastname"> <br>
@@ -75,7 +104,7 @@ include('db_access.php');
   			<input class="form-text" type="password" name="psw"> <br>
   			Repeat Password:<br>
   			<input class="form-text" type="password" name="psw2"> <br>
-  			<input type ="submit" name="enviar" value="Register"/>
+  			<input type ="submit" name="enviar" value="Register"/> -->
 		</form>
 	</div>
 </div>
