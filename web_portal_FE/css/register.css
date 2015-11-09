@@ -4,6 +4,10 @@
 	margin-left: 10%;
 }
 
+.form_wrapper {
+	text-align: center;
+}
+
 
 .input {
 	max-width: 500px;

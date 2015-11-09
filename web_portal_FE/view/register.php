@@ -69,57 +69,59 @@ include('db_access.php');
 <div class="main_content">
     <h1 class="title">Registration Form:</h1>
 	<div class="form_wrapper">
-		<form  class="form-horizontal"action="<?=$_SERVER['PHP_SELF']?>" method="post">
+        <div>
+    		<form  class="form-horizontal"action="<?=$_SERVER['PHP_SELF']?>" method="post">
 
-            <div class="form-group">
-                <label for="inputUser3" class="col-sm-2 control-label">User:</label>
-                <div class="col-sm-10">
-                    <input type="text" class="input form-control" name="user "id="inputUser3" placeholder="User">
+                <div class="form-group">
+                    <label for="inputUser3" class="col-sm-2 control-label">User:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="input form-control" name="user "id="inputUser3" placeholder="User">
+                    </div>
                 </div>
-            </div>
-            <div class="form-group">
-                <label for="inputUser3" class="col-sm-2 control-label">First Name:</label>
-                <div class="col-sm-10">
-                    <input type="text" class="input form-control" name="firstname" id="inputUser3" placeholder="First Name">
+                <div class="form-group">
+                    <label for="inputUser3" class="col-sm-2 control-label">First Name:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="input form-control" name="firstname" id="inputUser3" placeholder="First Name">
+                    </div>
                 </div>
-            </div>
-            <div class="form-group">
-                <label for="inputUser3" class="col-sm-2 control-label">Last Name:</label>
-                <div class="col-sm-10">
-                    <input type="text" class="input form-control" name="lastname" id="inputUser3" placeholder="Last Name">
+                <div class="form-group">
+                    <label for="inputUser3" class="col-sm-2 control-label">Last Name:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="input form-control" name="lastname" id="inputUser3" placeholder="Last Name">
+                    </div>
                 </div>
-            </div>
-            <div class="form-group">
-                <label for="inputEmail3" class="col-sm-2 control-label">Email:</label>
-                <div class="col-sm-10">
-                    <input type="email" class="input form-control" name="user "id="inputEmail3" placeholder="Email">
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Email:</label>
+                    <div class="col-sm-10">
+                        <input type="email" class="input form-control" name="user "id="inputEmail3" placeholder="Email">
+                    </div>
                 </div>
-            </div>
-            <div class="form-group">
-                <label for="inputUser3" class="col-sm-2 control-label">Password:</label>
-                <div class="col-sm-10">
-                    <input type="password" class="input form-control" name="user "id="inputPassword3" placeholder="Password">
+                <div class="form-group">
+                    <label for="inputUser3" class="col-sm-2 control-label">Password:</label>
+                    <div class="col-sm-10">
+                        <input type="password" class="input form-control" name="user "id="inputPassword3" placeholder="Password">
+                    </div>
                 </div>
-            </div>
-            <div class="form-group">
-                <label for="inputUser3" class="col-sm-2 control-label">Repeat Password:</label>
-                <div class="col-sm-10">
-                    <input type="password" class="input form-control" name="user "id="inputPassword3" placeholder="Password">
+                <div class="form-group">
+                    <label for="inputUser3" class="col-sm-2 control-label">Repeat Password:</label>
+                    <div class="col-sm-10">
+                        <input type="password" class="input form-control" name="user "id="inputPassword3" placeholder="Password">
+                    </div>
                 </div>
-            </div>
-<!-- 		        First name:<br>
-  			<input class="form-text" type="text" name="firstname"> <br>
-  			Last name:<br>
-  			<input class="form-text" type="text" name="lastname"> <br>
-  			E-mail:<br>
-  			<input class="form-text" type="email" name="email"> <br>
-  			Password:<br>
-  			<input class="form-text" type="password" name="psw"> <br>
-  			Repeat Password:<br>
-  			<input class="form-text" type="password" name="psw2"> <br>
-  			 -->
-             <button class="btn btn-success" type ="submit" name="enviar" value="Register">Registe </button>
-		</form>
+    <!-- 		        First name:<br>
+      			<input class="form-text" type="text" name="firstname"> <br>
+      			Last name:<br>
+      			<input class="form-text" type="text" name="lastname"> <br>
+      			E-mail:<br>
+      			<input class="form-text" type="email" name="email"> <br>
+      			Password:<br>
+      			<input class="form-text" type="password" name="psw"> <br>
+      			Repeat Password:<br>
+      			<input class="form-text" type="password" name="psw2"> <br>
+      			 -->
+                 <button class="btn btn-success" type ="submit" name="enviar" value="Register">Registe </button>
+		    </form>
+        </div>
 	</div>
 </div>
 <div class="footer"></div>
