@@ -50,10 +50,23 @@ include('db_access.php');
 	<link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
 </head>
 <body>
-<div class="header">
-	<img class="logo" src="/img/logo.jpeg" style="fload:left">
-	<div class="title"> Welcome to CamBerry Service Registration Form </div>
-</div>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">CamBerry</a>
+        </div>
+        <form class="navbar-form navbar-right">
+            <button ng-class="videoMode ? 'btn btn-danger' : 'btn btn-success' " ng-click="viewControll()" ng-show="someVideoisShown">{{videoModeButtonText}}</button>
+            <button type="submit" class="btn btn-success">Log out</button>
+        </form>
+    </div>
+</nav>
 <div class="main_content">
 	<div class="form_wrapper">
 		<form  class="form-horizontal"action="<?=$_SERVER['PHP_SELF']?>" method="post">
