@@ -20,7 +20,7 @@
 			video: "http://pticamberry.duckdns.org:8080/?action=stream"
 		},
 		{
-			img: "img/entrada.jpeg",
+			img: "img/test.jpg",
 			site: "Entrada",
 			video: "img/movi.mp4"
 		},{
