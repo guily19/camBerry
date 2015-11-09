@@ -55,9 +55,16 @@ include('db_access.php');
 </div>
 <div class="main_content">
 	<div class="form_wrapper">
-		<form action="<?=$_SERVER['PHP_SELF']?>" method="post">
+		<form  class="form-horizontal"action="<?=$_SERVER['PHP_SELF']?>" method="post">
+
+            <div class="form-group">
+                <label for="inputUser3" class="col-sm-2 control-label">User</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="user "id="inputUser3" placeholder="User">
+                </div>
+            </div>
 			User:<br>
-                        <input class="form-text" type="text" name="user"> <br>
+            <input class="form-text" type="text" name="user"> <br>
 		        First name:<br>
   			<input class="form-text" type="text" name="firstname"> <br>
   			Last name:<br>
