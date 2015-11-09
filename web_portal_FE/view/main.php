@@ -1,9 +1,4 @@
-<?php
-$conn = mysql_connect("localhost","root","S539CW7LjXk_v7A");
 
-mysql_select_db("CamberryDB",$conn); 
-
-?>
 
 <!DOCTYPE html>
 <html>
@@ -81,7 +76,3 @@ mysql_select_db("CamberryDB",$conn);
 	<div class="footer"></div>
 </body>
 </html>
-
-<?php
-}
-?>
