@@ -46,8 +46,8 @@ include('db_access.php');
 <html>
 <head>
 	<title> Main Portal</title>
-    <link rel="stylesheet" type="text/css" href="/css/register.css">
-	<link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/register.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 </head>
 <body>
 <nav class="navbar navbar-inverse navbar-fixed-top">
