@@ -21,7 +21,7 @@ if (isset($_COOKIE["id_usuario_dw"]) && isset($_COOKIE["marca_aleatoria_usuario_
 }
 
 if ($_GET){
-   //es que estamos recibiendo datos por el formulario de autenticación (recibo de $_POST)
+   //estan intentant accedir directament al ficher main.php
 
    //debería comprobar si el usuario es correcto
    $ssql = "select * from Users where MAIL = '" . $_POST["Email"] . "' and PASSWORD='" . $_POST["password"] . "'";

@@ -21,10 +21,11 @@ if (isset($_COOKIE["id_usuario_dw"]) && isset($_COOKIE["marca_aleatoria_usuario_
 }
 
 if ($_POST){
+  $password = md5($_POSt["password"]);
    //es que estamos recibiendo datos por el formulario de autenticación (recibo de $_POST)
 
    //debería comprobar si el usuario es correcto
-   $ssql = "select * from Users where MAIL = '" . $_POST["Email"] . "' and PASSWORD='" . $_POST["password"] . "'";
+   $ssql = "select * from Users where MAIL = '" . $_POST["Email"] . "' and PASSWORD='" . $password . "'";
    //echo $ssql;
    $rs = mysql_query($ssql);
    if (mysql_num_rows($rs)==1){
@@ -46,7 +47,7 @@ if ($_POST){
          setcookie("marca_aleatoria_usuario_dw", $numero_aleatorio, time()+(60*60*24*365));
      
       echo "Autenticado correctamente";
-      header ("Location: main.html");
+      header ("Location: main.php");
       
    }else{
       echo "Fallo de autenticación!";

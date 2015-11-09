@@ -19,7 +19,7 @@
                 exec("cp -r ../web_portal_FE/img/ ".$apache_files_path);
                 exec("cp -r ../web_portal_FE/icons/ ".$apache_files_path);
                 exec("cp ../web_portal_FE/view/index.php ".$apache_files_path);
-                exec("cp ../web_portal_FE/view/main.html ".$apache_files_path);
+                exec("cp ../web_portal_FE/view/main.php ".$apache_files_path);
                 exec("cp ../web_portal_FE/view/register.html ".$apache_files_path);
 
                 //exec("mv ".$apache_files_path."main.html ".$apache_files_path."index.html");
