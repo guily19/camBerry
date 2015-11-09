@@ -74,37 +74,37 @@ include('db_access.php');
             <div class="form-group">
                 <label for="inputUser3" class="col-sm-2 control-label">User:</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" name="user "id="inputUser3" placeholder="User">
+                    <input type="text" class="input form-control" name="user "id="inputUser3" placeholder="User">
                 </div>
             </div>
             <div class="form-group">
                 <label for="inputUser3" class="col-sm-2 control-label">First Name:</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" name="firstname" id="inputUser3" placeholder="First Name">
+                    <input type="text" class="input form-control" name="firstname" id="inputUser3" placeholder="First Name">
                 </div>
             </div>
             <div class="form-group">
                 <label for="inputUser3" class="col-sm-2 control-label">Last Name:</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" name="lastname" id="inputUser3" placeholder="Last Name">
+                    <input type="text" class="input form-control" name="lastname" id="inputUser3" placeholder="Last Name">
                 </div>
             </div>
             <div class="form-group">
                 <label for="inputEmail3" class="col-sm-2 control-label">Email:</label>
                 <div class="col-sm-10">
-                    <input type="email" class="form-control" name="user "id="inputEmail3" placeholder="Email">
+                    <input type="email" class="input form-control" name="user "id="inputEmail3" placeholder="Email">
                 </div>
             </div>
             <div class="form-group">
                 <label for="inputUser3" class="col-sm-2 control-label">Password:</label>
                 <div class="col-sm-10">
-                    <input type="password" class="form-control" name="user "id="inputPassword3" placeholder="Password">
+                    <input type="password" class="input form-control" name="user "id="inputPassword3" placeholder="Password">
                 </div>
             </div>
             <div class="form-group">
                 <label for="inputUser3" class="col-sm-2 control-label">Repeat Password:</label>
                 <div class="col-sm-10">
-                    <input type="password" class="form-control" name="user "id="inputPassword3" placeholder="Password">
+                    <input type="password" class="inputform-control" name="user "id="inputPassword3" placeholder="Password">
                 </div>
             </div>
 <!-- 		        First name:<br>
@@ -117,7 +117,8 @@ include('db_access.php');
   			<input class="form-text" type="password" name="psw"> <br>
   			Repeat Password:<br>
   			<input class="form-text" type="password" name="psw2"> <br>
-  			<input type ="submit" name="enviar" value="Register"/> -->
+  			 -->
+             <button class="btn btn-success" type ="submit" name="enviar" value="Register">Registe </button>
 		</form>
 	</div>
 </div>
