@@ -15,7 +15,7 @@ if (isset($_COOKIE["id_usuario_dw"]) && isset($_COOKIE["marca_aleatoria_usuario_
          echo "<b>Tengo un usuario correcto en una cookie</b>";
          $usuario_encontrado = mysql_fetch_object($rs);
          echo "<br>Eres el usuario número " . $usuario_encontrado->USER . ", de nombre " . $usuario_encontrado->usuario;
-         header ("Location: main.html");
+         header ("Location: main.php");
       }
    }
 }
