@@ -62,12 +62,12 @@ include('db_access.php');
             <a class="navbar-brand" href="#">CamBerry</a>
         </div>
         <form class="navbar-form navbar-right">
-            <button ng-class="videoMode ? 'btn btn-danger' : 'btn btn-success' " ng-click="viewControll()" ng-show="someVideoisShown">{{videoModeButtonText}}</button>
             <button type="submit" class="btn btn-success">Log out</button>
         </form>
     </div>
 </nav>
 <div class="main_content">
+    <h1>Registration Form:</h1>
 	<div class="form_wrapper">
 		<form  class="form-horizontal"action="<?=$_SERVER['PHP_SELF']?>" method="post">
 
