@@ -33,9 +33,9 @@
           <a class="navbar-brand" href="#">CamBerry</a>
         </div>
         <form class="navbar-form navbar-right">
+            <button type="button" class="btn btn-default">Settings</button>
             <button ng-class="videoMode ? 'btn btn-danger' : 'btn btn-success' " ng-click="viewControll()" ng-show="someVideoisShown">{{videoModeButtonText}}</button>
-            <button type="button" href="#" class="btn btn-default">Settings</button>
-        	<button type="submit" class="btn btn-success">Log out</button>
+        	<button type="submit" class="btn btn-danger">Log out</button>
         </form>
       </div>
     </nav>
