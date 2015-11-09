@@ -21,7 +21,7 @@ if (isset($_COOKIE["id_usuario_dw"]) && isset($_COOKIE["marca_aleatoria_usuario_
 }
 
 if ($_POST){
-  $password = md5($_POSt["password"]);
+  $password = md5($_POST["password"]);
    //es que estamos recibiendo datos por el formulario de autenticación (recibo de $_POST)
 
    //debería comprobar si el usuario es correcto
