@@ -130,12 +130,12 @@ if ($_POST){
         <div class="col-md-4">
           <h2>Pack Camberry</h2>
           <p>Compra tu Kit camberry para tener el mejor servicio de vijilancia al mejor precio. Te ofrecemos un sistema economico, simple y ...... </p>
-          <p><a class="btn btn-default" href="#" role="button">Compra tu Kit &raquo;</a></p>
+          <p><a class="btn btn-default" href="buyKit.html" role="button">Compra tu Kit &raquo;</a></p>
         </div>
         <div class="col-md-4">
           <h2>Registrate</h2>
           <p>Registrate para poder acceder a las camaras publicas de nuestro sistema y poder ver de forma totalmente privada tus camaras privadas </p>
-          <p><a class="btn btn-default" href="#" role="button">Registrate &raquo;</a></p>
+          <p><a class="btn btn-default" href="register.php" role="button">Registrate &raquo;</a></p>
        </div>
       </div>
 
