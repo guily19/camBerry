@@ -129,7 +129,7 @@ if ($_POST){
         <div class="col-md-4">
           <h2>Pack Camberry</h2>
           <p>Compra tu Kit camberry para tener el mejor servicio de vijilancia al mejor precio. Te ofrecemos un sistema economico, simple y ...... </p>
-          <p><a class="btn btn-default" href="#" role="button">Compra tu Kid &raquo;</a></p>
+          <p><a class="btn btn-default" href="#" role="button">Compra tu Kit &raquo;</a></p>
         </div>
         <div class="col-md-4">
           <h2>Registrate</h2>
