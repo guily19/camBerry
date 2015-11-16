@@ -16,14 +16,14 @@ if (isset($_COOKIE["id_usuario_dw"]) && isset($_COOKIE["marca_aleatoria_usuario_
       if (mysql_num_rows($rs)==1){
          echo "<b>Tengo un usuario correcto en una cookie</b>";
          $usuario_encontrado = mysql_fetch_object($rs);
-         echo "<br>Eres el usuario número " . $usuario_encontrado->USER . ", de nombre " . $usuario_encontrado->usuario;
+         echo "<br>Eres el usuario número " . $usuario_encontrado->USER . ", de nombre " . $usuario_encontrado->NOMBRE;
          header ("Location: main.php");
       }
    }
 }
  
 if ($_POST){
-	if(empty($_POST['usuario_nombre']) || empty($_POST['usuario_clave'])) {
+	if(empty($_POST['Email']) || empty($_POST['password'])) {
             echo "El usuario o la contraseña no han sido ingresados. <a href='javascript:history.back();'>Reintentar</a>";
     }else {
 		   $Email = mysql_real_escape_string($_POST['Email']);
