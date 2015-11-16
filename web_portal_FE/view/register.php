@@ -22,9 +22,10 @@ include('db_access.php');
             // "limpiamos" los campos del formulario de posibles códigos maliciosos
             $user = mysql_real_escape_string($_POST['user']);
             $psw = mysql_real_escape_string($_POST['psw']);
+            $psw2 = mysql_real_escape_string($_POST['psw2']);
             $email = mysql_real_escape_string($_POST['email']);
             $firstname = mysql_real_escape_string($_POST['firstname']);
-	    $lastname = mysql_real_escape_string($_POST['lastname']);
+	        $lastname = mysql_real_escape_string($_POST['lastname']);
 
             // comprobamos que el usuario ingresado no haya sido registrado antes
             $sql = mysql_query("SELECT USER FROM Users WHERE USER='".$user."'");
@@ -47,7 +48,8 @@ include('db_access.php');
 <head>
 	<title> Main Portal</title>
     <link rel="stylesheet" type="text/css" href="css/register.css">
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <script src="js/registration-validation.js"></script>
 </head>
 <body>
 <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -68,10 +70,12 @@ include('db_access.php');
 </nav>
 <div class="main_content">
     <h1 class="title">Registration Form:</h1>
+
+    <center><h3><label id="error_msg"><font color="red"><b></b></font></label></h3></center>
+
 	<div class="form_wrapper">
         <div>
-    		<form  class="form-horizontal"action="<?=$_SERVER['PHP_SELF']?>" method="post">
-
+    		<form  class="form-horizontal" action="<?=$_SERVER['PHP_SELF']?>" onSubmit="return formValidation()" method="post">
                 <div class="form-group">
                     <label for="inputUser3" class="col-sm-2 control-label">User:</label>
                     <div class="col-sm-10">
