@@ -62,7 +62,7 @@
     </div>
     <div id="page-content-wrapper">
     <div class="main_content">
-      <div ng-show="showView === 0" class="videos_wrapper">
+      <div ng-show="showView === 0 || videoMode" class="videos_wrapper">
         <div class="video_wrapper bounceInDown" ng-repeat="camera in cameras" ng-class="showVideo ? 'animated' : '' " ng-show="showVideo[$index] === true">
           <img class="close_icon" ng-src="img/icons/close.png" ng-click="closeVideo($index)">
           <img class="video" src="{{camera.video}}"></img>
@@ -78,7 +78,7 @@
           </div>
         </div>
       </div>
-      <div ng-show="showView === 1" class="videos_wrapper" ng-repeat="user in otherCameras">
+      <div ng-show="showView === 1 || videoMode" class="videos_wrapper" ng-repeat="user in otherCameras">
         <div class="video_wrapper bounceInRight" ng-repeat="camera in user.cameras" ng-class="showVideo ? 'animated' : '' " ng-show="camera.show === true">
           <img class="close_icon" ng-src="img/icons/close.png" ng-click="closeVideoOther($parent.$index, $index)">
           <video class="video" ng-src="{{camera.video}}"></video>
