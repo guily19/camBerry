@@ -1,4 +1,6 @@
 <?php
+
+session_start();
 $conn = mysql_connect("localhost","root","S539CW7LjXk_v7A");
 
 mysql_select_db("CamberryDB",$conn); 
@@ -19,43 +21,50 @@ if (isset($_COOKIE["id_usuario_dw"]) && isset($_COOKIE["marca_aleatoria_usuario_
       }
    }
 }
-
+ 
 if ($_POST){
-  $password = md5($_POST["password"]);
-   //es que estamos recibiendo datos por el formulario de autenticación (recibo de $_POST)
+	if(empty($_POST['usuario_nombre']) || empty($_POST['usuario_clave'])) {
+            echo "El usuario o la contraseña no han sido ingresados. <a href='javascript:history.back();'>Reintentar</a>";
+    }else {
+		   $Email = mysql_real_escape_string($_POST['Email']);
+		   $password = mysql_real_escape_string($_POST["password"]);
+		   $password = md5($password]);
+		   //es que estamos recibiendo datos por el formulario de autenticación (recibo de $_POST)
 
-   //debería comprobar si el usuario es correcto
-   $ssql = "select * from Users where MAIL = '" . $_POST["Email"] . "' and PASSWORD='" . $password . "'";
-   //echo $ssql;
-   $rs = mysql_query($ssql);
-   if (mysql_num_rows($rs)==1){
-      //TODO CORRECTO!! He detectado un usuario
-      $usuario_encontrado = mysql_fetch_object($rs);
-      //ahora debo de ver si el usuario quería memorizar su cuenta en este ordenador
-    
-         //es que pidió memorizar el usuario
-         //1) creo una marca aleatoria en el registro de este usuario
-         //alimentamos el generador de aleatorios
-         mt_srand (time());
-         //generamos un número aleatorio
-         $numero_aleatorio = mt_rand(1000000,999999999);
-         //2) meto la marca aleatoria en la tabla de usuario
-         $ssql = "update Users set COOKIE='$numero_aleatorio' where MAIL='" . $_POST["Email"] . "'";
-         mysql_query($ssql);
-         //3) ahora meto una cookie en el ordenador del usuario con el identificador del usuario y la cookie aleatoria
-         setcookie("id_usuario_dw", $usuario_encontrado->USER , time()+(60*60*24*365));
-         setcookie("marca_aleatoria_usuario_dw", $numero_aleatorio, time()+(60*60*24*365));
-     
-      echo "Autenticado correctamente";
-      header ("Location: main.php");
-      
-   }else{
-      echo "Fallo de autenticación!";
-      echo "<p><a href='index.php'>Volver</a>";
-      echo "<p>$rs es la sortida de query, $ssql la consulta, connexio $conn";
-   }
+		   //debería comprobar si el usuario es correcto
+		   $ssql = "select * from Users where MAIL = '" . $Email . "' and PASSWORD='" . $password . "'";
+		   //echo $ssql;
+		   $rs = mysql_query($ssql);
+		   if($row = mysql_fetch_array($rs)) {
+				//TODO CORRECTO!! He detectado un usuario
+				$usuario_encontrado = mysql_fetch_object($rs);
+				$_SESSION['ID'] = $row['ID']; // creamos la sesion "usuario_id" y le asignamos como valor el campo usuario_id
+				$_SESSION['USER'] = $row["USER"]; // creamos la sesion "usuario_nombre" y le asignamos como valor el campo usuario_nombre
+				//ahora debo de ver si el usuario quería memorizar su cuenta en este ordenador
+				
+				//es que pidió memorizar el usuario
+				//1) creo una marca aleatoria en el registro de este usuario
+				//alimentamos el generador de aleatorios
+				mt_srand (time());
+				//generamos un número aleatorio
+				$numero_aleatorio = mt_rand(1000000,999999999);
+				//2) meto la marca aleatoria en la tabla de usuario
+				$ssql = "update Users set COOKIE='$numero_aleatorio' where MAIL='" . $_POST["Email"] . "'";
+				mysql_query($ssql);
+				//3) ahora meto una cookie en el ordenador del usuario con el identificador del usuario y la cookie aleatoria
+				setcookie("id_usuario_dw", $usuario_encontrado->USER , time()+(60*60*24*365));
+				setcookie("marca_aleatoria_usuario_dw", $numero_aleatorio, time()+(60*60*24*365));
+				echo "Autenticado correctamente";
+				header ("Location: main.php");
+			}else{
+				echo "Fallo de autenticación!";
+				echo "<p><a href='index.php'>Volver</a>";
+				echo "<p>$rs es la sortida de query, $ssql la consulta, connexio $conn";
+			}
    
-}else{
+		}
+	}
+else{
 ?>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
