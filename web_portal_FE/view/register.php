@@ -49,7 +49,6 @@ include('db_access.php');
 	<title> Main Portal</title>
     <link rel="stylesheet" type="text/css" href="css/register.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-    <script src="js/registration-validation.js"></script>
 </head>
 <body>
 <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -71,15 +70,13 @@ include('db_access.php');
 <div class="main_content">
     <h1 class="title">Registration Form:</h1>
 
-    <center><h3><label id="error_msg"><font color="red"><b></b></font></label></h3></center>
-
 	<div class="form_wrapper">
         <div>
-    		<form  class="form-horizontal" action="<?=$_SERVER['PHP_SELF']?>" onSubmit="return formValidation()" method="post">
+    		<form  class="form-horizontal" action="<?=$_SERVER['PHP_SELF']?>" method="post">
                 <div class="form-group">
                     <label for="inputUser3" class="col-sm-2 control-label">User:</label>
                     <div class="col-sm-10">
-                        <input type="text" class="input form-control" name="user" id="inputUser3" placeholder="User">
+                        <input type="text" class="input form-control" name="user" id="inputUser3" placeholder="User" required>
                     </div>
                 </div>
                 <div class="form-group">
@@ -97,19 +94,19 @@ include('db_access.php');
                 <div class="form-group">
                     <label for="inputEmail3" class="col-sm-2 control-label">Email:</label>
                     <div class="col-sm-10">
-                        <input type="email" class="input form-control" name="email"id="inputEmail3" placeholder="Email">
+                        <input type="email" class="input form-control" name="email"id="inputEmail3" placeholder="Email" required>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="inputUser3" class="col-sm-2 control-label">Password:</label>
                     <div class="col-sm-10">
-                        <input type="password" class="input form-control" name="psw"id="inputPassword3" placeholder="Password">
+                        <input type="password" class="input form-control" name="psw"id="inputPassword3" placeholder="Password" required>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="inputUser3" class="col-sm-2 control-label">Repeat Password:</label>
                     <div class="col-sm-10">
-                        <input type="password" class="input form-control" name="psw2"id="inputPassword3" placeholder="Password">
+                        <input type="password" class="input form-control" name="psw2"id="inputPassword3" placeholder="Password" required>
                     </div>
                 </div>
     <!-- 		        First name:<br>
