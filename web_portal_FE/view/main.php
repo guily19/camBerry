@@ -47,29 +47,29 @@
               </a>
           </li>
           <li>
-              <a href="#">Your Cameras</a>
+              <a ng-click="showView = 0">Tus Cameras</a>
           </li>
           <li>
-              <a href="#">Others Cameras</a>
+              <a ng-click="showView = 1">Cameras de otros</a>
           </li>
           <li>
-              <a href="#">Your Alarms!</a>
+              <a ng-click="showView = 2">Tus Alarmas!</a>
           </li>
           <li>
-              <a href="#">Preferences</a>
+              <a ng-click="showView = 3">Preferencias</a>
           </li>
       </ul>
     </div>
     <div id="page-content-wrapper">
     <div class="main_content">
-      <div class="videos_wrapper">
+      <div ng-show="showView === 0" class="videos_wrapper">
         <div class="video_wrapper bounceInDown" ng-repeat="camera in cameras" ng-class="showVideo ? 'animated' : '' " ng-show="showVideo[$index] === true">
           <img class="close_icon" ng-src="img/icons/close.png" ng-click="closeVideo($index)">
           <img class="video" src="{{camera.video}}"></img>
           <div style="font-size: 20px; color: white;">{{camera.site}}</div>
         </div>
       </div>
-      <div class="personal_cameras" ng-show="!videoMode" animated>
+      <div ng-show="showView === 0 && !videoMode" class="personal_cameras" animated>
         <h1 class="subtitle">My Cameras</h1>
         <div class="cameras_wrapper">
           <div class="camera_content" ng-click="onClickOwnCamera($index)" ng-repeat="camera in cameras">
@@ -78,14 +78,14 @@
           </div>
         </div>
       </div>
-      <div class="videos_wrapper" ng-repeat="user in otherCameras">
+      <div ng-show="showView === 1" class="videos_wrapper" ng-repeat="user in otherCameras">
         <div class="video_wrapper bounceInRight" ng-repeat="camera in user.cameras" ng-class="showVideo ? 'animated' : '' " ng-show="camera.show === true">
           <img class="close_icon" ng-src="img/icons/close.png" ng-click="closeVideoOther($parent.$index, $index)">
           <video class="video" ng-src="{{camera.video}}"></video>
           <h3 style="">{{camera.site}}</h3>
         </div>
       </div>
-      <div class="others_cameras" ng-show="!videoMode" >
+      <div ng-show="showView === 1 && !videoMode" class="others_cameras">
         <h1 class="subtitle">Other's Cameras</h1>
         <div  ng-repeat="user in otherCameras"> 
           <h3 class="other_cameras_user">{{user.user}}</h3>
