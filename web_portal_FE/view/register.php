@@ -68,8 +68,8 @@ include('db_access.php');
     </div>
 </nav>
 <div class="main_content">
-    <h1 class="title">Registration Form:</h1>
-
+    <h1 class="title">Registration Form</h1>
+    <br><br>
 	<div class="form_wrapper">
         <div>
     		<form  class="form-horizontal" action="<?=$_SERVER['PHP_SELF']?>" method="post">
@@ -109,6 +109,7 @@ include('db_access.php');
                         <input type="password" class="input form-control" name="psw2"id="inputPassword3" placeholder="Password" required>
                     </div>
                 </div>
+                 <br><br>
                  <button class="btn btn-success" type ="submit" name="enviar" value="Register">Register </button>
 		    </form>
         </div>
