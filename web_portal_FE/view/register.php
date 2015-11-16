@@ -75,7 +75,7 @@ include('db_access.php');
                 <div class="form-group">
                     <label for="inputUser3" class="col-sm-2 control-label">User:</label>
                     <div class="col-sm-10">
-                        <input type="text" class="input form-control" name="user "id="inputUser3" placeholder="User">
+                        <input type="text" class="input form-control" name="user" id="inputUser3" placeholder="User">
                     </div>
                 </div>
                 <div class="form-group">
