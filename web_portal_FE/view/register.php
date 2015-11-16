@@ -99,13 +99,13 @@ include('db_access.php');
                 <div class="form-group">
                     <label for="inputUser3" class="col-sm-2 control-label">Password:</label>
                     <div class="col-sm-10">
-                        <input type="password" class="input form-control" name="pwd"id="inputPassword3" placeholder="Password">
+                        <input type="password" class="input form-control" name="psw"id="inputPassword3" placeholder="Password">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="inputUser3" class="col-sm-2 control-label">Repeat Password:</label>
                     <div class="col-sm-10">
-                        <input type="password" class="input form-control" name="pwd2"id="inputPassword3" placeholder="Password">
+                        <input type="password" class="input form-control" name="psw2"id="inputPassword3" placeholder="Password">
                     </div>
                 </div>
     <!-- 		        First name:<br>
