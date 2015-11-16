@@ -47,16 +47,16 @@
               </a>
           </li>
           <li>
-              <a href="#">Tus Cameras</a>
+              <a href="#">Your Cameras</a>
           </li>
           <li>
-              <a href="#">Cameras de otros</a>
+              <a href="#">Others Cameras</a>
           </li>
           <li>
-              <a href="#">Tus Alarmas!</a>
+              <a href="#">Your Alarms!</a>
           </li>
           <li>
-              <a href="#">Preferencias</a>
+              <a href="#">Preferences</a>
           </li>
       </ul>
     </div>

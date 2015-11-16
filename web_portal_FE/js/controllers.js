@@ -12,6 +12,7 @@
 		$scope.videoMode = false;
 		$scope.someVideoisShown = false;
 		$scope.videoModeButtonText = "Video Mode";
+		$scope.showView = 0;
 
 
 		$scope.cameras = [{
@@ -103,6 +104,11 @@
 			$scope.otherCameras[userIndex].cameras[cameraIndex].show = false;
 			--$scope.numCamerasOthers;
 		}
+
+		$scope.menuOptionClicked = function (index){
+
+		}
+
 	}]);
 
 })();
