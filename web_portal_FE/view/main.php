@@ -42,7 +42,7 @@
         <form class="navbar-form navbar-right">
             <button type="button" class="btn btn-default">Settings</button>
             <button ng-class="videoMode ? 'btn btn-danger' : 'btn btn-success' " ng-click="viewControll()" ng-show="someVideoisShown">{{videoModeButtonText}}</button>
-          <button type="submit" class="btn btn-danger" action="logout.php" >Log out</button>
+          <button type="submit" class="btn btn-danger" onclick="logout.php" >Log out</button>
         </form>
       </div>
     </nav>
