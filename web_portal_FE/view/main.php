@@ -1,3 +1,10 @@
+<?php
+	session_start();
+    include('db_access.php');
+	
+	if(isset($_SESSION['USER'])) {
+?> 
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,7 +41,7 @@
         <form class="navbar-form navbar-right">
             <button type="button" class="btn btn-default">Settings</button>
             <button ng-class="videoMode ? 'btn btn-danger' : 'btn btn-success' " ng-click="viewControll()" ng-show="someVideoisShown">{{videoModeButtonText}}</button>
-          <button type="submit" class="btn btn-danger">Log out</button>
+          <button type="submit" class="btn btn-danger" action="logout.php" >Log out</button>
         </form>
       </div>
     </nav>
@@ -45,6 +52,9 @@
               <a href="#">
                   Start Bootstrap
               </a>
+          </li>
+		  <li>
+              <a ng-click="showView = -1"><?php echo "$_SESSION['USER']"?></a>
           </li>
           <li>
               <a ng-click="showView = 0">Tus Cameras</a>
@@ -101,3 +111,10 @@
   <div class="footer"></div>
 </body>
 </html>
+ <?php
+        }else {
+    ?>
+            <a href="register.php">Registrarse</a> | <a href="index.php">Ingresar</a>
+    <?php
+        }
+    ?> 

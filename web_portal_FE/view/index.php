@@ -1,9 +1,7 @@
 <?php
 
 session_start();
-$conn = mysql_connect("localhost","root","S539CW7LjXk_v7A");
-
-mysql_select_db("CamberryDB",$conn); 
+include('db_access.php'); 
 
 //primero tengo que ver si el usuario está memorizado en una cookie
 if (isset($_COOKIE["id_usuario_dw"]) && isset($_COOKIE["marca_aleatoria_usuario_dw"])){
