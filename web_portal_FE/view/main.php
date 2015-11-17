@@ -3,6 +3,7 @@
     include('db_access.php');
 	
 	if(isset($_SESSION['USER'])) {
+		$user = $_SESSION['USER'];
 ?> 
 
 <!DOCTYPE html>
@@ -54,7 +55,7 @@
               </a>
           </li>
 		  <li>
-              <a ng-click="showView = -1"><?php echo "$_SESSION['USER']"?></a>
+              <a ng-click="showView = -1"><?php echo "$user";?></a>
           </li>
           <li>
               <a ng-click="showView = 0">Tus Cameras</a>
