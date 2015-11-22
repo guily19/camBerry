@@ -5,7 +5,7 @@
 		
 	}]);
 
-	myApp.controller('MainCtrl', ['$scope', function($scope) {
+	myApp.controller('MainCtrl', ['$scope','$http', function($scope) {
 		$scope.showVideo = [false,false,false,false];
 		$scope.numCameras = 0;
 		$scope.numCamerasOthers = 0;
