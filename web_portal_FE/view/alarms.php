@@ -7,7 +7,7 @@
 
 	error_log("Alarm.php------------------------------------------------",0);
 
-	$username = json_decode($data);
+	$username = $_SESSION["USER"];
 
 	error_log("username : ".$username);
 
