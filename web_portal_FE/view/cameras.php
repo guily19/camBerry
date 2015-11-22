@@ -46,21 +46,11 @@
 			array_push($current_camera, $cameras_json);
 		}
 
-		$json_data = json_encode($cameras_json);
+		//$json_data = json_encode($cameras_json);
 		error_log('----------',0);
-		$prueba = "" . $json_data;
+		$prueba = "" . $cameras_json;
 		error_log($prueba, 0);
-	
-		$result3 = print_r($res, true);
 
-		error_log($result3,0);
-		$string = "ERROR:" . $res;
-
-		error_log($string,0);
-		error_log("bduigwiudgwuidw",0);
-
-		$string2 = "ERROR2:" . $_SESSION['USER'];
-		error_log($string2,0);
 	}
 
 
