@@ -85,8 +85,8 @@
 		}
 
 		$scope.getAlarms = function (username){
+			$scope.showView = 2;
 			$http.post('alarms.php',{'username': username})
-
 			.success(function(data){
 			    if(data === undefined || data.length === 0){
 					//si data no esta definido o su size es 0 entences no tenemos nuevas alarmas

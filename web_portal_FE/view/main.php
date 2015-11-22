@@ -61,7 +61,7 @@
               <a ng-click="showView = 1">Cameras de otros</a>
           </li>
           <li>
-              <a ng-click="showView = 2; getAlarms()">Tus Alarmas!</a>
+              <a ng-click="getAlarms()">Tus Alarmas!</a>
           </li>
           <li>
               <a ng-click="showView = 3">Preferencias</a>
