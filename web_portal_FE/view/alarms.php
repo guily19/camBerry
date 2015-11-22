@@ -21,8 +21,9 @@
 		$response = "No files";
 		echo json_encode($response);
 	} else {
+
 		$response = sizeof($files)." files";
-		echo json_encode($response);
+		echo json_encode($files);
 		
 	}
 
