@@ -56,36 +56,42 @@
 		}];
 
 		$scope.getOwnCameras = function(username){
+			$scope.showView = -1;
 			if(username !== undefined && username !== ""){
 				$http.get('cameras.php')
 					.success(function(cameras){
 						console.log(cameras);
 						//TODO: Transformar la lista de cameras del BE a un JSON
 						$scope.cameras = cameras;
+						$scope.showView = 0;
 					})
 					.error(function(err){
 						//TODO: Mosrtrar un mensage de error en el FE
 						console.log("Error: ",err);
+						$scope.showView = 0;
 					})
 			}
 		}
 
 		$scope.getPublicCameras = function() {
+			$scope.showView = -1;
 			$http.get('publicCameras.php')
 				.success(function(cameras){
 					console.log(cameras);
 					//TODO: Transformar la lista de cameras del BE a un JSON
 					$scope.otherCameras = cameras;
+					$scope.showView = 1;
 				})
 				.error(function(err){
 					//TODO: show message to FE
 					console.log("Error: ",err);
+					$scope.showView = 1;
 
 				})
 		}
 
 		$scope.getAlarms = function (username){
-			$scope.showView = 2;
+			$scope.showView = -1;
 			$http.post('alarms.php',{'username': username})
 			.success(function(data){
 			    if(data === undefined || data.length === 0){
@@ -97,6 +103,7 @@
 			    		console.log("Data["+i+"] =",data[i]);
 			    	}
 			    }
+			    $scope.showView = 2;
 			})
 			.error(function (err) {
 			    console.log("Error: ",err);

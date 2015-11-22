@@ -70,7 +70,7 @@
     </div>
     <div id="page-content-wrapper">
     <div class="main_content">
-      <div ng-show="showVideo === -1" class="spinner">
+      <div ng-show="showView === -1" class="spinner">
         <div class="dot1"></div>
         <div class="dot2"></div>
       </div>
