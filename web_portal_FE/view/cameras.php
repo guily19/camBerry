@@ -8,18 +8,33 @@
 
 	$data = file_get_contents("php://input");
 
-	$username = json_decode($data);
+	//$username = json_decode($data);
+	if(isset($_SESSION['USER'])) {
+		$username = $_SESSION['USER'];
+  	} else {
+  		header("Location: index.php");
+  	}
 
 	//configuracionn con la BD
 
 	//query SQL
 
-	$ssql = "SELECT img, site, video from Users where USER='" . $username]"'";
+	$ssql = "SELECT img, site, video FROM Cameras WHERE owner='" . $username ."'";
     $res = mysql_query($ssql);
+
+    error_log($res,0);
+
+    $result = json_encode($res);
+    error_log($result,0);
+
+    $result2 = json_decode($res);
+    error_log($result2,0);
+
+
 
 
 	//Poner la respuesta de la base de datos en en JSON con los siguientes parametros:
-	// imagen, String con el sitio donde esta la camara, link del Video
+	//imagen, String con el sitio donde esta la camara, link del Video
 
 	
 
