@@ -50,8 +50,6 @@
 
 		$prueba = "" . $json_data;
 		error_log($prueba, 0);
-
-		}
 	
 		$result3 = print_r($res, true);
 
