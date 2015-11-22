@@ -2,6 +2,7 @@
 	// The request is a JSON request.
 	// We must read the input.
 	// $_POST or $_GET will not work!
+	session_start();
 
 	$data = file_get_contents("php://input");
 
