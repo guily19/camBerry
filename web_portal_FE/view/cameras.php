@@ -48,7 +48,7 @@
 
 		$json_data = json_encode($cameras_json);
 
-		$prueba = "" . $json_data .;
+		$prueba = "" . $json_data;
 		error_log($prueba, 0);
 
 		}
