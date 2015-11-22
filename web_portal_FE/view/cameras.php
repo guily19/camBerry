@@ -59,7 +59,7 @@
 		error_log($result, 0);
 
 
-		echo json_decode($cameras_json);
+		echo json_encode($cameras_json);
 
 	}
 
