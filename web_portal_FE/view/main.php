@@ -40,7 +40,7 @@
           <a class="navbar-brand" href="#">CamBerry</a>
         </div>
         <form class="navbar-form navbar-right">
-            <button type="button" class="btn btn-default">Settings</button>
+              <div ><?php echo "Welcome $user";?></div>
             <button ng-class="videoMode ? 'btn btn-danger' : 'btn btn-success' " ng-click="viewControll()" ng-show="someVideoisShown">{{videoModeButtonText}}</button>
           <button type="submit" class="btn btn-danger" src="logout.php" >Log out</button>
         </form>
@@ -53,9 +53,6 @@
               <a href="#">
                   Start Bootstrap
               </a>
-          </li>
-		      <li>
-              <a ng-click="showView = -1"><?php echo "$user";?></a>
           </li>
           <li>
               <a ng-click="showView = 0">Tus Cameras</a>
