@@ -55,10 +55,10 @@
               </a>
           </li>
           <li>
-              <a ng-click="showView = 0">Tus Cameras</a>
+              <a ng-click="getOwnCameras()">Tus Cameras</a>
           </li>
           <li>
-              <a ng-click="showView = 1">Cameras de otros</a>
+              <a ng-click="getOtherCameras()">Cameras de otros</a>
           </li>
           <li>
               <a ng-click="getAlarms()">Tus Alarmas!</a>
