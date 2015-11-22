@@ -12,7 +12,8 @@
 
 	error_log("username : ".$username);
 
-	$dir = "tmp/".$username;
+	$dir = "/tmp/motion/".$username;
+	error_log("Dir : ".$dir);
 
 	$files = scandir($dir);
 
