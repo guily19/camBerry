@@ -108,6 +108,15 @@
           </div>
         </div>
       </div>
+      <div ng-show="showView === 2 && !videoMode" class="others_cameras">
+        <h1 class="subtitle">Alarms!</h1>
+        <div  ng-repeat="alarm in alarms"> 
+          <div class="camera_content">
+            <img class="camera_image" ng-src={{camera.img}}>
+            <h2 class="camera_site">{{alarm}}</h2>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   </div>
