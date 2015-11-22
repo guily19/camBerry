@@ -38,9 +38,9 @@
 			error_log($sitestr,0);
 			error_log($videostr,0);
 			$current_camera = array(
-				'img' => $imgstr;
-				'site' => $sitestr;
-				'video' => $videostr;
+				'img' => $imgstr,
+				'site' => $sitestr,
+				'video' => $videostr,
 			);
 
 			array_push($current_camera, $cameras_json);
