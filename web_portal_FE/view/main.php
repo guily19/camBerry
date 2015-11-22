@@ -4,7 +4,9 @@
 	
 	if(isset($_SESSION['USER'])) {
 		$user = $_SESSION['USER'];
-  
+  function logout(){
+    header ("Location: logout.php");
+  }
 ?> 
 
 <!DOCTYPE html>
@@ -43,7 +45,7 @@
         <form class="navbar-form navbar-right">
               <a> <?php echo "Welcome $user";?> </a>
             <button ng-class="videoMode ? 'btn btn-danger' : 'btn btn-success' " ng-click="viewControll()" ng-show="someVideoisShown">{{videoModeButtonText}}</button>
-          <button type="submit" class="btn btn-danger" src="logout.php" >Log out</button>
+          <button type="submit" class="btn btn-danger" onclick="logout()" >Log out</button>
         </form>
       </div>
     </nav>

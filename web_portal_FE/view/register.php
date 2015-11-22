@@ -29,9 +29,14 @@ include('db_access.php');
 
             // comprobamos que el usuario ingresado no haya sido registrado antes
             $sql = mysql_query("SELECT USER FROM Users WHERE USER='".$user."'");
+            $sql2 = mysql_query("SELECT MAIL FROM Users WHERE MAIL='".$email."'");
             if(mysql_num_rows($sql) > 0) {
                 echo "El nombre usuario elegido ya ha sido registrado anteriormente. <a href='javascript:history.back();'>Reintentar</a>";
-            }else {
+            }
+            else if(mysql_num_rows($sql2) > 0) {
+                echo "Este email ya ha sido registrado anteriormente. <a href='javascript:history.back();'>Reintentar</a>";
+            }
+            else {
                 $psw = md5($psw); // encriptamos la contraseña ingresada con md5
                 // ingresamos los datos a la BD
                 $reg = mysql_query("INSERT INTO Users (USER, PASSWORD ,MAIL, NOMBRE, APELLIDOS) VALUES ('".$user."', '".$psw."', '".$email."','".$firstname."','".$lastname."')");
