@@ -54,7 +54,7 @@
                   Start Bootstrap
               </a>
           </li>
-		  <li>
+		      <li>
               <a ng-click="showView = -1"><?php echo "$user";?></a>
           </li>
           <li>
