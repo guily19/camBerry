@@ -62,11 +62,11 @@
 						console.log(cameras);
 						//TODO: Transformar la lista de cameras del BE a un JSON
 						$scope.cameras = cameras;
-					});
+					})
 					.error(function(err){
 						//TODO: Mosrtrar un mensage de error en el FE
 						console.log("Error: ",err);
-					});
+					})
 			}
 		}
 
@@ -76,24 +76,31 @@
 					console.log(cameras);
 					//TODO: Transformar la lista de cameras del BE a un JSON
 					$scope.otherCameras = cameras;
-				});
+				})
 				.error(function(err){
 					//TODO: show message to FE
 					console.log("Error: ",err);
 
-				});
+				})
 		}
 
 		$scope.getAlarms = function (username){
 			$http.post('alarms.php',{'username': username})
 
-			.success(function(response){
-			    // this callback will be called asynchronously
-			    // when the response is available
-			});
+			.success(function(data){
+			    if(data === undefined || data.length === 0){
+					//si data no esta definido o su size es 0 entences no tenemos nuevas alarmas
+			    	var text = "No dispones de nuevas alarmas";
+			    } else {
+			    	//Hemos recibido datos de nuevas alarmas en el servidor
+			    	for(var i = 0; i < data.length; ++i){
+			    		console.log("Data["+i+"] =",data[i]);
+			    	}
+			    }
+			})
 			.error(function (err) {
 			    console.log("Error: ",err);
-			});
+			})
 		}
 
 		$scope.onClickOwnCamera = function (index){
