@@ -28,7 +28,7 @@
 
 		//$cameras = "[{}]";
 		//$cameras_json = json_decode($cameras, true);
-		$cameras_json = json_decode("{}");
+		$cameras_json = array();
 
 		while($row = mysql_fetch_array($res, MYSQL_ASSOC)) {
 
@@ -52,6 +52,10 @@
 		$result = print_r($cameras_json, true);
 
 		error_log($result, 0);
+
+
+		$result2 = var_dump($cameras_json);
+		error_log($result2, 0);
 
 	}
 
