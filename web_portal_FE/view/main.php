@@ -108,7 +108,7 @@
           </div>
         </div>
       </div>
-      <div ng-show="showView === 2 && !videoMode" class="others_cameras">
+      <div ng-show="showView === 2 && !videoMode" class="personal_cameras">
         <h1 class="subtitle">Alarms!</h1>
         <div  ng-repeat="alarm in alarms"> 
           <div class="camera_content">
