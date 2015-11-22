@@ -23,8 +23,21 @@
 	error_log($ssql,0);
 
 
+	while($row = mysql_fetch_array($ssql, MYSQL_ASSOC)) {
+		
+
+    echo "Tutorial ID :{$row['tutorial_id']}  <br> ".
+         "Title: {$row['tutorial_title']} <br> ".
+         "Author: {$row['tutorial_author']} <br> ".
+         "Submission Date : {$row['submission_date']} <br> ".
+         "--------------------------------<br>";
+	} 
+
+
     $res = mysql_query($ssql);
+
     $result3 = print_r($res, true);
+
     error_log($result3,0);
     $string = "ERROR:" . $res;
 
