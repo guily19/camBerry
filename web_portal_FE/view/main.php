@@ -4,7 +4,7 @@
 	
 	if(isset($_SESSION['USER'])) {
 		$user = $_SESSION['USER'];
-  }
+  
 ?> 
 
 <!DOCTYPE html>
