@@ -14,6 +14,8 @@
 		$scope.videoModeButtonText = "Video Mode";
 		$scope.showView = -1;
 
+		$scope.alarms =[];
+
 
 		$scope.cameras = [{
 			img: "http://pticamberry.duckdns.org:8080/?action=snapshot",
@@ -96,9 +98,7 @@
 					//si data no esta definido o su size es 0 entences no tenemos nuevas alarmas
 			    	var text = "No dispones de nuevas alarmas";
 			    } else {
-			    	//Hemos recibido datos de nuevas alarmas en el servidor
-			    	for(var i = 0; i < data.length; ++i){
-			    		console.log("Data["+i+"] =",data[i]);
+			    	alarms = data;
 			    	}
 			    }
 			    $scope.showView = 2;
