@@ -20,7 +20,12 @@
 	//query SQL
 
 	$ssql = "SELECT img, site, video FROM Cameras WHERE owner='" . $username ."'";
+	error_log($ssql,0);
+
+
     $res = mysql_query($ssql);
+    $result3 = print_r($res, true);
+    error_log($result3,0);
     $string = "ERROR:" . $res;
 
     error_log($string,0);
