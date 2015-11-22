@@ -48,8 +48,7 @@
 		}
 
 		error_log("FOREACH",0);
-		foreach($cameras_json as $item):
-			error_log("FOREACH2",0);
+		foreach($cameras_json as $item):;
 			error_log($item['img'],0);
 			error_log($item['site'],0);
  		endforeach;
@@ -57,12 +56,10 @@
 		//$json_data = json_encode($cameras_json);
 		error_log('----------',0);
 		$result = print_r($cameras_json, true);
-
 		error_log($result, 0);
 
 
-		$result2 = var_dump($cameras_json);
-		error_log($result2, 0);
+		echo json_decode($cameras_json);
 
 	}
 
