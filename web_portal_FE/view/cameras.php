@@ -34,7 +34,7 @@
 			$imgstr = $row['img'];
 			$sitestr = $row['site'];
 			$videostr = $row['video'];
-			error_log($imgrstr,0);
+			error_log($imgstr,0);
 			error_log($sitestr,0);
 			error_log($videostr,0);
 			$current_camera = array(
@@ -47,7 +47,7 @@
 		}
 
 		$json_data = json_encode($cameras_json);
-
+		error_log('----------',0);
 		$prueba = "" . $json_data;
 		error_log($prueba, 0);
 	
