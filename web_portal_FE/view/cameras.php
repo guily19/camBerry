@@ -47,9 +47,9 @@
 			array_push($current_camera, $cameras_json);
 		}
 
-
+		error_log("FOREACH",0);
 		foreach($cameras_json as $item):
-			error_log('FOREACH',0);
+			error_log("FOREACH2",0);
 			error_log($item['img'],0);
 			error_log($item['site'],0);
  		endforeach;
