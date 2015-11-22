@@ -22,7 +22,7 @@
 	$ssql = "SELECT img, site, video FROM Cameras WHERE owner='" . $username ."'";
 	//error_log($ssql,0);
 
-    $res = mysql_query($ssql);
+	$res = mysql_query($ssql);
 
 	while($row = mysql_fetch_array($res, MYSQL_ASSOC)) {
 
