@@ -26,8 +26,9 @@
 		error_log('NO MATCHES ON SQL QUERY',0);
 	} else {
 
-		$cameras = "[{}]";
-		$cameras_json = json_decode($cameras, true);
+		//$cameras = "[{}]";
+		//$cameras_json = json_decode($cameras, true);
+		$cameras_json = json_decode("{}");
 
 		while($row = mysql_fetch_array($res, MYSQL_ASSOC)) {
 
@@ -48,8 +49,9 @@
 
 		//$json_data = json_encode($cameras_json);
 		error_log('----------',0);
-		$prueba = "" . $cameras_json;
-		error_log($prueba, 0);
+		$result = print_r($cameras_json, true);
+
+		error_log($result, 0);
 
 	}
 
