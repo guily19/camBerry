@@ -107,6 +107,7 @@
 			})
 			.error(function (err) {
 			    console.log("Error: ",err);
+			    $scope.showView = 2;
 			})
 		}
 
@@ -163,6 +164,13 @@
 		$scope.menuOptionClicked = function (index){
 
 		}
+
+
+		$scope.init = function(){
+			$scope.getOwnCameras();
+		}
+
+		init();
 
 	}]);
 
