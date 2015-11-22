@@ -55,6 +55,47 @@
 			}]
 		}];
 
+		$scope.getOwnCameras = function(username){
+			if(username !== undefined && username !== ""){
+				$http.get('cameras.php')
+					.success(function(cameras){
+						console.log(cameras);
+						//TODO: Transformar la lista de cameras del BE a un JSON
+						$scope.cameras = cameras;
+					});
+					.error(function(err){
+						//TODO: Mosrtrar un mensage de error en el FE
+						console.log("Error: ",err);
+					});
+			}
+		}
+
+		$scope.getPublicCameras = function() {
+			$http.get('publicCameras.php')
+				.success(function(cameras){
+					console.log(cameras);
+					//TODO: Transformar la lista de cameras del BE a un JSON
+					$scope.otherCameras = cameras;
+				});
+				.error(function(err){
+					//TODO: show message to FE
+					console.log("Error: ",err);
+
+				});
+		}
+
+		$scope.getAlarms = function (username){
+			$http.post('alarms.php',{'username': username})
+
+			.success(function(response){
+			    // this callback will be called asynchronously
+			    // when the response is available
+			});
+			.error(function (err) {
+			    console.log("Error: ",err);
+			});
+		}
+
 		$scope.onClickOwnCamera = function (index){
 			if(index !== -1 && $scope.numCameras != 3){
 				var selectedCamera = $scope.cameras[index];
