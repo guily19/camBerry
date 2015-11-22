@@ -23,6 +23,7 @@
     $res = mysql_query($ssql);
 
     error_log($res,0);
+    error_log('bduigwiudgwuidw',0);
 
     $result = json_encode($res);
     error_log($result,0);
