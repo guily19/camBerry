@@ -20,39 +20,50 @@
 	//query SQL
 
 	$ssql = "SELECT img, site, video FROM Cameras WHERE owner='" . $username ."'";
-	//error_log($ssql,0);
-
 	$res = mysql_query($ssql);
 
-	while($row = mysql_fetch_array($res, MYSQL_ASSOC)) {
+	if is_empty($res) {
+		error_log('NO MATCHES ON SQL QUERY',0);
+	} else {
 
-		$imgstr = $row['img'];
-		$sitestr = $row['site'];
-		$videostr = $row['video'];
-		error_log($imgrstr,0);
-		error_log($sitestr,0);
-		error_log($videostr,0);
+		$cameras = "[{}]";
+		$cameras_json = json_decode($cameras, true);
 
-		// echo "Tutorial ID :{$row['tutorial_id']}  <br> ".
-        // "Title: {$row['tutorial_title']} <br> ".
-        // "Author: {$row['tutorial_author']} <br> ".
-        // "Submission Date : {$row['submission_date']} <br> ".
-        // "--------------------------------<br>";
-	} 
+		while($row = mysql_fetch_array($res, MYSQL_ASSOC)) {
 
+			$imgstr = $row['img'];
+			$sitestr = $row['site'];
+			$videostr = $row['video'];
+			error_log($imgrstr,0);
+			error_log($sitestr,0);
+			error_log($videostr,0);
+			$current_camera = array(
+				'img' => $imgstr;
+				'site' => $sitestr;
+				'video' => $videostr;
+			);
 
+			array_push($current_camera, $cameras_json);
+		}
 
+		$json_data = json_encode($cameras_json);
 
-    $result3 = print_r($res, true);
+		$prueba = "" . $json_data .;
+		error_log($prueba, 0);
 
-    error_log($result3,0);
-    $string = "ERROR:" . $res;
+		}
+	
+		$result3 = print_r($res, true);
 
-    error_log($string,0);
-    error_log("bduigwiudgwuidw",0);
+		error_log($result3,0);
+		$string = "ERROR:" . $res;
 
-    $string2 = "ERROR2:" . $_SESSION['USER'];
-    error_log($string2,0);
+		error_log($string,0);
+		error_log("bduigwiudgwuidw",0);
+
+		$string2 = "ERROR2:" . $_SESSION['USER'];
+		error_log($string2,0);
+	}
 
 
 
