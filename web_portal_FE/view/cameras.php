@@ -22,7 +22,7 @@
 	$ssql = "SELECT img, site, video FROM Cameras WHERE owner='" . $username ."'";
 	$res = mysql_query($ssql);
 
-	if is_empty($res) {
+	if empty($res) {
 		error_log('NO MATCHES ON SQL QUERY',0);
 	} else {
 
