@@ -55,7 +55,7 @@
 			}]
 		}];
 
-		$scope.getOwnCameras = function(username){
+		$scope.getOwnCameras = function(){
 			$scope.showView = -1;
 			$http.get('cameras.php')
 				.success(function(cameras){
@@ -88,7 +88,7 @@
 				})
 		}
 
-		$scope.getAlarms = function (username){
+		$scope.getAlarms = function (){
 			$scope.showView = -1;
 			$http.post('alarms.php')
 			.success(function(data){
