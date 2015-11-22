@@ -20,21 +20,28 @@
 	//query SQL
 
 	$ssql = "SELECT img, site, video FROM Cameras WHERE owner='" . $username ."'";
-	error_log($ssql,0);
+	//error_log($ssql,0);
 
+    $res = mysql_query($ssql);
 
-	while($row = mysql_fetch_array($ssql, MYSQL_ASSOC)) {
-		
+	while($row = mysql_fetch_array($res, MYSQL_ASSOC)) {
 
-    echo "Tutorial ID :{$row['tutorial_id']}  <br> ".
-         "Title: {$row['tutorial_title']} <br> ".
-         "Author: {$row['tutorial_author']} <br> ".
-         "Submission Date : {$row['submission_date']} <br> ".
-         "--------------------------------<br>";
+		$imgstr = $row['img'];
+		$sitestr = $row['site'];
+		$videostr = $row['video'];
+		error_log($imgrstr,0);
+		error_log($sitestr,0);
+		error_log($videostr,0);
+
+		// echo "Tutorial ID :{$row['tutorial_id']}  <br> ".
+        // "Title: {$row['tutorial_title']} <br> ".
+        // "Author: {$row['tutorial_author']} <br> ".
+        // "Submission Date : {$row['submission_date']} <br> ".
+        // "--------------------------------<br>";
 	} 
 
 
-    $res = mysql_query($ssql);
+
 
     $result3 = print_r($res, true);
 
