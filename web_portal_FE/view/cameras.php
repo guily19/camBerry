@@ -21,15 +21,13 @@
 
 	$ssql = "SELECT img, site, video FROM Cameras WHERE owner='" . $username ."'";
     $res = mysql_query($ssql);
+    $string = "ERROR:" . $res;
 
-    error_log("" . $res ."",0);
+    error_log($string,0);
     error_log("bduigwiudgwuidw",0);
 
-    $result = json_encode($res);
-    error_log("" . $result . "",0);
-
-    $result2 = json_decode($res);
-    error_log("" . $result2 . "",0);
+    $string2 = "ERROR2:" . $_SESSION['USER'];
+    error_log($string2,0);
 
 
 
