@@ -57,20 +57,18 @@
 
 		$scope.getOwnCameras = function(username){
 			$scope.showView = -1;
-			if(username !== undefined && username !== ""){
-				$http.get('cameras.php')
-					.success(function(cameras){
-						console.log(cameras);
-						//TODO: Transformar la lista de cameras del BE a un JSON
-						$scope.cameras = cameras;
-						$scope.showView = 0;
-					})
-					.error(function(err){
-						//TODO: Mosrtrar un mensage de error en el FE
-						console.log("Error: ",err);
-						$scope.showView = 0;
-					})
-			}
+			$http.get('cameras.php')
+				.success(function(cameras){
+					console.log(cameras);
+					//TODO: Transformar la lista de cameras del BE a un JSON
+					$scope.cameras = cameras;
+					$scope.showView = 0;
+				})
+				.error(function(err){
+					//TODO: Mosrtrar un mensage de error en el FE
+					console.log("Error: ",err);
+					$scope.showView = 0;
+				})
 		}
 
 		$scope.getPublicCameras = function() {
