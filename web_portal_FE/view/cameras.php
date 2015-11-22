@@ -44,7 +44,7 @@
 				'video' => $videostr,
 			);
 
-			array_push($current_camera, $cameras_json);
+			array_push($cameras_json, $current_camera);
 		}
 
 		error_log("FOREACH",0);
