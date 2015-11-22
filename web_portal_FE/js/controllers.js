@@ -99,7 +99,6 @@
 			    	var text = "No dispones de nuevas alarmas";
 			    } else {
 			    	$scope.alarms = data;
-			    	}
 			    }
 			    $scope.showView = 2;
 			})
