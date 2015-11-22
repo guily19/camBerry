@@ -170,7 +170,7 @@
 			$scope.getOwnCameras();
 		}
 
-		init();
+		$scope.init();
 
 	}]);
 
