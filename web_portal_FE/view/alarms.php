@@ -5,7 +5,7 @@
 
 	$data = file_get_contents("php://input");
 
-	error_log("Alarm.php------------------------------------------------");
+	error_log("Alarm.php------------------------------------------------",0);
 
 	$username = json_decode($data);
 
