@@ -70,6 +70,10 @@
     </div>
     <div id="page-content-wrapper">
     <div class="main_content">
+      <div ng-show="showVideo === -1" class="spinner">
+        <div class="dot1"></div>
+        <div class="dot2"></div>
+      </div>
       <div ng-show="showView === 0 || videoMode" class="videos_wrapper">
         <div class="video_wrapper bounceInDown" ng-repeat="camera in cameras" ng-class="showVideo ? 'animated' : '' " ng-show="showVideo[$index] === true">
           <img class="close_icon" ng-src="img/icons/close.png" ng-click="closeVideo($index)">

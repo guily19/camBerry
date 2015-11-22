@@ -12,7 +12,7 @@
 		$scope.videoMode = false;
 		$scope.someVideoisShown = false;
 		$scope.videoModeButtonText = "Video Mode";
-		$scope.showView = 0;
+		$scope.showView = -1;
 
 
 		$scope.cameras = [{
