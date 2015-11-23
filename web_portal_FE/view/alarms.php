@@ -15,7 +15,7 @@
 	$files = scandir($dir);
 	error_log("Files->".$files);
 
-	if(not $files){
+	if(!$files){
 		$response = "No files";
 		echo json_encode($response);
 	} else {
