@@ -21,7 +21,7 @@
 		//Netegem el array files perque no mostri . i ..
 		$response = [];
 
-		for ($i=0; $i < ; $i++) { 
+		for ($i=0; $i < sizeof($files); $i++) { 
 			# code...
 			if($files[$i] === "." || $files[$i] === ".."){
 				unset($files[$i]);
