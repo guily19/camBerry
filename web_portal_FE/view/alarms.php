@@ -15,21 +15,18 @@
 	$files = scandir($dir);
 	error_log("Files->".$files);
 
-	//Netegem el array files perque no mostri . i ..
-	for ($i=0; $i < sizeof($files); $i++) { 
-		# code...
-		if($files[$i] === "." || $files[$i] === ".."){
-			unset($files[$i]);
-		}
-		error_log("Files-".$i."=".$files[$i]);
-	}
-
-	if(sizeof($files) === 0){
+	if(not $files){
 		$response = "No files";
 		echo json_encode($response);
 	} else {
-
-		$response = sizeof($files)." files";
+		//Netegem el array files perque no mostri . i ..
+		for ($i=0; $i < sizeof($files); $i++) { 
+			# code...
+			if($files[$i] === "." || $files[$i] === ".."){
+				unset($files[$i]);
+			}
+			error_log("Files-".$i."=".$files[$i]);
+		}
 		echo json_encode($files);
 		
 	}
