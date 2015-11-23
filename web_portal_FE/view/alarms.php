@@ -28,7 +28,7 @@
 			}
 		}
 		//Re-indexamos el array una vez eliminados los elementos no deseados.
-		$files = array_values($files)
+		$files = array_values($files);
 
 		for ($i=0; $i < sizeof($files); $i++) { 
 			# code...
