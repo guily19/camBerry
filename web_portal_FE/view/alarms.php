@@ -13,9 +13,9 @@
 	$dir = "/tmp/motion/".$username;
 
 	$files = scandir($dir);
-	error_log("Files->".$files);
+	error_log("Files->".json_encode($files));
 
-	if(!$files){
+	if($files === false){
 		$response = "No files";
 		echo json_encode($response);
 	} else {
