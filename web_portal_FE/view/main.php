@@ -120,6 +120,37 @@
           </div>
         </div>
       </div>
+      <div ng-show="showView === 3" class="personal_cameras">
+        <h1 class="subtitle">Preferencias</h1>
+        <div>
+          <h2>Añade una camara</h2>
+          <form>
+            <div class="form-group">
+              <label>Video link:</label>
+              <input type="url" class="form-control" id="video">
+            </div>
+            <div class="form-group">
+              <label>Image link:</label>
+              <input type="url" class="form-control" id="img">
+            </div>
+            <div class="form-group">
+              <label>Donde está la camara?:</label>
+              <input type="text" class="form-control" id="site">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form> 
+        </div>
+        <div>
+          <h2>Publica tus cameras</h2>
+          <div class="form-group" ng-repeat="camera in cameras">
+              <label>[[camera.site]]</label>
+              <input type="checkbox" class="form-control" id="video" checked>
+          </div>
+        </div>
+        <div>
+          <h2>Elimina una camara</h2>
+        </div>
+      </div>
     </div>
   </div>
   </div>
