@@ -31,10 +31,11 @@
 		$cameras_json = array();
 		$first_loop = 1;
 		$last_user = "";
-
+		$lastRow = mysql_num_rows($res);
+		counter = 0;
 
 		while($row = mysql_fetch_array($res, MYSQL_ASSOC)) {
-
+			++$counter;
 			$current_user = $row['owner'];
 			if ($current_user != $last_user) {
 
@@ -45,7 +46,7 @@
 				}
 
 				$user_array = array(
-					'user' => $row['owner'],
+					'user' => $current_user,
 					'cameras' => array()
 				);
 				$last_user = $current_user;
@@ -57,7 +58,13 @@
 				'show' => false
 			);
 			array_push($user_array['cameras'],$current_camera);
+			if ($counter == $lastRow) {
+				array_push($cameras_json,$user_array);
+			}
+
 		}
+
+
 
 		error_log('----------',0);
 		$result = print_r($cameras_json, true);
