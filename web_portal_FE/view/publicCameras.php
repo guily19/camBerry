@@ -39,7 +39,7 @@
 			if ($current_user != $last_user) {
 
 				if ($first_loop != 1) {
-					array_push($cameras_json,$user_array)
+					array_push($cameras_json,$user_array);
 				} else {
 					$first_loop = 0;
 				}
