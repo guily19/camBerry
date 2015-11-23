@@ -127,7 +127,7 @@ else{
       <div class="container">
         <h2>Bienvenido al proyecto CamBerry</h2>
         <p>El sistema de seguridad para tu hogar y tu empresa más simple de instalar, más facil de obtener y con el mejor servicio de atencion del momento.</p>
-        <p><a class="btn btn-primary btn-lg" href="buykit.php" role="button">Learn more &raquo;</a></p>
+        <p><a class="btn btn-primary btn-lg" href="buykit.html" role="button">Learn more &raquo;</a></p>
       </div>
     </div>
 
@@ -137,12 +137,12 @@ else{
         <div class="col-md-4">
           <h2>Pack Camberry</h2>
           <p>Compra tu Kit camberry para tener el mejor servicio de vijilancia al mejor precio. Te ofrecemos un sistema economico, simple y ...... </p>
-          <p><a class="btn btn-default" href="buykit.html" role="button">Compra tu Kit &raquo;</a></p>
+          <p><a class="btn btn-default" href="buykit.html" role="button">Compra tu Kit! &raquo;</a></p>
         </div>
         <div class="col-md-4">
           <h2>Registrate</h2>
           <p>Registrate para poder acceder a las camaras publicas de nuestro sistema y poder ver de forma totalmente privada tus camaras privadas </p>
-          <p><a class="btn btn-default" href="register.php" role="button">Registrate &raquo;</a></p>
+          <p><a class="btn btn-default" href="register.php" role="button">Regístrate &raquo;</a></p>
        </div>
       </div>
 
