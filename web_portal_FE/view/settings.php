@@ -19,11 +19,7 @@
   	if(!empty($_POST["Video"]) || !empty($_POST["Image"]) || !empty($_POST["Site"])){
   		//Add camera
   		error_log("Adding Camera ------------------------------");
-  	} else if(){
-
-  	} else if(){
-  		
-  	}
+  	} 
 
   	error_log("Data ->",json_decode($data));
 
