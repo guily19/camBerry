@@ -19,7 +19,7 @@
 
 	//query SQL
 
-	$ssql = "SELECT img, site, video, public FROM Cameras WHERE owner='" . $username ."'";
+	$ssql = "SELECT owner, img, site, video FROM Cameras WHERE owner!='" . $username ."' AND Cameras.public=1 ORDER BY Cameras.owner";
 	$res = mysql_query($ssql);
 
 	if (empty($res)) {
@@ -29,37 +29,42 @@
 		//$cameras = "[{}]";
 		//$cameras_json = json_decode($cameras, true);
 		$cameras_json = array();
+		$first_loop = 1;
+		$last_user = "";
+
 
 		while($row = mysql_fetch_array($res, MYSQL_ASSOC)) {
 
+			$current_user = $row['owner'];
+			if ($current_user != $last_user) {
+
+				if ($first_loop != 1) {
+					array_push($cameras_json,$user_array);
+				} else {
+					$first_loop = 0;
+				}
+
+				$user_array = array(
+					'user' => $row['owner'],
+					'cameras' => array()
+				);
+				$last_user = $current_user;
+			}
 			$current_camera = array(
 				'img' => $row['img'],
 				'site' => $row['site'],
 				'video' => $row['video'],
-				'public' => $row['public']
+				'show' => false
 			);
-
-			array_push($cameras_json, $current_camera);
+			array_push($user_array['cameras'],$current_camera);
 		}
 
-		error_log("FOREACH",0);
-		foreach($cameras_json as $item):;
-			error_log($item['img'],0);
-			error_log($item['site'],0);
- 		endforeach;
-
-		//$json_data = json_encode($cameras_json);
 		error_log('----------',0);
 		$result = print_r($cameras_json, true);
 		error_log($result, 0);
-
-
+		
 		echo json_encode($cameras_json);
-
 	}
-
-
-
 
 	//Poner la respuesta de la base de datos en en JSON con los siguientes parametros:
 	//imagen, String con el sitio donde esta la camara, link del Video
