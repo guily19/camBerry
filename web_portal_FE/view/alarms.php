@@ -10,7 +10,7 @@
 
 	$username = $_SESSION["USER"];
 
-	$dir = "/tmp/motion/".$username."/";
+	$dir = "/tmp/motion/".$username;
 
 	$files = scandir($dir);
 	error_log("Files->".json_encode($files));
