@@ -19,7 +19,7 @@
 
 	//query SQL
 
-	$ssql = "SELECT owner, img, site, video FROM Cameras WHERE owner!='" . $username ."' AND Cameras.public=1";
+	$ssql = "SELECT owner, img, site, video FROM Cameras WHERE owner!='" . $username ."' AND Cameras.public=1 ORDER BY Cameras.owner";
 	$res = mysql_query($ssql);
 
 	if (empty($res)) {
