@@ -14,6 +14,7 @@
 
 	$files = scandir($dir);
 	error_log("Files->".json_encode($files));
+	$files = json_encode($files)
 
 	if($files === false){
 		echo undefined;
