@@ -112,7 +112,7 @@
       </div>
       <div ng-show="showView === 2 && !videoMode" class="personal_cameras">
         <h1 class="subtitle">Alarms!</h1>
-        <h3 class"alertMessage" ng-show="noAlarms">No dispones de alarmas</h3>
+        <h3 class"alert_message" ng-show="noAlarms">No dispones de alarmas</h3>
         <div ng-hide="noAlarms" ng-repeat="alarm in alarms"> 
           <div class="camera_content">
             <img class="camera_image" ng-src={{camera.img}}>
