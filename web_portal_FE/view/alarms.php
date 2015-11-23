@@ -19,14 +19,22 @@
 		echo undefined;
 	} else {
 		//Netegem el array files perque no mostri . i ..
+		$response = [];
 		for ($i=0; $i < sizeof($files); $i++) { 
 			# code...
 			if($files[$i] === "." || $files[$i] === ".."){
 				unset($files[$i]);
+			} else {
+				header('Content-type: image/png');
+				if (user_is_allowed_to_access($file)) {
+    				$file = $dir.$files[$i];
+    				readfile($file);
+    				$response.push($file)
+				}
 			}
 			error_log("Files-".$i."=".$files[$i]);
 		}
-		echo json_encode($files);
+		echo json_encode($response);
 		
 	}
 
