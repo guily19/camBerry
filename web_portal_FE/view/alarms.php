@@ -17,7 +17,7 @@
 
 	if($files === false){
 		$response = undefined;
-		echo json_encode($response);
+		echo $response;
 	} else {
 		//Netegem el array files perque no mostri . i ..
 		for ($i=0; $i < sizeof($files); $i++) { 
