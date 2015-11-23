@@ -145,7 +145,7 @@
           <form>
             <div ng-repeat="camera in cameras">
               <div class="form-group">
-                  <label>[[camera.site]]</label>
+                  <label>{{camera.site}}</label>
                   <input type="checkbox" class="form-control" id="video" checked>
               </div>
             </div>
