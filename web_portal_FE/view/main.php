@@ -124,7 +124,7 @@
         <h1 class="subtitle">Preferencias</h1>
         <div>
           <h2>Add a camera</h2>
-          <form>
+          <form action="preferences.php">
             <div class="form-group">
               <label>Video link:</label>
               <input type="url" class="form-control" id="video">
@@ -142,7 +142,7 @@
         </div>
         <div>
           <h2>Do your cameras public</h2>
-          <form>
+          <form action="preferences.php">
             <div ng-repeat="camera in cameras">
               <div class="form-group">
                   <label>{{camera.site}}</label>
@@ -155,12 +155,14 @@
         <div>
           <h2>Elimina una camara</h2>
           <div ng-repeat="camera in cameras">
+            <form action="preferences.php">
               <div class="form-group">
                   <label>{{camera.site}}</label>
                   <input type="checkbox" class="form-control" id="video" checked>
               </div>
-            </div>
-            <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+          </div>
+          <button type="submit" class="btn btn-default">Submit</button>
         </div>
       </div>
     </div>
