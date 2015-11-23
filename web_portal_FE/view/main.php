@@ -127,15 +127,15 @@
           <form action="settings.php">
             <div class="form-group">
               <label>Video link:</label>
-              <input type="url" class="form-control" id="video">
+              <input type="url" name="Video" class="form-control" id="video">
             </div>
             <div class="form-group">
               <label>Image link:</label>
-              <input type="url" class="form-control" id="img">
+              <input type="url" name="Image" class="form-control" id="img">
             </div>
             <div class="form-group">
               <label>Where is this camera?</label>
-              <input type="text" class="form-control" id="site">
+              <input type="text" name="Site" class="form-control" id="site">
             </div>
             <button type="submit" class="btn btn-default">Submit</button>
           </form> 
@@ -146,7 +146,7 @@
             <div ng-repeat="camera in cameras">
               <div class="form-group">
                   <label>{{camera.site}}</label>
-                  <input type="checkbox" class="form-control" id="video" checked>
+                  <input type="checkbox" name="$index" class="form-control" id="video" checked>
               </div>
             </div>
             <button type="submit" class="btn btn-default">Submit</button>
