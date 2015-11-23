@@ -143,10 +143,13 @@
         <div>
           <h2>Do your cameras public</h2>
           <form>
-            <div class="form-group" ng-repeat="camera in cameras">
-                <label>[[camera.site]]</label>
-                <input type="checkbox" class="form-control" id="video" checked>
+            <div ng-repeat="camera in cameras">
+              <div class="form-group">
+                  <label>[[camera.site]]</label>
+                  <input type="checkbox" class="form-control" id="video" checked>
+              </div>
             </div>
+            <button type="submit" class="btn btn-default">Submit</button>
           </form>
         </div>
         <div>
