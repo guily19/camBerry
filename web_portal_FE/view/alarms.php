@@ -10,12 +10,10 @@
 
 	$username = $_SESSION["USER"];
 
-	error_log("username : ".$username);
-
 	$dir = "/tmp/motion/".$username;
-	error_log("Dir : ".$dir);
 
 	$files = scandir($dir);
+	error_log("Files: ".$files);
 
 	if(sizeof($files) === 0){
 		$response = "No files";
