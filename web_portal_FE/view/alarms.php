@@ -14,24 +14,29 @@
 
 	$files = scandir($dir);
 	error_log("Files->".json_encode($files));
-	$files = json_encode($files)
 
 	if($files === false){
 		echo undefined;
 	} else {
 		//Netegem el array files perque no mostri . i ..
 		$response = [];
-		for ($i=0; $i < sizeof($files); $i++) { 
+
+		for ($i=0; $i < ; $i++) { 
 			# code...
 			if($files[$i] === "." || $files[$i] === ".."){
 				unset($files[$i]);
-			} else {
-				header('Content-type: image/png');
-				$file = $dir."/".$files[$i];
-				error_log($file);
-				readfile($file);
-				array_push($response, $file);
 			}
+		}
+		//Re-indexamos el array una vez eliminados los elementos no deseados.
+		$files = array_values($files)
+
+		for ($i=0; $i < sizeof($files); $i++) { 
+			# code...
+			header('Content-type: image/png');
+			$file = $dir."/".$files[$i];
+			error_log($file);
+			readfile($file);
+			array_push($response, $file);
 			// error_log("Files-".$i."=".$files[$i]);
 		}
 		echo json_encode($response);
