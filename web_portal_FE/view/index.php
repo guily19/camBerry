@@ -127,7 +127,7 @@ else{
       <div class="container">
         <h2>Bienvenido al proyecto CamBerry</h2>
         <p>El sistema de seguridad para tu hogar y tu empresa más simple de instalar, más facil de obtener y con el mejor servicio de atencion del momento.</p>
-        <p><a class="btn btn-primary btn-lg" href="buykit.php" role="button">Learn more &raquo;</a></p>
+        <p><a class="btn btn-primary btn-lg" href="buykit.html" role="button">Learn more &raquo;</a></p>
       </div>
     </div>
 
