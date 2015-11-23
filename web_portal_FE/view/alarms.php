@@ -16,7 +16,7 @@
 	error_log("Files->".json_encode($files));
 
 	if($files === false){
-		$response = "No files";
+		$response = undefined;
 		echo json_encode($response);
 	} else {
 		//Netegem el array files perque no mostri . i ..

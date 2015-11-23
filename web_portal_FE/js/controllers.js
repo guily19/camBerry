@@ -13,6 +13,7 @@
 		$scope.someVideoisShown = false;
 		$scope.videoModeButtonText = "Video Mode";
 		$scope.showView = -1;
+		$scope.noAlarms = true;
 
 		$scope.alarms =[];
 
@@ -97,13 +98,16 @@
 			    if(data === undefined || data.length === 0){
 					//si data no esta definido o su size es 0 entences no tenemos nuevas alarmas
 			    	var text = "No dispones de nuevas alarmas";
+			    	$scope.noAlarms = true;
 			    } else {
 			    	$scope.alarms = data;
+			    	$scope.noAlarms = false;
 			    }
 			    $scope.showView = 2;
 			})
 			.error(function (err) {
 			    console.log("Error: ",err);
+			    $scope.noAlarms = true;
 			    $scope.showView = 2;
 			})
 		}
