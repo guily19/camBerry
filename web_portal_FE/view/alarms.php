@@ -26,7 +26,7 @@
 				unset($files[$i]);
 			} else {
 				header('Content-type: image/png');
-				$file = $dir.$files[$i];
+				$file = $dir."/".$files[$i];
 				error_log($file);
 				readfile($file);
 				array_push($response, $file);
