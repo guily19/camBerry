@@ -45,7 +45,7 @@
 				}
 
 				$user_array = array(
-					'user' => "".$username,
+					'user' => $row['owner'],
 					'cameras' => array()
 				);
 				$last_user = $current_user;
