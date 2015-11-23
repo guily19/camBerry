@@ -32,7 +32,7 @@
 		$first_loop = 1;
 		$last_user = "";
 		$lastRow = mysql_num_rows($res);
-		counter = 0;
+		$counter = 0;
 
 		while($row = mysql_fetch_array($res, MYSQL_ASSOC)) {
 			++$counter;
