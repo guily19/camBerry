@@ -13,7 +13,16 @@
 	$dir = "/tmp/motion/".$username;
 
 	$files = scandir($dir);
-	error_log("Files: ".$files);
+	error_log("Files->".$files;
+
+	//Netegem el array files perque no mostri . i ..
+	for ($i=0; $i < sizeof($files); $i++) { 
+		# code...
+		if($files[$i] === "." || $files[$i] === ".."){
+			unset($files[$i]);
+		}
+		error_log("Files-".$i."=".$files[$i]);
+	}
 
 	if(sizeof($files) === 0){
 		$response = "No files";
