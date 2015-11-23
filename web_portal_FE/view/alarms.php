@@ -28,11 +28,12 @@
 				header('Content-type: image/png');
 				if (user_is_allowed_to_access($file)) {
     				$file = $dir.$files[$i];
+    				error_log($file);
     				readfile($file);
-    				$response.push($file)
+    				array_push($response, $file);
 				}
 			}
-			error_log("Files-".$i."=".$files[$i]);
+			// error_log("Files-".$i."=".$files[$i]);
 		}
 		echo json_encode($response);
 		
