@@ -33,7 +33,7 @@
 		for ($i=0; $i < sizeof($files); $i++) { 
 			# code...
 			header('Content-type: image/png');
-			$file = $dir."/".$files[$i];
+			$file = $files[$i];
 			error_log($file);
 			readfile($file);
 			array_push($response, $file);
