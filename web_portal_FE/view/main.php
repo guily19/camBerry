@@ -142,11 +142,11 @@
         </div>
         <div>
           <h2>Do your cameras public</h2>
-          <form action="public.php">
+          <form action="public.php" method="post">
             <div ng-repeat="camera in cameras">
               <div class="form-group">
                   <label>{{camera.site}}</label>
-                  <input type="checkbox" name="cams" class="form-control" value = "video" id="video" checked>
+                  <input type="checkbox" name="cams[]" class="form-control" value = "video" id="video" checked>
               </div>
             </div>
             <button type="submit" class="btn btn-default">Submit</button>
@@ -154,7 +154,7 @@
         </div>
         <div>
           <h2>Elimina una camara</h2>
-            <form action="deleteCamera.php">
+            <form action="deleteCamera.php" method="post">
               <div ng-repeat="camera in cameras">
                 <div class="form-group">
                   <label>{{camera.site}}</label>
