@@ -7,8 +7,8 @@
 	// $_POST or $_GET will not work!
 
 	$video = $_POST["Video"];
-  	$img = $_POST["img"];
-  	$site = $_POST["site"];
+  	$img = $_POST["Image"];
+  	$site = $_POST["Site"];
   	error_log("video ->",$video);
   	error_log("img ->",$img);
   	error_log("site ->",$site);
