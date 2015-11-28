@@ -24,14 +24,14 @@
     $query = "UPDATE Cameras SET public = 0 WHERE id='".$id."'";
     $reg = mysql_query($query);
     }
-    $total = 0;
+    if($_POST["cams"]){
       $cams = $_POST["cams"];
       foreach ($cams as $site){
-      $query = "UPDATE Cameras SET public = 1 WHERE owner= '".$username."' AND site='".$site."'";
+        $query = "UPDATE Cameras SET public = 1 WHERE owner= '".$username."' AND site='".$site."'";
      
-      $reg = mysql_query($query);
-    }
-      //TODO
+        $reg = mysql_query($query);
+      }
+    } //TODO
       //error_log("check that the params are correct");
       //Add camera
       error_log("There are all params to save camera");
@@ -45,7 +45,7 @@
   //}
   
   		if($reg) {
-            echo "La camara ha sido añadida correctamente $query /// $total oo $cam";
+            echo "Las camaras se han hecho publicas";
             //header ("Location: main.php");
         }else {
             echo "ha ocurrido un error y no se guardo la camara $query";
