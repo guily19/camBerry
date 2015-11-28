@@ -31,6 +31,8 @@
 
   		error_log("query = ".$query);
 
+  		$reg = mysql_query($query);
+
   		if($reg) {
             echo "La camara ha sido añadida correctamente";
         }else {
