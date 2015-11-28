@@ -16,7 +16,7 @@
   	}
 
     $result = mysql_query("SELECT id FROM Cameras WHERE owner ='".$username."'");
-    $cameras = mysql_fetch_array(result);
+    $cameras = mysql_fetch_array($result);
     $id = mysql_fetch_assoc($cameras);
   	//while ($id = mysql_fetch_assoc($cameras)) {
 
