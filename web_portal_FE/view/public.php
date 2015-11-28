@@ -14,23 +14,21 @@
   	} else {
   		header("Location: index.php");
   	}
-    if(!(empty($_POST['0']))){
-  	
-    
-  		$id = $_POST['0'];
-  		
-  	  $query = "UPDATE Cameras SET public = 1 WHERE id='".$id."'";
 
-  		error_log("query = ".$query);
-  		$reg = mysql_query($query);
+    $cameras = mysql_query("SELECT id FROM cameras WHERE owner ='".$user."'");
+  	while ($id = mysql_fetch_assoc($cameras)) {
 
+  	$query = "UPDATE Cameras SET public = 1 WHERE id='".$id."'";
+
+    error_log("query = ".$query);
+     
+  	$reg = mysql_query($query);
+  }
   		if($reg) {
             echo "La camara ha sido añadida correctamente $query";
             //header ("Location: main.php");
         }else {
             echo "ha ocurrido un error y no se guardo la camara $query";
         }
-  	
-  }
 
 ?>
