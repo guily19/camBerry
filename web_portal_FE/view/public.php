@@ -21,13 +21,15 @@
     for($i = 0; $i < $max;$i++)
     {
     $id = mysql_fetch_object($result)->id;  
-    $query = "UPDATE Cameras SET public = 1 WHERE id='".$id."'";
+    $query = "UPDATE Cameras SET public = 0 WHERE id='".$id."'";
     $reg = mysql_query($query);
     }
     $total = 0;
       $cams = $_POST["cams"];
-      foreach ($cams as $cam){
-      $total =  $cam;  
+      foreach ($cams as $site){
+      $query = "UPDATE Cameras SET public = 1 WHERE owner= '".$username."' AND site='".$site."'";
+     
+      $reg = mysql_query($query);
     }
       //TODO
       //error_log("check that the params are correct");
