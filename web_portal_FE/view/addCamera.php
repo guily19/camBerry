@@ -6,9 +6,9 @@
 	// We must read the input.
 	// $_POST or $_GET will not work!
 
-	$video = $_POST["Video"];
-  	$img = $_POST["Image"];
-  	$site = $_POST["Site"];
+	$video = $_POST["video"];
+  	$img = $_POST["img"];
+  	$site = $_POST["site"];
   	error_log("video ->",$video);
   	error_log("img ->",$img);
   	error_log("site ->",$site);
