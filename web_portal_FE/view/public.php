@@ -46,7 +46,7 @@
   //}
   
   		if($reg) {
-            echo "La camara ha sido añadida correctamente $query /// $total";
+            echo "La camara ha sido añadida correctamente $query /// $total oo $cam";
             //header ("Location: main.php");
         }else {
             echo "ha ocurrido un error y no se guardo la camara $query";
