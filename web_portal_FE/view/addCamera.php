@@ -7,7 +7,7 @@
 	// $_POST or $_GET will not work!
 
 	error_log("AddCamera -----------------------------------");
-
+  $user = $_SESSION['USER'];
 	$data = file_get_contents("php://input");
 
 	//$username = json_decode($data);
@@ -27,7 +27,7 @@
 
 
   		
-  		$query = "INSERT into Cameras VALUES ('".$video."', '".$img."', '".$site."')";
+  		$query = "INSERT INTO Cameras (owner ,site, img, video, public)VALUES ('".$user."','".$site."','".$img."','".$video."',0)";
 
   		error_log("query = ".$query);
 
