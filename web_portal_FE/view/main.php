@@ -161,9 +161,9 @@
                   <input type="checkbox" name="cams[]" class="form-control" id="video" value = {{camera.site}} >
                 </div>
               </div>
+               <button type="submit" class="btn btn-default">Eliminar</button>
             </form>
           </div>
-          <button type="submit" class="btn btn-default">Eliminar</button>
         </div>
       </div>
     </div>
