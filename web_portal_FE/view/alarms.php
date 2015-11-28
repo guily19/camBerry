@@ -36,6 +36,7 @@
 			$file = $dir.'/'.$files[$i];
 			error_log($file);
 			readfile($file);
+			echo $file;
 			array_push($response, $file);
 			// error_log("Files-".$i."=".$files[$i]);
 		}
