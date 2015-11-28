@@ -32,7 +32,7 @@
 
 		for ($i=0; $i < sizeof($files); $i++) { 
 			# code...
-			header('Content-type: image/png');
+			header('Content-type: image/jpg');
 			$file = $files[$i];
 			error_log($file);
 			readfile($file);
