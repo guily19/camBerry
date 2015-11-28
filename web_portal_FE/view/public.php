@@ -16,16 +16,17 @@
   	}
 
     $cameras = mysql_query("SELECT id FROM Cameras WHERE owner ='".$username."'");
-  	while ($id = mysql_fetch_assoc($cameras)) {
+  	//while ($id = mysql_fetch_assoc($cameras)) {
 
-  	$query = "UPDATE Cameras SET public = 1 WHERE id='".$id."'";
+  //	$query = "UPDATE Cameras SET public = 1 WHERE id='".$id."'";
 
-    error_log("query = ".$query);
+  //  error_log("query = ".$query);
      
-  	$reg = mysql_query($query);
-  }
+  //	$reg = mysql_query($query);
+  //}
+    echo "La camara ha sido añadida correctamente $cameras";
   		if($reg) {
-            echo "La camara ha sido añadida correctamente $query";
+            echo "La camara ha sido añadida correctamente $cameras";
             //header ("Location: main.php");
         }else {
             echo "ha ocurrido un error y no se guardo la camara $query";
