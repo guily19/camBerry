@@ -14,9 +14,9 @@
   	} else {
   		header("Location: index.php");
   	}
-  	if(isset($_POST["$index"])){
-
-  		$id = $_POST["$index"];
+  	foreach($_POST['cameras']){
+    
+  		$id = $_POST['cameras'];
   		
   	  $query = "UPDATE Cameras SET public = 1 WHERE id='".$id."'";
 
@@ -30,9 +30,6 @@
         }else {
             echo "ha ocurrido un error y no se guardo la camara $query";
         }
-
-  	} else {
-  		echo "todas privadas";
   	}
 
 ?>
