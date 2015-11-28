@@ -25,10 +25,10 @@
     $reg = mysql_query($query);
     }
     $total = 0;
-      $cams = $_POST["video"];
-      foreach ($cams as $cam){
-      $total =  $cam;  
-    }
+      $cams = $_POST['cams'];
+      //foreach ($cams as $cam){
+      //$total =  $cam;  
+    //}
       //TODO
       //error_log("check that the params are correct");
       //Add camera
@@ -43,7 +43,7 @@
   //}
   
   		if($reg) {
-            echo "La camara ha sido añadida correctamente $query /// $total oo $cam";
+            echo "La camara ha sido añadida correctamente $query /// $total oo $cams";
             //header ("Location: main.php");
         }else {
             echo "ha ocurrido un error y no se guardo la camara $query";
