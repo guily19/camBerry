@@ -35,6 +35,7 @@
 
   		if($reg) {
             echo "La camara ha sido añadida correctamente";
+            header ("Location: main.php");
         }else {
             echo "ha ocurrido un error y no se guardo la camara";
         }
