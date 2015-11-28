@@ -29,7 +29,7 @@
 
       $cams = $_POST["cams"];
       foreach ($cams as $cam){
-      $total = $total + $cam;  
+      $total =  $cam;  
       }
     }
       //TODO
