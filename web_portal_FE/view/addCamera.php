@@ -6,7 +6,7 @@
 	// We must read the input.
 	// $_POST or $_GET will not work!
 
-	error_log("Settings -----------------------------------");
+	error_log("AddCamera -----------------------------------");
 
 	$data = file_get_contents("php://input");
 
@@ -16,7 +16,7 @@
   	} else {
   		header("Location: index.php");
   	}
-  	if(!empty($_POST["Video"]) && !empty($_POST["Image"]) && !empty($_POST["Site"])){
+  	if(!empty($_POST["video"]) && !empty($_POST["image"]) && !empty($_POST["site"])){
   		//TODO
   		//error_log("check that the params are correct");
   		$video = $_POST["Video"];
