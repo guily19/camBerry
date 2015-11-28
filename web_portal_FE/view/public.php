@@ -14,7 +14,7 @@
   	} else {
   		header("Location: index.php");
   	}
-    if(!(empty($_POST['tema']))){
+    if(!(empty($_POST['cameras']))){
   	foreach($_POST['cameras'] as $camera){
     
   		$id = $camera;
