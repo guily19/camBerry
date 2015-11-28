@@ -21,7 +21,7 @@
   	  $query = "UPDATE Cameras SET public = 1 WHERE id='".$id."'";
 
   		error_log("query = ".$query);
-
+      echo "ha ocurrido un error y no se guardo la camara $query";
   		$reg = mysql_query($query);
 
   		if($reg) {
