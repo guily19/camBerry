@@ -16,9 +16,9 @@
   	} else {
   		header("Location: index.php");
   	}
-  	if(!empty($_POST["Video"]) || !empty($_POST["Image"]) || !empty($_POST["Site"])){
+  	if(!empty($_POST["Video"]) && !empty($_POST["Image"]) && !empty($_POST["Site"])){
   		//Add camera
-  		error_log("Adding Camera ------------------------------");
+  		error_log("There are all params to save camera");
   	} 
 
   	error_log("Data ->",json_decode($data));
