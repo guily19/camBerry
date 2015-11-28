@@ -17,7 +17,7 @@
 
     $result = mysql_query("SELECT id FROM Cameras WHERE owner ='".$username."'");
     $cameras = mysql_fetch_array($result);
-    $id = mysql_fetch_assoc($cameras);
+    $id = $cameras[0];
   	//while ($id = mysql_fetch_assoc($cameras)) {
 
   //	$query = "UPDATE Cameras SET public = 1 WHERE id='".$id."'";
