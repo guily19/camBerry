@@ -14,9 +14,9 @@
   	} else {
   		header("Location: index.php");
   	}
-  	foreach($_POST['cameras']){
+  	foreach($_POST['cameras'] as $camera){
     
-  		$id = $_POST['cameras'];
+  		$id = $camera;
   		
   	  $query = "UPDATE Cameras SET public = 1 WHERE id='".$id."'";
 
