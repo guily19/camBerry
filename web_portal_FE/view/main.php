@@ -142,7 +142,7 @@
         </div>
         <div>
           <h2>Do your cameras public</h2>
-          <form action="settings.php">
+          <form action="public.php">
             <div ng-repeat="camera in cameras">
               <div class="form-group">
                   <label>{{camera.site}}</label>
@@ -154,7 +154,7 @@
         </div>
         <div>
           <h2>Elimina una camara</h2>
-            <form action="settings.php">
+            <form action="deleteCamera.php">
               <div ng-repeat="camera in cameras">
                 <div class="form-group">
                   <label>{{camera.site}}</label>
