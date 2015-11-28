@@ -6,13 +6,6 @@
 	// We must read the input.
 	// $_POST or $_GET will not work!
 
-	$video = $_POST["Video"];
-  	$img = $_POST["Image"];
-  	$site = $_POST["Site"];
-  	error_log("video ->".$video);
-  	error_log("img ->".$img);
-  	error_log("site ->".$site);
-
 	error_log("AddCamera -----------------------------------");
 
 	$data = file_get_contents("php://input");
@@ -23,7 +16,7 @@
   	} else {
   		header("Location: index.php");
   	}
-  	if(!empty($_POST["video"]) && !empty($_POST["image"]) && !empty($_POST["site"])){
+  	if(!empty($_POST["Video"]) && !empty($_POST["Image"]) && !empty($_POST["Site"])){
   		//TODO
   		//error_log("check that the params are correct");
   		$video = $_POST["Video"];
@@ -44,6 +37,8 @@
             echo "ha ocurrido un error y no se guardo la camara";
         }
 
-  	} 
+  	} else {
+  		echo "Todos los campos tienen que estar llenos";
+  	}
 
 ?>
