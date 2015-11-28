@@ -137,7 +137,7 @@
               <label>Where is this camera?</label>
               <input type="text" name="Site" class="form-control" id="site">
             </div>
-            <button type="submit" class="btn btn-default">Submit</button>
+            <button type="submit" class="btn btn-default">Añadir</button>
           </form> 
         </div>
         <div>
@@ -158,12 +158,12 @@
               <div ng-repeat="camera in cameras">
                 <div class="form-group">
                   <label>{{camera.site}}</label>
-                  <input type="checkbox" name="cams[]" class="form-control" id="video" value = {{camera.site}}>
+                  <input type="checkbox" name="cams[]" class="form-control" id="video" value = {{camera.site}} >
                 </div>
               </div>
             </form>
           </div>
-          <button type="submit" class="btn btn-default">Submit</button>
+          <button type="submit" class="btn btn-default">Eliminar</button>
         </div>
       </div>
     </div>
