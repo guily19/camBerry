@@ -31,6 +31,7 @@
       foreach ($cams as $cam){
       $total = $total + $cam;  
       }
+    }
       //TODO
       //error_log("check that the params are correct");
       //Add camera
