@@ -14,6 +14,7 @@
   	} else {
   		header("Location: index.php");
   	}
+    if(!(empty($_POST['tema']))){
   	foreach($_POST['cameras'] as $camera){
     
   		$id = $camera;
@@ -30,5 +31,6 @@
             echo "ha ocurrido un error y no se guardo la camara $query";
         }
   	}
+  }
 
 ?>
