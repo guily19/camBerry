@@ -14,7 +14,7 @@
   	} else {
   		header("Location: index.php");
   	}
-  	if($_POST["$index"]){
+  	if($_POST["11"]){
 
   		$id = $_POST["$index"];
   		
