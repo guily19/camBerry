@@ -17,10 +17,26 @@
   		header("Location: index.php");
   	}
   	if(!empty($_POST["Video"]) && !empty($_POST["Image"]) && !empty($_POST["Site"])){
+  		//TODO
+  		//error_log("check that the params are correct");
+  		$video = $_POST["Video"];
+  		$img = $_POST["Image"];
+  		$site = $_POST["Site"];
   		//Add camera
   		error_log("There are all params to save camera");
-  	} 
 
-  	error_log("Data ->",json_decode($data));
+
+  		
+  		$query = "INSERT into Cameras VALUES ('".$video."', '".$img."', '".$site."')";
+
+  		error_log("query = ".$query);
+
+  		if($reg) {
+            echo "La camara ha sido añadida correctamente";
+        }else {
+            echo "ha ocurrido un error y no se guardo la camara";
+        }
+
+  	} 
 
 ?>
