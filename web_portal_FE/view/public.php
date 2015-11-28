@@ -15,7 +15,9 @@
   		header("Location: index.php");
   	}
 
-    $cameras = mysql_query("SELECT id FROM Cameras WHERE owner ='".$username."'");
+    $result = mysql_query("SELECT id FROM Cameras WHERE owner ='".$username."'");
+    $cameras = mysql_fetch_array(result);
+    $id = mysql_fetch_assoc($cameras);
   	//while ($id = mysql_fetch_assoc($cameras)) {
 
   //	$query = "UPDATE Cameras SET public = 1 WHERE id='".$id."'";
@@ -24,7 +26,7 @@
      
   //	$reg = mysql_query($query);
   //}
-    echo "La camara ha sido añadida correctamente $cameras";
+    echo "La camara ha sido añadida correctamente $cameras //// $id ";
   		if($reg) {
             echo "La camara ha sido añadida correctamente $cameras";
             //header ("Location: main.php");
