@@ -6,6 +6,13 @@
 	// We must read the input.
 	// $_POST or $_GET will not work!
 
+	$video = $_POST["Video"];
+  	$img = $_POST["Image"];
+  	$site = $_POST["Site"];
+  	error_log("video ->",$video);
+  	error_log("img ->",$img);
+  	error_log("site ->",$site);
+
 	error_log("AddCamera -----------------------------------");
 
 	$data = file_get_contents("php://input");
