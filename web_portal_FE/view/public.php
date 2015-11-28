@@ -6,7 +6,7 @@
 	// We must read the input.
 	// $_POST or $_GET will not work!
 
-	$data = file_get_contents("php://input");
+	//$data = file_get_contents("php://input");
 
 	//$username = json_decode($data);
 	if(isset($_SESSION['USER'])) {
@@ -21,7 +21,6 @@
   	  $query = "UPDATE Cameras SET public = 1 WHERE id='".$id."'";
 
   		error_log("query = ".$query);
-      echo "ha ocurrido un error y no se guardo la camara $query";
   		$reg = mysql_query($query);
 
   		if($reg) {
