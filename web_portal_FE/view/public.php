@@ -25,12 +25,9 @@
     $reg = mysql_query($query);
     }
     $total = 0;
-    if(!empty($_POST["cams"])){
-
-      $cams = $_POST["cams"];
+      $cams = $_POST["cams[]"];
       foreach ($cams as $cam){
       $total =  $cam;  
-      }
     }
       //TODO
       //error_log("check that the params are correct");
