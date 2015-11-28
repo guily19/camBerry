@@ -25,7 +25,7 @@
     $reg = mysql_query($query);
     }
     $total = 0;
-      $cams = $_POST["cams"];
+      $cams = $_POST["video"];
       foreach ($cams as $cam){
       $total =  $cam;  
     }
