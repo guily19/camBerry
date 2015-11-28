@@ -146,7 +146,7 @@
             <div ng-repeat="camera in cameras">
               <div class="form-group">
                   <label>{{camera.site}}</label>
-                  <input type="checkbox" name="cams[]" class="form-control" value = "video" id="video" checked>
+                  <input type="checkbox" name="video[]" class="form-control" value = "video" id="video" checked>
               </div>
             </div>
             <button type="submit" class="btn btn-default">Submit</button>
