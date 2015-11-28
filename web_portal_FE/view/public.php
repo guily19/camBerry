@@ -16,12 +16,11 @@
   	}
 
     $result = mysql_query("SELECT id FROM Cameras WHERE owner ='".$username."'");
-    $cameras = mysql_fetch_array($result);
-    
-    $max = count($cameras);
+  
+    $max = mysql_num_rows($result);
     for($i = 0; $i < $max;$i++)
     {
-    $id = $cameras[$i];  
+    $id = mysql_fetch_object($result)->id;  
     $query = "UPDATE Cameras SET public = 1 WHERE id='".$id."'";
     $reg = mysql_query($query);
     }
