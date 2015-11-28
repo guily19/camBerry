@@ -17,7 +17,7 @@
     if(!(empty($_POST['0']))){
   	
     
-  		$id = $_POST['0']
+  		$id = $_POST['0'];
   		
   	  $query = "UPDATE Cameras SET public = 1 WHERE id='".$id."'";
 
