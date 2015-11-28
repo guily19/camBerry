@@ -124,7 +124,7 @@
         <h1 class="subtitle">Preferencias</h1>
         <div>
           <h2>Add a camera</h2>
-          <form action="addCamera.php">
+          <form action="addCamera.php" method="post">
             <div class="form-group">
               <label>Video link:</label>
               <input type="url" name="Video" class="form-control" id="video">
