@@ -15,7 +15,7 @@
   		header("Location: index.php");
   	}
 
-    $cameras = mysql_query("SELECT id FROM cameras WHERE owner ='".$user."'");
+    $cameras = mysql_query("SELECT id FROM cameras WHERE owner ='".$username."'");
   	while ($id = mysql_fetch_assoc($cameras)) {
 
   	$query = "UPDATE Cameras SET public = 1 WHERE id='".$id."'";
