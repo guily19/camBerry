@@ -31,9 +31,9 @@ include('db_access.php');
             $sql = mysql_query("SELECT USER FROM Users WHERE USER='".$user."'");
             $sql2 = mysql_query("SELECT MAIL FROM Users WHERE MAIL='".$email."'");
             if(mysql_num_rows($sql) > 0) {
-                echo "<h2><b> Error al registrar usuario </b></h2><br><br>";
-                echo "<h3>El nombre usuario elegido ya ha sido registrado anteriormente. <a href='javascript:history.back();'>Reintentar</a>";
-                echo "<hr><h3><br>Ir a <b><a href='index.php'>Inicio</a></b></h3>";
+                echo "<h1><b> Error al registrar usuario </b></h1><br>";
+                echo "<h3>El nombre de usuario ya ha sido registrado anteriormente. <a href='javascript:history.back();'>Reintentar</a>";
+                echo "<center><br><hr><h3><br>Ir a <b><a href='index.php'>Inicio</a></b></h3></center>";
             }
             else if(mysql_num_rows($sql2) > 0) {
                 echo "Este email ya ha sido registrado anteriormente. <a href='javascript:history.back();'>Reintentar</a>";
