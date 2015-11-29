@@ -166,15 +166,6 @@
 
 		}
 
-		$scope.UsernameValidation = function (username, label){
-			if (/\s/g.test(username)) {
-				document.getElementById(label).innerHTML = "El nombre de usuario no puedo contener espacios.";
-			} else {
-				document.getElementById(label).innerHTML= "";
-			}
-		}
-
-
 		$scope.init = function(){
 			$scope.getOwnCameras();
 		}
