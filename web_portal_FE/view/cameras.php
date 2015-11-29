@@ -31,12 +31,14 @@
 		$cameras_json = array();
 
 		while($row = mysql_fetch_array($res, MYSQL_ASSOC)) {
-
+			$check=" ";
+			if($row['public'] == 1) $check = "checked";
 			$current_camera = array(
 				'img' => $row['img'],
 				'site' => $row['site'],
 				'video' => $row['video'],
-				'public' => $row['public']
+				'public' => $row['public'],
+				'check' => $check
 			);
 
 			array_push($cameras_json, $current_camera);
