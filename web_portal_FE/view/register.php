@@ -57,6 +57,7 @@ include('db_access.php');
 
     <script src="js/controllers.js"></script>
     <script src="../js/controllers.js"></script>
+    <script src="../js/angular.min.js"></script> 
 
 </head>
 <body>
