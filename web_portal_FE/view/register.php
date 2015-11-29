@@ -46,7 +46,7 @@
             $reg = mysql_query("INSERT INTO Users (USER, PASSWORD ,MAIL, NOMBRE, APELLIDOS) VALUES ('".$user."', '".$psw."', '".$email."','".$firstname."','".$lastname."')");
             if($reg) {
                 echo "<h1><b> Registro Completado </b></h1><br>";
-                echo "Datos ingresados correctamente. Acceda a <b><a href='index.php'>Camberry!</a></b>";
+                echo "<h3>Datos ingresados correctamente. Acceda a <b><a href='index.php'>Camberry!</a></b></h3>";
                 echo "<center><br><hr><h3><br>Ir a <b><a href='index.php'>Inicio</a></b></h3></center>";
             }else {
                 echo "<h1><b> Error al registrar usuario </b></h1><br>";
