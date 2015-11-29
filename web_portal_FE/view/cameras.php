@@ -32,7 +32,7 @@
 
 		while($row = mysql_fetch_array($res, MYSQL_ASSOC)) {
 			$check=" ";
-			if($row['public'] == 1) $check = "checked";
+			if($row['public'] == 1) $check = checked;
 			$current_camera = array(
 				'img' => $row['img'],
 				'site' => $row['site'],
