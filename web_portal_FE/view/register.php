@@ -77,12 +77,12 @@ include('db_access.php');
         }
 
         function validateEmail() {
-            var mail = document.getElementById("inputPassword3").value;
+            var mail = document.getElementById("inputEmail3").value;
 
             if (/^[A-Za-z0-9-_.+%]+@[A-Za-z0-9-.]+\.[A-Za-z]{2,4}$/.test(mail)) {
                 document.getElementById("emailErrorMsg").innerHTML = "";
             } else {
-                document.getElementById("emailErrorMsg").innerHTML = "Formato de mail incorrecto.";
+                document.getElementById("emailErrorMsg").innerHTML = "Formato de mail incorrecto.   ";
             }
         }      
 
