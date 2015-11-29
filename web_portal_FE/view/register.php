@@ -92,22 +92,34 @@ include('db_access.php');
 
 </head>
 <body>
-<nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container ProductImage">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">CamBerry</a>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.php">CamBerry</a>
         </div>
-        <form class="navbar-form navbar-right">
-            <button type="submit" class="btn btn-success">Log out</button>
-        </form>
-    </div>
-</nav>
+        <div id="navbar" class="navbar-collapse collapse">
+          <form action="index.php" method="POST" class="navbar-form navbar-right">
+            <div class="form-group">
+              <input type="text" placeholder="Email" name="Email"  class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="password" placeholder="Password" name= "password"  class="form-control">
+            </div>
+            <button type="submit" class="btn btn-success">Sign in</button>
+          </form>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </nav>
+
+
+
 <div class="main_content">
     <h1 class="title">Registration Form</h1>
     <br><br>

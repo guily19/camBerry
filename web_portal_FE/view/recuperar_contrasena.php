@@ -25,7 +25,7 @@
                     $psw2 = md5($psw); // encriptamos la nueva contraseña para guardarla en la BD
                     $email = $row['MAIL'];
                     // actualizamos los datos (contraseña) del usuario que solicitó su contraseña
-                    mysql_query("UPDATE USERS SET PASSWORD='".$psw2."' WHERE user='".$user."'");
+                    mysql_query("UPDATE Users SET PASSWORD='".$psw2."' WHERE USER='".$user."'");
                     // Enviamos por email la nueva contraseña
                     $remite_nombre = "Camberry Project"; // Tu nombre o el de tu página
                     $remite_email = "noreply@camberry.es"; // tu correo
