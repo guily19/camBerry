@@ -61,7 +61,7 @@ include('db_access.php');
 
 
             alert('eeeeeei');
-            var InputUsername = document.getElementById("inputUser3").InnerHTML;
+            var InputUsername = document.getElementById("inputUser3").value;
             alert('holaaaa ' + InputUsername);
             if (/\s/.test(InputUsername)) {
                 alert('entra');
@@ -104,7 +104,7 @@ include('db_access.php');
                     <label for="inputUser3" class="col-sm-4 control-label">User:</label>
                     <div class="col-sm-8">
                         <input type="text" class="input form-control" name="user" id="inputUser3" placeholder="User" onchange="validateUsername()" required>
-                        <label id="usernameErrorMsg"><font colot="red"></font><font></label> 
+                        <label id="usernameErrorMsg"><font color="red"> </font></label> 
                     </div>
                 </div>
                 <div class="form-group">
