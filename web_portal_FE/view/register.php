@@ -90,7 +90,7 @@
             if (/^[A-Za-z0-9-_.+%]+@[A-Za-z0-9-.]+\.[A-Za-z]{2,4}$/.test(mail)) {
                 document.getElementById("emailErrorMsg").innerHTML = "";
             } else {
-                document.getElementById("emailErrorMsg").innerHTML = "Formato de mail incorrecto.   ";
+                document.getElementById("emailErrorMsg").innerHTML = "Formato de mail incorrecto.";
             }
         }      
 
@@ -115,10 +115,10 @@
         <div id="navbar" class="navbar-collapse collapse">
           <form action="index.php" method="POST" class="navbar-form navbar-right">
             <div class="form-group">
-              <input type="text" placeholder="Email" name="Email"  class="form-control">
+              <input type="text" placeholder="Email" name="Email"  class="form-control" required>
             </div>
             <div class="form-group">
-              <input type="password" placeholder="Password" name= "password"  class="form-control">
+              <input type="password" placeholder="Password" name= "password"  class="form-control" required>
             </div>
             <button type="submit" class="btn btn-success">Sign in</button>
           </form>
