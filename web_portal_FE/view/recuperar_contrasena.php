@@ -28,7 +28,7 @@
                     mysql_query("UPDATE USERS SET PASSWORD='".$psw2."' WHERE user='".$user."'");
                     // Enviamos por email la nueva contraseña
                     $remite_nombre = "Camberry Project"; // Tu nombre o el de tu página
-                    $remite_email = "@"; // tu correo
+                    $remite_email = "noreply@camberry.es"; // tu correo
                     $asunto = "Recuperación de contraseña"; // Asunto (se puede cambiar)
                     $mensaje = "Se ha generado una nueva contraseña para el usuario <strong>".$user."</strong>. La nueva contraseña es: <strong>".$psw."</strong>.";
                     $cabeceras = "From: ".$remite_nombre." <".$remite_email.">\r\n";
