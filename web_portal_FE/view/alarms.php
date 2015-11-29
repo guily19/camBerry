@@ -9,6 +9,7 @@
 	error_log("Alarm.php------------------------------------------------",0);
 
 	$username = $_SESSION["USER"];
+	error_log($username);
 
 	$dir = "/var/motion/".$username;
 
