@@ -117,6 +117,7 @@ else{
               <input type="password" placeholder="Password" name= "password"  class="form-control">
             </div>
             <button type="submit" class="btn btn-success">Sign in</button>
+            <button type="submit" class="btn btn-danger"  onclick = "location='/recuperar_contrasena.php'" >Forgot password?</button>
           </form>
         </div><!--/.navbar-collapse -->
       </div>
@@ -136,7 +137,7 @@ else{
       <div class="row">
         <div class="col-md-4">
           <h2>Pack Camberry</h2>
-          <p>Compra tu Kit camberry para tener el mejor servicio de vijilancia al mejor precio. Te ofrecemos un sistema economico, simple y ...... </p>
+          <p>Compra tu Kit camberry para tener el mejor servicio de vigilancia al mejor precio. Te ofrecemos un sistema economico, simple y ...... </p>
           <p><a class="btn btn-default" href="buykit.html" role="button">Compra tu Kit! &raquo;</a></p>
         </div>
         <div class="col-md-4">

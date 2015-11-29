@@ -72,26 +72,23 @@
             </button>
             <a class="navbar-brand" href="#">CamBerry</a>
         </div>
-        <form class="navbar-form navbar-right">
-            <button type="submit" class="btn btn-success">Log out</button>
-        </form>
     </div>
 </nav>
 <div class="main_content">
-    <h1 class="title">Recovery Form</h1>
+    <h1 class="title">Password Recovery</h1>
     <br><br>
     <div class="form_wrapper">
         <div>
             <form  class="form-horizontal" action="<?=$_SERVER['PHP_SELF']?>" method="post">
                 <div class="form-group">
-                    <label for="inputUser3" class="col-sm-4 control-label">User:</label>
+                    <label for="inputUser3" class="col-sm-4 control-label">USER--></label>
                     <div class="col-sm-5">
                         <input type="text" class="input form-control" name="user" id="inputUser3" placeholder="User" onchange="validateUsername()" required>
                         <font color="red"><label id="usernameErrorMsg"></label></font>
                     </div>
                 </div>
                  <br><br>
-                 <button class="btn btn-success" type ="submit" name="enviar" value="Recover">Register </button>
+                 <button class="btn btn-success" type ="submit" name="enviar" value="Recover">Recover </button>
             </form>
         </div>
     </div>
