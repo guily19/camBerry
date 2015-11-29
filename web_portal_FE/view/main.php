@@ -9,6 +9,7 @@
   }
 
   function isPublic($site){
+  error_log("query = ".$site);
   $result = mysql_query("SELECT public FROM Cameras WHERE owner ='".$username."' AND site ='".$site."'");
   $public = mysql_fetch_object($result)->public; 
   return $public;
