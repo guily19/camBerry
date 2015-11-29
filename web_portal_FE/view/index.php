@@ -9,12 +9,16 @@ if (isset($_COOKIE["id_usuario_dw"]) && isset($_COOKIE["marca_aleatoria_usuario_
    //además voy a comprobar que esas variables no estén vacías
    if ($_COOKIE["id_usuario_dw"]!="" || $_COOKIE["marca_aleatoria_usuario_dw"]!=""){
       //Voy a ver si corresponden con algún usuario
-      $ssql = "select * from Users where USER='" . $_COOKIE["id_usuario_dw"] . "' and COOKIE='" . $_COOKIE["marca_aleatoria_usuario_dw"] . "'";
+
+      $userCookie = mysql_real_escape_string($_COOKIE["id_usuario_dw"]);
+      $markCookie = mysql_real_escape_string($_COOKIE["marca_aleatoria_usuario_dw"]);
+
+      $ssql = "select * from Users where USER='" . $userCookie . "' and COOKIE='" . $markCookie . "'";
       $rs = mysql_query($ssql);
       if (mysql_num_rows($rs)==1){
-         echo "<b>Tengo un usuario correcto en una cookie</b>";
+         //echo "<b>Tengo un usuario correcto en una cookie</b>";
          $usuario_encontrado = mysql_fetch_object($rs);
-         echo "<br>Eres el usuario número " . $usuario_encontrado->USER . ", de nombre " . $usuario_encontrado->usuario;
+         //echo "<br>Eres el usuario número " . $usuario_encontrado->USER . ", de nombre " . $usuario_encontrado->usuario;
          header ("Location: main.php");
       }
    }
@@ -22,7 +26,8 @@ if (isset($_COOKIE["id_usuario_dw"]) && isset($_COOKIE["marca_aleatoria_usuario_
  
 if ($_POST){
 	if(empty($_POST['Email']) || empty($_POST['password'])) {
-            echo "El usuario o la contraseña no han sido ingresados. <a href='javascript:history.back();'>Reintentar</a>";
+            //echo "El usuario o la contraseña no han sido ingresados. <a href='javascript:history.back();'>Reintentar</a>";
+            header("Location: index.php");
     }else {
 		   $Email = mysql_real_escape_string($_POST['Email']);
 		   $password = mysql_real_escape_string($_POST["password"]);
@@ -47,17 +52,18 @@ if ($_POST){
 				//generamos un número aleatorio
 				$numero_aleatorio = mt_rand(1000000,999999999);
 				//2) meto la marca aleatoria en la tabla de usuario
-				$ssql = "update Users set COOKIE='$numero_aleatorio' where MAIL='" . $_POST["Email"] . "'";
+				$ssql = "update Users set COOKIE='$numero_aleatorio' where MAIL='" . $Email . "'";
 				mysql_query($ssql);
 				//3) ahora meto una cookie en el ordenador del usuario con el identificador del usuario y la cookie aleatoria
 				setcookie("id_usuario_dw", $usuario_encontrado->USER , time()+(60*60*24*365));
 				setcookie("marca_aleatoria_usuario_dw", $numero_aleatorio, time()+(60*60*24*365));
-				echo "Autenticado correctamente";
+				//echo "Autenticado correctamente";
 				header ("Location: main.php");
 			}else{
-				echo "Fallo de autenticación!";
-				echo "<p><a href='index.php'>Volver</a>";
-				echo "<p>$rs es la sortida de query, $ssql la consulta, connexio $conn";
+				//echo "Fallo de autenticación!";
+				//echo "<p><a href='index.php'>Volver</a>";
+				//echo "<p>$rs es la sortida de query, $ssql la consulta, connexio $conn";
+        header("Location: index.php");
 			}
    
 		}
