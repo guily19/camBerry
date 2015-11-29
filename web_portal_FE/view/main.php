@@ -155,7 +155,7 @@
             <div ng-repeat="camera in cameras">
               <div class="form-group">
                   <label>{{camera.site}}</label>
-                  <input type="checkbox" name="cams[]" class="form-control" value = {{camera.site}} id="video" <?php if(isPublic(?>{{camera.site}}<?php)){  ?> checked  <?php }  ?> >
+                  <input type="checkbox" name="cams[]" class="form-control" value = {{camera.site}} id="video" <?php $name= ?> {{camera.site}} <?php ; if(isPublic($name)){  ?> checked  <?php }  ?> >
               </div>
             </div>
             <button type="submit" class="btn btn-default">Publicar</button>
