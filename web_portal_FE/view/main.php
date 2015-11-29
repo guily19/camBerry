@@ -4,6 +4,8 @@
 	
 	if(isset($_SESSION['USER'])) {
 		$user = $_SESSION['USER'];
+  $mycameras = mysql_query("SELECT id FROM Cameras WHERE owner ='".$user."'");
+
   function logout(){
     header ("Location: logout.php");
   }
@@ -155,7 +157,7 @@
             <div ng-repeat="camera in cameras">
               <div class="form-group">
                   <label>{{camera.site}}</label>
-                  <input type="checkbox" name="cams[]" class="form-control" value = {{camera.site}} id="video" <?php if(isPublic($site)){  ?> checked  <?php }  ?> >
+                  <input type="checkbox" name="cams[]" class="form-control" value = {{camera.site}} id="video" <?php if(isPublic(mysql_fetch_object($mycameras)->site)){  ?> checked  <?php }  ?> >
               </div>
             </div>
             <button type="submit" class="btn btn-default">Publicar</button>
