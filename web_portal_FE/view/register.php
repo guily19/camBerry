@@ -65,10 +65,10 @@ include('db_access.php');
             alert('holaaaa ' + InputUsername);
             if (/\s/.test(InputUsername)) {
                 alert('entra');
-                document.getElementById("usernameErrorMsg").value = "El usuario no puede contener espacios.";
+                document.getElementById("usernameErrorMsg").innerHTML = "El usuario no puede contener espacios.";
             } else {
                 alert('foo');
-                document.getElementById("usernameErrorMsg").value = "blabla";
+                document.getElementById("usernameErrorMsg").innerHTML = "blabla";
             }
         }
 
