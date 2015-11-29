@@ -5,7 +5,7 @@
     if(isset($_SESSION['USER'])) {
         session_destroy();
         header("Location: index.php");
-    }else {
-        echo "Operación incorrecta.";
+    } else {
+        header("Location: index.php");
     }
 ?>  
