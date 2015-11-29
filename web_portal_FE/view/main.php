@@ -43,7 +43,7 @@
           <a class="navbar-brand" href="#">CamBerry</a>
         </div>
         <form class="navbar-form navbar-right">
-              <b><a href='main.php'> <?php echo "Welcome $user";?> </a></b>
+              <b><a href='perfil.php'> <?php echo "Welcome $user        ";?> </a></b>
             <button ng-class="videoMode ? 'btn btn-danger' : 'btn btn-success' " ng-click="viewControll()" ng-show="someVideoisShown">{{videoModeButtonText}}</button>
           <button type="submit" class="btn btn-danger"  onclick = "location='/logout.php'" >Log out</button>
         </form>
