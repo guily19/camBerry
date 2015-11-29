@@ -9,8 +9,10 @@
   }
 
   function isPublic($site){
-  error_log("query = ".$site);
-  $result = mysql_query("SELECT public FROM Cameras WHERE owner ='".$username."' AND site ='".$site."'");
+  
+  $query ="SELECT public FROM Cameras WHERE owner ='".$username."' AND site ='".$site."'";
+  error_log("query = ".$query);
+  $result = mysql_query($query);
   $public = mysql_fetch_object($result)->public; 
   return $public;
   }
@@ -153,7 +155,7 @@
             <div ng-repeat="camera in cameras">
               <div class="form-group">
                   <label>{{camera.site}}</label>
-                  <input type="checkbox" name="cams[]" class="form-control" value = {{camera.site}} id="video" <?php if(isPublic(camera.site)){  ?> checked  <?php }  ?> >
+                  <input type="checkbox" name="cams[]" class="form-control" value = {{camera.site}} id="video" <?php if(isPublic($camera->site)){  ?> checked  <?php }  ?> >
               </div>
             </div>
             <button type="submit" class="btn btn-default">Publicar</button>
