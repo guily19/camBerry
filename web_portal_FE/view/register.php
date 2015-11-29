@@ -54,6 +54,20 @@ include('db_access.php');
 	<title> Main Portal</title>
     <link rel="stylesheet" type="text/css" href="css/register.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+
+    <script language="javascript">
+        function validateUsername() {
+            var InputUsername = document.getElementById("inputUser3").value;
+            if (/\s/.test(InputUsername)) {
+                document.getElementById("usernameErrorMsg").innerHTML = "El usuario no puede contener espacios.";
+            } else {
+                document.getElementById("usernameErrorMsg").innerHTML = "";
+            }
+        }
+    </script>
+
+
+
 </head>
 <body>
 <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -80,37 +94,38 @@ include('db_access.php');
     		<form  class="form-horizontal" action="<?=$_SERVER['PHP_SELF']?>" method="post">
                 <div class="form-group">
                     <label for="inputUser3" class="col-sm-4 control-label">User:</label>
-                    <div class="col-sm-8">
-                        <input type="text" class="input form-control" name="user" id="inputUser3" placeholder="User" required>
+                    <div class="col-sm-5">
+                        <input type="text" class="input form-control" name="user" id="inputUser3" placeholder="User" onchange="validateUsername()" required>
+                        <font color="red"><label id="usernameErrorMsg"></label></font>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="inputUser3" class="col-sm-4 control-label">First Name:</label>
-                    <div class="col-sm-8">
+                    <div class="col-sm-5">
                         <input type="text" class="input form-control" name="firstname" id="inputUser3" placeholder="First Name">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="inputUser3" class="col-sm-4 control-label">Last Name:</label>
-                    <div class="col-sm-8">
+                    <div class="col-sm-5">
                         <input type="text" class="input form-control" name="lastname" id="inputUser3" placeholder="Last Name">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="inputEmail3" class="col-sm-4 control-label">Email:</label>
-                    <div class="col-sm-8">
+                    <div class="col-sm-5">
                         <input type="email" class="input form-control" name="email"id="inputEmail3" placeholder="Email" required>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="inputUser3" class="col-sm-4 control-label">Password:</label>
-                    <div class="col-sm-8">
+                    <div class="col-sm-5">
                         <input type="password" class="input form-control" name="psw"id="inputPassword3" placeholder="Password" required>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="inputUser3" class="col-sm-4 control-label">Repeat Password:</label>
-                    <div class="col-sm-8">
+                    <div class="col-sm-5">
                         <input type="password" class="input form-control" name="psw2"id="inputPassword3" placeholder="Password" required>
                     </div>
                 </div>

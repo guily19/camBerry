@@ -166,7 +166,6 @@
 
 		}
 
-
 		$scope.init = function(){
 			$scope.getOwnCameras();
 		}
