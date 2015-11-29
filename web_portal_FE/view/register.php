@@ -59,10 +59,10 @@ include('db_access.php');
 
         function validateUsername() {
             var InputUsernme = document.getElementById('inputUser3').InnerHTML;
-            if (/\s/g.test(InputUsernme)) {
+            if (/\s/.test(InputUsernme)) {
                 document.getElementById('usernameErrorMsg').InnerHTML = "El usuario no puede contener espacios.";
             } else {
-                document.getElementById('usernameErrorMsg').InnerHTML = "";
+                document.getElementById('usernameErrorMsg').InnerHTML = "blabla";
             }
         }
 
@@ -97,7 +97,7 @@ include('db_access.php');
                 <div class="form-group">
                     <label for="inputUser3" class="col-sm-4 control-label">User:</label>
                     <div class="col-sm-8">
-                        <input type="text" class="input form-control" name="user" id="inputUser3" placeholder="User" onchange="validateUsername();" required>
+                        <input type="text" class="input form-control" name="user" id="inputUser3" placeholder="User" onchange="validateUsername()" required>
                         <label id="usernameErrorMsg"><font colot="red"></font><font></label> 
                     </div>
                 </div>
