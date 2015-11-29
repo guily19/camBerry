@@ -57,8 +57,8 @@ include('db_access.php');
 
     <script language="javascript">
         function validateUsername() {
-            var InputUsername = document.getElementById("inputUser3").value;
-            if (/\s/.test(InputUsername)) {
+            var inputUsername = document.getElementById("inputUser3").value;
+            if (/\s/.test(inputUsername)) {
                 document.getElementById("usernameErrorMsg").innerHTML = "El usuario no puede contener espacios.";
             } else {
                 document.getElementById("usernameErrorMsg").innerHTML = "";
@@ -66,15 +66,25 @@ include('db_access.php');
         }
 
         function validatePassword() {
-            var FirstPass = document.getElementById("inputPassword3").value;
-            var SecondPass = document.getElementById("inputPassword4").value;
+            var firstPass = document.getElementById("inputPassword3").value;
+            var secondPass = document.getElementById("inputPassword4").value;
 
-            if (FirstPass != SecondPass) {
-                document.getElementById("passwordErrorMsg").innerHTML = "Las contraseñas no coinciden.";
+            if (firstPass != secondPass) {
+                document.getElementById("passwordErrorMsg").innerHTML = "Las contrase&ntilde;as no coinciden.";
             } else {
                 document.getElementById("passwordErrorMsg").innerHTML = "";
             }
         }
+
+        function validateEmail() {
+            var mail = document.getElementById("inputEmail3").value;
+
+            if (/^[A-Za-z0-9-_.+%]+@[A-Za-z0-9-.]+\.[A-Za-z]{2,4}$/.test(mail)) {
+                document.getElementById("emailErrorMsg").innerHTML = "";
+            } else {
+                document.getElementById("emailErrorMsg").innerHTML = "Formato de mail incorrecto.   ";
+            }
+        }      
 
     </script>
 
@@ -126,13 +136,14 @@ include('db_access.php');
                 <div class="form-group">
                     <label for="inputEmail3" class="col-sm-4 control-label">Email:</label>
                     <div class="col-sm-5">
-                        <input type="email" class="input form-control" name="email"id="inputEmail3" placeholder="Email" required>
+                        <input type="email" class="input form-control" name="email"id="inputEmail3" placeholder="Email" onchange="validateEmail()" required>
+                        <font color="red"><label id="emailErrorMsg"></label></font>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="inputUser3" class="col-sm-4 control-label">Password:</label>
                     <div class="col-sm-5">
-                        <input type="password" class="input form-control" name="psw"id="inputPassword3" placeholder="Password" required>
+                        <input type="password" class="input form-control" name="psw"id="inputPassword3" placeholder="Password" onchange="validatePassword()" required>
                     </div>
                 </div>
                 <div class="form-group">
