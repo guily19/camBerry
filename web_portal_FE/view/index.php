@@ -117,7 +117,7 @@ else{
               <input type="password" placeholder="Password" name= "password"  class="form-control">
             </div>
             <button type="submit" class="btn btn-success">Sign in</button>
-            <button type="submit" class="btn btn-danger"  onclick = "location='/recuperar_contrasena.php'" >Forgot password?</button>
+            <button type="button" class="btn btn-danger"  onclick = "location='/recuperar_contrasena.php'" >Forgot password?</button>
           </form>
         </div><!--/.navbar-collapse -->
       </div>
