@@ -96,7 +96,7 @@ include('db_access.php');
                     <label for="inputUser3" class="col-sm-4 control-label">User:</label>
                     <div class="col-sm-5">
                         <input type="text" class="input form-control" name="user" id="inputUser3" placeholder="User" onchange="validateUsername()" required>
-                        <font color="red"><label id="usernameErrorMsg">" "</label></font>
+                        <font color="red"><label id="usernameErrorMsg"></label></font>
                     </div>
                 </div>
                 <div class="form-group">
