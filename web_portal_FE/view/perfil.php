@@ -22,7 +22,7 @@
                 }else {
                     $user = $_SESSION['USER'];
                     $psw = mysql_real_escape_string($_POST["psw"]);
-                    $psw = md5($usuario_clave); 
+                    $psw = md5($psw); 
                     $sql = mysql_query("UPDATE Users SET PASSWORD='".$psw."' WHERE USER='".$user."'");
                     if($sql) {
                         echo "Contraseña cambiada correctamente.";
@@ -95,14 +95,6 @@
                 </div>
                 <div class="form-group">
                     <label for="inputEmail3" class="col-sm-4 control-label">Email: <?=$email?></label>
-                </div>
-                
-                <div class="form-group">
-                    <label for="inputUser3" class="col-sm-4 control-label">Repeat Password:</label>
-                    <div class="col-sm-5">
-                        <input type="password" class="input form-control" name="psw2"id="inputPassword4" placeholder="Password" onchange="validatePassword()" required>
-                        <font color="red"><label id="passwordErrorMsg"></label></font>
-                    </div>
                 </div>
                  <br><br>
         </div>
