@@ -56,6 +56,8 @@ include('db_access.php');
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 
     <script src="js/controllers.js"></script>
+    <script src="../js/controllers.js"></script>
+    <script src="../js/angular.min.js"></script> 
 
 </head>
 <body>
