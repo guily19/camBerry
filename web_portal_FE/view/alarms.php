@@ -36,7 +36,7 @@
 			//header('Content-type: image/jpg');
 			$file = $dir."/".$files[$i];
 			error_log("File ->".$file);
-			//$read = readfile($file);
+			$read = readfile($file);
 			//error_log("Read ->".$read);
 			//echo $file;
 			array_push($response, $file);
