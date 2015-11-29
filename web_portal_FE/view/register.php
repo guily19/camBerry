@@ -54,6 +54,9 @@ include('db_access.php');
 	<title> Main Portal</title>
     <link rel="stylesheet" type="text/css" href="css/register.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+
+    <script src="js/controllers.js"></script>
+
 </head>
 <body>
 <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -81,7 +84,8 @@ include('db_access.php');
                 <div class="form-group">
                     <label for="inputUser3" class="col-sm-4 control-label">User:</label>
                     <div class="col-sm-8">
-                        <input type="text" class="input form-control" name="user" id="inputUser3" placeholder="User" required>
+                        <input type="text" class="input form-control" name="user" id="inputUser3" placeholder="User" onchange="UsernameValidation(this.value, 'inputUser3');" required>
+                        <label id="usernameErrorMsg"><font colot="red"></font><font></label> 
                     </div>
                 </div>
                 <div class="form-group">
