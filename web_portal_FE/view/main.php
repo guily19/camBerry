@@ -150,7 +150,7 @@
           <form action="public.php" method="post">
             <div ng-repeat="camera in cameras">
               <div class="form-group">
-                  <label>{{camera.site}}</label>
+                  <label>{{camera.site}} {{camera.check}}</label>
                   <input type="checkbox" name="cams[]" class="form-control" value = {{camera.site}} id="video" {{camera.check}} >
               </div>
             </div>
