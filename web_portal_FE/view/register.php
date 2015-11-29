@@ -65,10 +65,10 @@ include('db_access.php');
             alert('holaaaa ' + InputUsername);
             if (/\s/.test(InputUsername)) {
                 alert('entra');
-                document.getElementById("usernameErrorMsg").InnerHTML = "El usuario no puede contener espacios.";
+                document.getElementById("usernameErrorMsg").value = "El usuario no puede contener espacios.";
             } else {
                 alert('foo');
-                document.getElementById("usernameErrorMsg").InnerHTML = "blabla";
+                document.getElementById("usernameErrorMsg").value = "blabla";
             }
         }
 
@@ -104,7 +104,7 @@ include('db_access.php');
                     <label for="inputUser3" class="col-sm-4 control-label">User:</label>
                     <div class="col-sm-8">
                         <input type="text" class="input form-control" name="user" id="inputUser3" placeholder="User" onchange="validateUsername()" required>
-                        <label id="usernameErrorMsg"><font color="red"> </font></label> 
+                        <font color="red"><label id="usernameErrorMsg">" "</label></font>
                     </div>
                 </div>
                 <div class="form-group">
