@@ -2,12 +2,6 @@
     include('db_access.php'); // incluímos los datos de acceso a la BD
 ?>
 <!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-</head>
-<body>
     <?php
         if(isset($_POST['enviar'])) { // comprobamos que se han enviado los datos del formulario
             if(empty($_POST['user'])) {
@@ -46,13 +40,66 @@
             }
         }else {
     ?>
-        <form action="<?=$_SERVER['PHP_SELF']?>" method="post">
-            <label>Usuario:</label><br />
-            <input type="text" name="user" /><br />
-            <input type="submit" name="enviar" value="Enviar" />
+<head>
+    <title> Password Recovery </title>
+    <link rel="stylesheet" type="text/css" href="css/register.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+
+    <script language="javascript">
+        function validateUsername() {
+            var inputUsername = document.getElementById("inputUser3").value;
+            if (/\s/.test(inputUsername)) {
+                document.getElementById("usernameErrorMsg").innerHTML = "El usuario no puede contener espacios.";
+            } else {
+                document.getElementById("usernameErrorMsg").innerHTML = "";
+            }
+        }
+
+    </script>
+
+
+
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">CamBerry</a>
+        </div>
+        <form class="navbar-form navbar-right">
+            <button type="submit" class="btn btn-success">Log out</button>
         </form>
+    </div>
+</nav>
+<div class="main_content">
+    <h1 class="title">Recovery Form</h1>
+    <br><br>
+    <div class="form_wrapper">
+        <div>
+            <form  class="form-horizontal" action="<?=$_SERVER['PHP_SELF']?>" method="post">
+                <div class="form-group">
+                    <label for="inputUser3" class="col-sm-4 control-label">User:</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="input form-control" name="user" id="inputUser3" placeholder="User" onchange="validateUsername()" required>
+                        <font color="red"><label id="usernameErrorMsg"></label></font>
+                    </div>
+                </div>
+                 <br><br>
+                 <button class="btn btn-success" type ="submit" name="enviar" value="Recover">Register </button>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="footer"></div>
+</body>
+</html>
+
     <?php
         }
     ?> 
-</body>
-</html>
