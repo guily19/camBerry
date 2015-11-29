@@ -116,7 +116,7 @@ include('db_access.php');
           </form>
         </div><!--/.navbar-collapse -->
       </div>
-    </nav
+    </nav>
 
 
 
