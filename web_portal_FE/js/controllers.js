@@ -167,13 +167,12 @@
 		}
 
 		$scope.UsernameValidation = function (username, label){
-			if (/\s/g.test(username) {
-				document.getElementById(label).style.display= "inline";
+			if (/\s/g.test(username)) {
+				document.getElementById(label).innerHTML = "El nombre de usuario no puedo contener espacios.";
 			} else {
-				document.getElementById(label).style.display= "none";
+				document.getElementById(label).innerHTML= "";
 			}
 		}
-
 
 
 		$scope.init = function(){

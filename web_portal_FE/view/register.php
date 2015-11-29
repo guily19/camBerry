@@ -85,7 +85,7 @@ include('db_access.php');
                     <label for="inputUser3" class="col-sm-4 control-label">User:</label>
                     <div class="col-sm-8">
                         <input type="text" class="input form-control" name="user" id="inputUser3" placeholder="User" onchange="UsernameValidation(this.value, 'inputUser3');" required>
-                        <label id="usernameErrorMsg" class="errorMsg">El usuario no puede contener espacios.</label> 
+                        <label id="usernameErrorMsg"><font colot="red"></font><font></label> 
                     </div>
                 </div>
                 <div class="form-group">
