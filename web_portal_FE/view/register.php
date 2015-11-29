@@ -9,15 +9,15 @@ include('db_access.php');
         // Procedemos a comprobar que los campos del formulario no estén vacíos
         $sin_espacios = count_chars($_POST['user'], 1);
         if(!empty($sin_espacios[32])) { // comprobamos que el campo usuario_nombre no tenga espacios en blanco
-            echo "El campo <em>usuario_nombre</em> no debe contener espacios en blanco. <a href='javascript:history.back();'>Reintentar</a>";
+            header("Location: register.php");
         }elseif(empty($_POST['user'])) { // comprobamos que el campo usuario_nombre no esté vacío
-            echo "No haz ingresado tu usuario. <a href='javascript:history.back();'>Reintentar</a>";
-        }elseif(empty($_POST['psw'])) { // comprobamos que el campo usuario_clave no esté vacío
-            echo "No haz ingresado contraseña. <a href='javascript:history.back();'>Reintentar</a>";
+            header("Location: register.pgp");
+        }elseif(empty($_POST['psw']) || empty($_POST['psw2'])) { // comprobamos que el campo usuario_clave no esté vacío
+            header("Location: register.php");
         }elseif($_POST['psw'] != $_POST['psw2']) { // comprobamos que las contraseñas ingresadas coincidan
-            echo "Las contraseñas ingresadas no coinciden. <a href='javascript:history.back();'>Reintentar</a>";
+            header("Location: register.php");
         }elseif(!valida_email($_POST['email'])) { // validamos que el email ingresado sea correcto
-            echo "El email ingresado no es válido. <a href='javascript:history.back();'>Reintentar</a>";
+            header("Location: register.php");
         }else {
             // "limpiamos" los campos del formulario de posibles códigos maliciosos
             $user = mysql_real_escape_string($_POST['user']);
@@ -64,6 +64,18 @@ include('db_access.php');
                 document.getElementById("usernameErrorMsg").innerHTML = "";
             }
         }
+
+        function validatePassword() {
+            var FirstPass = document.getElementById("inputPassword3").value;
+            var SecondPass = document.getElementById("inputPassword4").value;
+
+            if (FirstPass != SecondPass) {
+                document.getElementById("passwordErrorMsg").innerHTML = "Las contraseñas no coinciden.";
+            } else {
+                document.getElementById("passwordErrorMsg").innerHTML = "";
+            }
+        }
+
     </script>
 
 
@@ -126,7 +138,8 @@ include('db_access.php');
                 <div class="form-group">
                     <label for="inputUser3" class="col-sm-4 control-label">Repeat Password:</label>
                     <div class="col-sm-5">
-                        <input type="password" class="input form-control" name="psw2"id="inputPassword3" placeholder="Password" required>
+                        <input type="password" class="input form-control" name="psw2"id="inputPassword4" placeholder="Password" onchange="validatePassword()" required>
+                        <font color="red"><label id="passwordErrorMsg"></label></font>
                     </div>
                 </div>
                  <br><br>
