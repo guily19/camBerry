@@ -15,7 +15,7 @@
             }else {
                 $user = mysql_real_escape_string($_POST['user']);
                 $user = trim($user);
-                $sql = mysql_query("SELECT USER, PASSWORD, MAIL FROM USERS WHERE user='".$user."'");
+                $sql = mysql_query("SELECT USER, PASSWORD, MAIL FROM USERS WHERE USER='".$user."'");
                 if(mysql_num_rows($sql)) {
                     $row = mysql_fetch_assoc($sql);
                     $num_caracteres = "10"; // asignamos el número de caracteres que va a tener la nueva contraseña
