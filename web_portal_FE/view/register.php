@@ -60,9 +60,9 @@ include('db_access.php');
         function validateUsername() {
             var InputUsernme = document.getElementById('inputUser3').InnerHTML;
             if (/\s/g.test(InputUsernme)) {
-                document.getElementById('inputUser3').InnerHTML = "El usuario no puede contener espacios.";
+                document.getElementById('usernameErrorMsg').InnerHTML = "El usuario no puede contener espacios.";
             } else {
-                document.getElementById('inputUser3').InnerHTML = "";
+                document.getElementById('usernameErrorMsg').InnerHTML = "";
             }
         }
 
