@@ -8,6 +8,10 @@
 	text-align: center;
 }
 
+.errorMsg {
+    display:none;        
+    color:Red;
+}
 
 .input {
 	max-width: 500px;

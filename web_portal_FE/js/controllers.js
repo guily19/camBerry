@@ -166,6 +166,15 @@
 
 		}
 
+		$scope.UsernameValidation = function (username, label){
+			if (/\s/g.test(username) {
+				document.getElementById(label).style.display= "inline";
+			} else {
+				document.getElementById(label).style.display= "none";
+			}
+		}
+
+
 
 		$scope.init = function(){
 			$scope.getOwnCameras();
