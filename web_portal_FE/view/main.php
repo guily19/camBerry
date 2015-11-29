@@ -1,16 +1,11 @@
 <?php
 	session_start();
-    include('db_access.php');
-	
-	if(isset($_SESSION['USER'])) {
-		$user = $_SESSION['USER'];
 
-  $mycameras = mysql_query("SELECT site FROM Cameras WHERE owner ='".$user."'");
-
-  function logout(){
-    header ("Location: logout.php");
+  if(!isset($_SESSION['USER'])) {
+    header("Location: index.php");
   }
-
+  else {
+    $user = $_SESSION['USER'];
   
 ?> 
 
@@ -177,10 +172,6 @@
   <div class="footer"></div>
 </body>
 </html>
- <?php
-        }else {
-    ?>
-            <a href="register.php">Registrarse</a> | <a href="index.php">Ingresar</a>
-    <?php
-        }
-    ?> 
+<?php
+  }
+?>

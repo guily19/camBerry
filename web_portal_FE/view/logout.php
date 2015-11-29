@@ -1,5 +1,5 @@
 <?php
-    session_start();
+    //session_start();
     //include('db_access.php'); // incluímos los datos de acceso a la BD
     // comprobamos que se haya iniciado la sesión
     if(isset($_SESSION['USER'])) {
