@@ -61,10 +61,13 @@ include('db_access.php');
 
 
             alert('eeeeeei');
-            var InputUsernme = document.getElementById("inputUser3").InnerHTML;
-            if (/\s/.test(InputUsernme)) {
+            var InputUsername = document.getElementById("inputUser3").InnerHTML;
+            alert('holaaaa ' + InputUsername);
+            if (/\s/.test(InputUsername)) {
+                alert('entra');
                 document.getElementById("usernameErrorMsg").InnerHTML = "El usuario no puede contener espacios.";
             } else {
+                alert('foo');
                 document.getElementById("usernameErrorMsg").InnerHTML = "blabla";
             }
         }
