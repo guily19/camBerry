@@ -101,7 +101,7 @@
       <div ng-show="showView === 1 || videoMode" class="videos_wrapper" ng-repeat="user in otherCameras">
         <div class="video_wrapper bounceInRight" ng-repeat="camera in user.cameras" ng-class="showVideo ? 'animated' : '' " ng-show="camera.show === true">
           <img class="close_icon" ng-src="img/icons/close.png" ng-click="closeVideoOther($parent.$index, $index)">
-          <video class="video" ng-src="{{camera.video}}"></video>
+          <img class="video" ng-src="{{camera.video}}"></img>
           <h3 style="">{{camera.site}}</h3>
         </div>
       </div>
