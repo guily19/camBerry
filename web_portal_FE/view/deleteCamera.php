@@ -35,7 +35,7 @@
   
       if($reg) {
             echo "Camara Borrada";
-            //header ("Location: main.php");
+            header ("Location: main.php");
         }else {
             echo "ha ocurrido un error y no se ha borrado la camara $query";
         }

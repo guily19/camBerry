@@ -46,7 +46,7 @@
   
   		if($reg) {
             echo "Las camaras se han hecho publicas";
-            //header ("Location: main.php");
+            header ("Location: main.php");
         }else {
             echo "ha ocurrido un error y no se guardo la camara $query";
         }

@@ -7,6 +7,12 @@
   function logout(){
     header ("Location: logout.php");
   }
+
+  function isPublic($site){
+  $result = mysql_query("SELECT public FROM Cameras WHERE owner ='".$username."' AND site ='".$site."'");
+  $public = mysql_fetch_object($result)->public; 
+  return $public;
+  }
 ?> 
 
 <!DOCTYPE html>
@@ -137,7 +143,7 @@
               <label>Where is this camera?</label>
               <input type="text" name="Site" class="form-control" id="site">
             </div>
-            <button type="submit" class="btn btn-default">Añadir</button>
+            <button type="submit" class="btn btn-default">Guardar</button>
           </form> 
         </div>
         <div>
@@ -146,7 +152,7 @@
             <div ng-repeat="camera in cameras">
               <div class="form-group">
                   <label>{{camera.site}}</label>
-                  <input type="checkbox" name="cams[]" class="form-control" value = {{camera.site}} id="video" checked>
+                  <input type="checkbox" name="cams[]" class="form-control" value = {{camera.site}} id="video" <?php if(isPublic({{camera.site}})){  ?> checked  <?php }  ?> >
               </div>
             </div>
             <button type="submit" class="btn btn-default">Publicar</button>
