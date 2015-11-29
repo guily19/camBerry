@@ -58,6 +58,9 @@ include('db_access.php');
     <script language="javascript">
 
         function validateUsername() {
+
+
+            alert('eeeeeei');
             var InputUsernme = document.getElementById('inputUser3').InnerHTML;
             if (/\s/.test(InputUsernme)) {
                 document.getElementById('usernameErrorMsg').InnerHTML = "El usuario no puede contener espacios.";
