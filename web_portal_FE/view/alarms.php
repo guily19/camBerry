@@ -33,16 +33,16 @@
 
 		for ($i=0; $i < sizeof($files); $i++) { 
 			# code...
-			header('Content-type: image/jpg');
+			//header('Content-type: image/jpg');
 			$file = $dir."/".$files[$i];
 			error_log("File ->".$file);
-			$read = readfile($file);
-			error_log("Read ->".$read);
-			echo $file;
+			//$read = readfile($file);
+			//error_log("Read ->".$read);
+			//echo $file;
 			array_push($response, $file);
 			// error_log("Files-".$i."=".$files[$i]);
 		}
-		header('Content-type: image/jpg');
+		//header('Content-type: image/jpg');
 		echo json_encode($response);
 		
 	}
