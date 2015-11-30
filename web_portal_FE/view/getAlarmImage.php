@@ -6,10 +6,10 @@
 
 	$data = file_get_contents("php://input");
 
-	error_log("Alarm.php------------------------------------------------",0);
+	error_log("getAlarmImage.php------------------------------------------------",0);
 
 	$username = $_SESSION["USER"];
-	error_log($username);
+	error_log("ImageParam ->",$_GET["img"]);
 
 	if(!empty($_GET["img"])){
 		header('Content-type: image/jpg');
