@@ -104,7 +104,7 @@
 			    	for(var i = 0; i < $scope.alarms.length; ++i){
 			    		$http.get('getAlarmImage.php', {
         					params: {
-            					img: $scope.alarms[i]
+            					img: String($scope.alarms[i])
         					}
      					})
 			    			.success(function(img){
