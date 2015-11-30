@@ -118,7 +118,7 @@
             <img class="alarm_image" ng-src="getAlarmImage.php?img={{alarm}}">
           </div> -->
           <object width="100" height="100">
-            <param name="movie" value="getAlarmImage.php?img={{alarm}}">
+            <!-- <param name="movie" value="getAlarmImage.php?img={{alarm}}"> -->
             <embed ng-src="getAlarmImage.php?img={{alarm}}" width="100" height="100"></embed>
           </object>
         </div>
