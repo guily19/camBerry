@@ -129,18 +129,25 @@
           <h2>Add a camera</h2>
           <form action="addCamera.php" method="post">
             <div class="form-group">
-              <label>Video link:</label>
-              <input type="url" name="Video" class="form-control" id="video" required>
+              <h4><label>Video URL:</label></h4>
+              <center>
+                <input type="url" name="Video" class="form-control preference_field" id="video" required>
+              </center>
             </div>
             <div class="form-group">
-              <label>Image link:</label>
-              <input type="url" name="Image" class="form-control" id="img" required>
+              <h4><label>Image URL:</label></h4>
+              <center>
+                <input type="url" name="Image" class="form-control preference_field" id="img" required>
+              </center>
             </div>
             <div class="form-group">
-              <label>Where is this camera?</label>
-              <input type="text" name="Site" class="form-control" id="site" required>
+              <h4><label>Where is this camera?</label></h4>
+              <center>
+                <input type="text" name="Site" class="form-control preference_field" id="site" required>
+              </center>
             </div>
-            <button type="submit" class="btn btn-default">Guardar</button>
+            <button type="submit" class="btn btn-success">Guardar</button>
+            <br>
           </form> 
         </div>
         <div>
@@ -148,11 +155,12 @@
           <form action="public.php" method="post">
             <div ng-repeat="camera in cameras">
               <div class="form-group">
-                  <label>{{camera.site}} </label>
+                  <h4><label>{{camera.site}} </label></h4>
                   <input type="checkbox" name="cams[]" class="form-control" value = {{camera.site}} id="video" checked = {{camera.check}}>
               </div>
             </div>
-            <button type="submit" class="btn btn-default">Publicar</button>
+            <button type="submit" class="btn btn-success">Publicar</button>
+            <br>
           </form>
         </div>
         <div>
@@ -160,11 +168,12 @@
             <form action="deleteCamera.php" method="post">
               <div ng-repeat="camera in cameras">
                 <div class="form-group">
-                  <label>{{camera.site}}</label>
+                  <h4><label>{{camera.site}}</label></h4>
                   <input type="checkbox" name="cams[]" class="form-control" id="video" value = {{camera.site}} >
                 </div>
               </div>
-               <button type="submit" class="btn btn-default">Eliminar</button>
+               <button type="submit" class="btn btn-success">Eliminar</button>
+               <br>
             </form>
           </div>
         </div>
