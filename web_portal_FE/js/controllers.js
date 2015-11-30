@@ -16,47 +16,8 @@
 		$scope.noAlarms = true;
 
 		$scope.alarms =[];
-
-
-		$scope.cameras = [{
-			img: "http://pticamberry.duckdns.org:8080/?action=snapshot",
-			site: "Room",
-			video: "http://pticamberry.duckdns.org:8080/?action=stream"
-		},
-		{
-			img: "img/test.jpg",
-			site: "Entrada",
-			video: "img/movi.mp4"
-		},{
-			img: "img/lavabo.jpeg",
-			site: "Lavabo",
-			video: "img/movi.mp4"
-		},{
-			img: "img/comedor.jpeg",
-			site: "Comedor",
-			video: "img/movi.mp4"
-		}];
-
-		$scope.otherCameras = [{
-			user: "Alberto Preemo",
-			cameras: [{
-				img: "../img/comedor.jpeg",
-				site: "Comedor",
-				show: false
-			},{
-				img: "../img/comedor.jpeg",
-				site: "Comedor",
-				show: false
-			}]
-
-		},{
-			user: "Sergi Alonso",
-			cameras: [{
-				img: "../img/comedor.jpeg",
-				site: "Comedor",
-				show: false
-			}]
-		}];
+		$scope.cameras = [];
+		$scope.otherCameras = [];
 
 		$scope.getOwnCameras = function(){
 			$scope.showView = -1;
