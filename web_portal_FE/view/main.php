@@ -151,7 +151,7 @@
           </form> 
         </div>
         <div>
-          <h2>Do your cameras public</h2>
+          <h2>Make your cameras public</h2>
           <form action="public.php" method="post">
             <div ng-repeat="camera in cameras">
               <div class="form-group">
@@ -160,7 +160,7 @@
               </div>
             </div>
             <button type="submit" class="btn btn-success">Publicar</button>
-            <hr style="height:3px; border:none; color:rgb(60,90,180); background-color:rgb(60,90,180);">
+            <hr style="height:3px; border:none; color:rgb(0,0,0); background-color:rgb(0,0,0);">
           </form>
         </div>
         <div>
