@@ -42,6 +42,7 @@
     ?>
 <head>
     <title> Password Recovery </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link rel="stylesheet" type="text/css" href="css/register.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 
@@ -75,13 +76,13 @@
     </div>
 </nav>
 <div class="main_content">
-    <h1 class="title">Password Recovery</h1>
+    <h1 class="title">Recuperación de contraseña</h1>
     <br><br>
     <div class="form_wrapper">
         <div>
             <form  class="form-horizontal" action="<?=$_SERVER['PHP_SELF']?>" method="post">
                 <div class="form-group">
-                    <label for="inputUser3" class="col-sm-4 control-label">USER--></label>
+                    <label for="inputUser3" class="col-sm-4 control-label">USUARIO--></label>
                     <div class="col-sm-5">
                         <input type="text" class="input form-control" name="user" id="inputUser3" placeholder="User" onchange="validateUsername()" required>
                         <font color="red"><label id="usernameErrorMsg"></label></font>

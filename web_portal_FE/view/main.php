@@ -13,6 +13,7 @@
 <html>
 <head>
   <title> Main Portal</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <link rel="stylesheet" type="text/css" href="css/main.css">
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="css/animate.css">
@@ -45,7 +46,7 @@
         <form class="navbar-form navbar-right">
               <b><a href='perfil.php'> <?php echo "Welcome $user        ";?> </a></b>
             <button ng-class="videoMode ? 'btn btn-danger' : 'btn btn-success' " ng-click="viewControll()" ng-show="someVideoisShown">{{videoModeButtonText}}</button>
-          <button type="submit" class="btn btn-danger"  onclick = "location='/logout.php'" >Log out</button>
+          <button type="submit" class="btn btn-danger"  onclick = "location='/logout.php'" >Salir</button>
         </form>
       </div>
     </nav>
@@ -58,13 +59,13 @@
               </a>
           </li>
           <li>
-              <a ng-click="getOwnCameras()">Tus Cameras</a>
+              <a ng-click="getOwnCameras()">Mis Cámeras</a>
           </li>
           <li>
-              <a ng-click="getPublicCameras()">Cameras de otros</a>
+              <a ng-click="getPublicCameras()">Cámaras de otros</a>
           </li>
           <li>
-              <a ng-click="getAlarms()">Tus Alarmas!</a>
+              <a ng-click="getAlarms()">Mis Alarmas!</a>
           </li>
           <li>
               <a ng-click="showView = 3">Preferencias</a>
@@ -85,7 +86,7 @@
         </div>
       </div>
       <div ng-show="showView === 0 && !videoMode" class="personal_cameras" animated>
-        <h1 class="subtitle">My Cameras</h1>
+        <h1 class="subtitle">Mis Cámaras</h1>
         <div class="cameras_wrapper">
           <div class="camera_content" ng-click="onClickOwnCamera($index)" ng-repeat="camera in cameras">
             <img class="camera_image" ng-src={{camera.img}}>
@@ -101,7 +102,7 @@
         </div>
       </div>
       <div ng-show="showView === 1 && !videoMode" class="others_cameras">
-        <h1 class="subtitle">Other's Cameras</h1>
+        <h1 class="subtitle">Cámaras de Otros</h1>
         <div  ng-repeat="user in otherCameras"> 
           <h3 class="other_cameras_user">{{user.user}}</h3>
           <div class="camera_content" ng-click="onClickOtherCamera($parent.$index,$index)" ng-repeat="camera in user.cameras">
@@ -111,7 +112,7 @@
         </div>
       </div>
       <div ng-show="showView === 2 && !videoMode" class="personal_cameras">
-        <h1 class="subtitle">Alarms!</h1>
+        <h1 class="subtitle">Alarmas!</h1>
         <h3 class"alert_message" ng-show="noAlarms">No dispones de alarmas</h3>
         <div ng-hide="noAlarms" ng-repeat="alarm in alarms"> 
           <div class="camera_content">
@@ -126,22 +127,22 @@
       <div ng-show="showView === 3" class="personal_cameras">
         <h1 class="subtitle">Preferencias</h1>
         <div>
-          <h2>Add a camera</h2>
+          <h2>Añadir una cámara</h2>
           <form action="addCamera.php" method="post">
             <div class="form-group">
-              <h4><label>Video URL:</label></h4>
+              <h4><label>URL del Vídeo:</label></h4>
               <center>
                 <input type="url" name="Video" class="form-control preference_field" id="video" required>
               </center>
             </div>
             <div class="form-group">
-              <h4><label>Image URL:</label></h4>
+              <h4><label>URL de la Imagen:</label></h4>
               <center>
                 <input type="url" name="Image" class="form-control preference_field" id="img" required>
               </center>
             </div>
             <div class="form-group">
-              <h4><label>Where is this camera?</label></h4>
+              <h4><label>Dónde está la cámara?</label></h4>
               <center>
                 <input type="text" name="Site" class="form-control preference_field" id="site" required>
               </center>
@@ -151,7 +152,7 @@
           </form> 
         </div>
         <div>
-          <h2>Make your cameras public</h2>
+          <h2>Haz tus camaras publicas</h2>
           <form action="public.php" method="post">
             <div ng-repeat="camera in cameras">
               <div class="form-group">

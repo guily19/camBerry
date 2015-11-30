@@ -122,8 +122,8 @@ else{
             <div class="form-group">
               <input type="password" placeholder="Password" name= "password"  class="form-control" required>
             </div>
-            <button type="submit" class="btn btn-success">Sign in</button>
-            <button type="button" class="btn btn-danger"  onclick = "location='/recuperar_contrasena.php'" >Forgot password?</button>
+            <button type="submit" class="btn btn-success">Entrar</button>
+            <button type="button" class="btn btn-danger"  onclick = "location='/recuperar_contrasena.php'" >Olvido su contraseña?</button>
           </form>
         </div><!--/.navbar-collapse -->
       </div>
@@ -134,7 +134,7 @@ else{
       <div class="container">
         <h2>Bienvenido al proyecto CamBerry</h2>
         <p>El sistema de seguridad para tu hogar y tu empresa más simple de instalar, más facil de obtener y con el mejor servicio de atencion del momento.</p>
-        <p><a class="btn btn-primary btn-lg" href="buykit.html" role="button">Learn more &raquo;</a></p>
+        <p><a class="btn btn-primary btn-lg" href="buykit.html" role="button">Más información &raquo;</a></p>
       </div>
     </div>
 

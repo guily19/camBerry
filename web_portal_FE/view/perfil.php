@@ -35,6 +35,7 @@
     <html>
 <head>
     <title> About me</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link rel="stylesheet" type="text/css" href="css/register.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 
@@ -77,7 +78,7 @@
 
 
 <div class="main_content">
-    <h1 class="title">About me</h1>
+    <h1 class="title">Sobre mi</h1>
     <br><br>
     <div class="form_wrapper">
         <div>
@@ -85,13 +86,13 @@
                     <label for="inputUser3" class="col-sm-4 control-label">ID: <?=$id?></label>
                 </div>
                 <div class="form-group">
-                    <label for="inputUser3" class="col-sm-4 control-label">User: <?=$nick?></label>
+                    <label for="inputUser3" class="col-sm-4 control-label">Usuario: <?=$nick?></label>
                 </div>
                 <div class="form-group">
-                    <label for="inputUser3" class="col-sm-4 control-label">First Name: <?=$name?></label>
+                    <label for="inputUser3" class="col-sm-4 control-label">Nombre: <?=$name?></label>
                 </div>
                 <div class="form-group">
-                    <label for="inputUser3" class="col-sm-4 control-label">Last Name: <?=$surname?></label>
+                    <label for="inputUser3" class="col-sm-4 control-label">Apellidos: <?=$surname?></label>
                 </div>
                 <div class="form-group">
                     <label for="inputEmail3" class="col-sm-4 control-label">Email: <?=$email?></label>
@@ -101,24 +102,24 @@
     </div>
 </div>
 <div class="form_wrapper">
-     <h1 class="title">Change password</h1>
+     <h1 class="title">Cambiar contraseña</h1>
         <div>
             <form  class="form-horizontal" action="<?=$_SERVER['PHP_SELF']?>" method="post">
                 <div class="form-group">
-                    <label for="inputUser3" class="col-sm-4 control-label">new Password:</label>
+                    <label for="inputUser3" class="col-sm-4 control-label">Nueva contraseña:</label>
                     <div class="col-sm-5">
                         <input type="password" class="input form-control" name="psw"id="inputPassword3" placeholder="Password" onchange="validatePassword()" required>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="inputUser3" class="col-sm-4 control-label">Repeat new Password:</label>
+                    <label for="inputUser3" class="col-sm-4 control-label">Repita la nueva contraseña:</label>
                     <div class="col-sm-5">
                         <input type="password" class="input form-control" name="psw2"id="inputPassword4" placeholder="Password" onchange="validatePassword()" required>
                         <font color="red"><label id="passwordErrorMsg"></label></font>
                     </div>
                 </div>
                  <br><br>
-                 <button class="btn btn-success" type ="submit" name="enviar" value="Register">Update </button>
+                 <button class="btn btn-success" type ="submit" name="enviar" value="Register">Actualizar </button>
             </form>
         </div>
     </div>
