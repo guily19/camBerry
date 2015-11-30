@@ -123,7 +123,7 @@ else{
               <input type="password" placeholder="Password" name= "password"  class="form-control" required>
             </div>
             <button type="submit" class="btn btn-success">Entrar</button>
-            <button type="button" class="btn btn-danger"  onclick = "location='/recuperar_contrasena.php'" >Olvido su contraseña?</button>
+            <button type="button" class="btn btn-danger"  onclick = "location='/recuperar_contrasena.php'" >Olvidó su contraseña?</button>
           </form>
         </div><!--/.navbar-collapse -->
       </div>
