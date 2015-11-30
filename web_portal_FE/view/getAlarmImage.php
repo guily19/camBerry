@@ -12,7 +12,8 @@
 	error_log("ImageParam ->",$_GET["img"]);
 
 	if(!empty($_GET["img"])){
-		header('Content-type: image/jpg');
+		//header('Content-type: image/jpg');
+		header("Content-Type: application/x-shockwave-flash",true);
 		readfile($_GET["img"]);
 	} else {
 		error_log("No image path param to get Image");
