@@ -10,10 +10,10 @@
 
 	//$username = json_decode($data);
 	if(isset($_SESSION['USER'])) {
-		$username = $_SESSION['USER'];
+		$username = mysql_real_escape_string($_SESSION['USER']);
   	} else {
   		header("Location: index.php");
-  	}
+  }
 
     $result = mysql_query("SELECT id FROM Cameras WHERE owner ='".$username."'");
   
@@ -25,10 +25,9 @@
     $reg = mysql_query($query);
     }
     if($_POST["cams"]){
-      $cams = $_POST["cams"];
+      $cams = mysql_real_escape_string($_POST["cams"]);
       foreach ($cams as $site){
         $query = "UPDATE Cameras SET public = 1 WHERE owner= '".$username."' AND site='".$site."'";
-     
         $reg = mysql_query($query);
       }
     } //TODO
@@ -45,10 +44,11 @@
   //}
   
   		if($reg) {
-            echo "Las camaras se han hecho publicas";
-            header ("Location: main.php");
-        }else {
-            echo "ha ocurrido un error y no se guardo la camara $query";
-        }
+          header ("Location: main.php");
+      }else {
+          echo "<h1><b> Error al publicar la camara</b></h1><br>";
+          echo "<h3>Ha ocurrido un error y no se ha publicado la camara <a href='javascript:history.back();'>Reintentar</a>";
+          echo "<center><br><hr><h3><br>Ir a <b><a href='index.php'>Inicio</a></b></h3></center>";
+      }
 
 ?>

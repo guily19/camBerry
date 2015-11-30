@@ -12,7 +12,7 @@
 
 	//$username = json_decode($data);
 	if(isset($_SESSION['USER'])) {
-		$username = $_SESSION['USER'];
+		$username = mysql_real_escape_string($_SESSION['USER']);
   } else {
   	header("Location: index.php");
   }
@@ -28,7 +28,7 @@
   		//Add camera
   		error_log("There are all params to save camera");
 
-  		$query = "INSERT INTO Cameras (owner ,site, img, video, public)VALUES ('".$user."','".$site."','".$img."','".$video."',0)";
+  		$query = "INSERT INTO Cameras (owner ,site, img, video, public)VALUES ('".$username."','".$site."','".$img."','".$video."',0)";
 
   		error_log("query = ".$query);
 
@@ -37,13 +37,13 @@
   		if($reg) {
             header ("Location: main.php");
         } else {
-          echo "<h1><b> Error al registrar la cámara</b></h1><br>";
+          echo "<h1><b> Error al registrar la camara</b></h1><br>";
           echo "<h3>Ha ocurrido un error y no se ha guardado la camara <a href='javascript:history.back();'>Reintentar</a>";
           echo "<center><br><hr><h3><br>Ir a <b><a href='index.php'>Inicio</a></b></h3></center>";
         }
 
   	} else {
-      echo "<h1><b> Error al registrar la cámara</b></h1><br>";
+      echo "<h1><b> Error al registrar la camara</b></h1><br>";
       echo "<h3>Todos los campos tienen que estar llenos <a href='javascript:history.back();'>Reintentar</a>";
       echo "<center><br><hr><h3><br>Ir a <b><a href='index.php'>Inicio</a></b></h3></center>";
   	}
