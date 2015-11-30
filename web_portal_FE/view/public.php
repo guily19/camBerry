@@ -33,7 +33,7 @@
     } //TODO
       //error_log("check that the params are correct");
       //Add camera
-      error_log("There are all params to save camera");
+      error_log("$query");
   	//while ($id = mysql_fetch_assoc($cameras)) {
 
   //	$query = "UPDATE Cameras SET public = 1 WHERE id='".$id."'";
