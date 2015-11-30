@@ -30,6 +30,8 @@
         $query = "UPDATE Cameras SET public = 1 WHERE owner= '".$username."' AND site='".$site."'";
         $reg = mysql_query($query);
       }
+    }
+    else{error_log("no entraaaaaaaaaaaaa!!!!!!!!!");
     } //TODO
       //error_log("check that the params are correct");
       //Add camera
