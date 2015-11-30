@@ -156,7 +156,7 @@
             <div ng-repeat="camera in cameras">
               <div class="form-group">
                   <h4><label>{{camera.site}} </label></h4>
-                  <input type="checkbox" name="cams[]" class="form-control" value = {{camera.site}} id="video" ng-checked = "camera.public">
+                  <input type="checkbox" name="cams[]" class="form-control" value = {{camera.site}} id="video" ng-checked = {{camera.public}}>
               </div>
             </div>
             <button type="submit" class="btn btn-success">Publicar</button>
