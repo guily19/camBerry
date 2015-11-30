@@ -114,13 +114,9 @@
         <h1 class="subtitle">Alarms!</h1>
         <h3 class"alert_message" ng-show="noAlarms">No dispones de alarmas</h3>
         <div ng-hide="noAlarms" ng-repeat="alarm in alarms"> 
-          <!-- <div class="camera_content">
+          <div class="camera_content">
             <img class="alarm_image" ng-src="getAlarmImage.php?img={{alarm}}">
-          </div> -->
-          <object width="100" height="100">
-            <!-- <param name="movie" value="getAlarmImage.php?img={{alarm}}"> -->
-            <embed ng-src="getAlarmImage.php?img={{alarm}}" width="100" height="100"></embed>
-          </object>
+          </div>
         </div>
       </div>
       <div ng-show="showView === 3" class="personal_cameras">
