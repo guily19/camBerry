@@ -130,15 +130,15 @@
           <form action="addCamera.php" method="post">
             <div class="form-group">
               <label>Video link:</label>
-              <input type="url" name="Video" class="form-control" id="video">
+              <input type="url" name="Video" class="form-control" id="video" required>
             </div>
             <div class="form-group">
               <label>Image link:</label>
-              <input type="url" name="Image" class="form-control" id="img">
+              <input type="url" name="Image" class="form-control" id="img" required>
             </div>
             <div class="form-group">
               <label>Where is this camera?</label>
-              <input type="text" name="Site" class="form-control" id="site">
+              <input type="text" name="Site" class="form-control" id="site" required>
             </div>
             <button type="submit" class="btn btn-default">Guardar</button>
           </form> 
