@@ -147,7 +147,7 @@
               </center>
             </div>
             <button type="submit" class="btn btn-success">Guardar</button>
-            <hr style="height:3px; border:none; color:rgb(60,90,180); background-color:rgb(60,90,180);">
+            <hr style="height:3px; border:none; color:rgb(0,0,0); background-color:rgb(0,0,0);">
           </form> 
         </div>
         <div>
@@ -173,7 +173,7 @@
                 </div>
               </div>
                <button type="submit" class="btn btn-success">Eliminar</button>
-               <hr style="height:3px; border:none; color:rgb(60,90,180); background-color:rgb(60,90,180);">
+               <hr style="height:3px; border:none; color:rgb(0,0,0); background-color:rgb(0,0,0);">
             </form>
           </div>
         </div>
