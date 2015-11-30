@@ -102,7 +102,7 @@
 			    } else {
 			    	$scope.alarms = data;
 			    	for(var i = 0; i < $scope.alarms.length; ++i){
-			    		$http.get('getAlarmImage.php$img='+$scope.alarms[i])
+			    		$http.get('getAlarmImage.php&img='+$scope.alarms[i])
 			    			.success(function(img){
 			    				$scope.noAlarms = false;
 			    			})
