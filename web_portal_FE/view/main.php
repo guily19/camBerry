@@ -114,13 +114,13 @@
         <h1 class="subtitle">Alarms!</h1>
         <h3 class"alert_message" ng-show="noAlarms">No dispones de alarmas</h3>
         <div ng-hide="noAlarms" ng-repeat="alarm in alarms"> 
-          <!-- <div class="camera_content">
-            <img class="alarm_image" ng-src="getAlarmImage.php?img={{alarm}}">
-          </div> -->
-          <video width="320" height="240" controls>
-            <source src="getAlarmImage.php?img={{alarm}}" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
+          <div class="camera_content">
+            <video width="320" height="240" controls>
+              <source src="getAlarmImage.php?img={{alarm}}" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <!-- <img class="alarm_image" ng-src="getAlarmImage.php?img={{alarm}}"> -->
+          </div>
         </div>
       </div>
       <div ng-show="showView === 3" class="personal_cameras">
