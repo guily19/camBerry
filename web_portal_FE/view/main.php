@@ -59,7 +59,7 @@
               </a>
           </li>
           <li>
-              <a ng-click="getOwnCameras()">Mis Cámeras</a>
+              <a ng-click="getOwnCameras()">Mis Cámaras</a>
           </li>
           <li>
               <a ng-click="getPublicCameras()">Cámaras de otros</a>
@@ -152,7 +152,7 @@
           </form> 
         </div>
         <div>
-          <h2>Haz tus camaras publicas</h2>
+          <h2>Haz tus cámaras publicas</h2>
           <form action="public.php" method="post">
             <div ng-repeat="camera in cameras">
               <div class="form-group">
@@ -165,7 +165,7 @@
           </form>
         </div>
         <div>
-          <h2>Elimina una camara</h2>
+          <h2>Elimina una cámara</h2>
             <form action="deleteCamera.php" method="post">
               <div ng-repeat="camera in cameras">
                 <div class="form-group">

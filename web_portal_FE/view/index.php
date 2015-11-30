@@ -133,7 +133,7 @@ else{
     <div class="jumbotron">
       <div class="container">
         <h2>Bienvenido al proyecto CamBerry</h2>
-        <p>El sistema de seguridad para tu hogar y tu empresa más simple de instalar, más facil de obtener y con el mejor servicio de atencion del momento.</p>
+        <p>El sistema de seguridad para tu hogar y tu empresa más simple de instalar, más facil de obtener y con el mejor servicio de atención del momento.</p>
         <p><a class="btn btn-primary btn-lg" href="buykit.html" role="button">Más información &raquo;</a></p>
       </div>
     </div>
@@ -147,8 +147,8 @@ else{
           <p><a class="btn btn-default" href="buykit.html" role="button">Compra tu Kit! &raquo;</a></p>
         </div>
         <div class="col-md-4">
-          <h2>Registrate</h2>
-          <p>Registrate para poder acceder a las camaras publicas de nuestro sistema y poder ver de forma totalmente privada tus camaras privadas </p>
+          <h2>Regístrate</h2>
+          <p>Regístrate para poder acceder a las cámaras publicas de nuestro sistema y poder ver de forma totalmente privada tus cámaras privadas </p>
           <p><a class="btn btn-default" href="register.php" role="button">Regístrate &raquo;</a></p>
        </div>
       </div>

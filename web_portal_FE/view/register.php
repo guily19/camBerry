@@ -59,6 +59,7 @@
 ?>
 <html>
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<title> Main Portal</title>
     <link rel="stylesheet" type="text/css" href="css/register.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
@@ -120,7 +121,7 @@
             <div class="form-group">
               <input type="password" placeholder="Password" name= "password"  class="form-control" required>
             </div>
-            <button type="submit" class="btn btn-success">Sign in</button>
+            <button type="submit" class="btn btn-success">Entrar</button>
           </form>
         </div><!--/.navbar-collapse -->
       </div>
@@ -129,26 +130,26 @@
 
 
 <div class="main_content">
-    <h1 class="title">Registration Form</h1>
+    <h1 class="title">Formulario de registro</h1>
     <br><br>
 	<div class="form_wrapper">
         <div>
     		<form  class="form-horizontal" action="<?=$_SERVER['PHP_SELF']?>" method="post">
                 <div class="form-group">
-                    <label for="inputUser3" class="col-sm-4 control-label">User:</label>
+                    <label for="inputUser3" class="col-sm-4 control-label">Usuario:</label>
                     <div class="col-sm-5">
                         <input type="text" class="input form-control" name="user" id="inputUser3" placeholder="User" onchange="validateUsername()" required>
                         <font color="red"><label id="usernameErrorMsg"></label></font>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="inputUser3" class="col-sm-4 control-label">First Name:</label>
+                    <label for="inputUser3" class="col-sm-4 control-label">Nombre:</label>
                     <div class="col-sm-5">
                         <input type="text" class="input form-control" name="firstname" id="inputUser3" placeholder="First Name">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="inputUser3" class="col-sm-4 control-label">Last Name:</label>
+                    <label for="inputUser3" class="col-sm-4 control-label">Apellidos:</label>
                     <div class="col-sm-5">
                         <input type="text" class="input form-control" name="lastname" id="inputUser3" placeholder="Last Name">
                     </div>
@@ -161,20 +162,20 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="inputUser3" class="col-sm-4 control-label">Password:</label>
+                    <label for="inputUser3" class="col-sm-4 control-label">Contraseña:</label>
                     <div class="col-sm-5">
                         <input type="password" class="input form-control" name="psw"id="inputPassword3" placeholder="Password" onchange="validatePassword()" required>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="inputUser3" class="col-sm-4 control-label">Repeat Password:</label>
+                    <label for="inputUser3" class="col-sm-4 control-label">Repita la contraseña:</label>
                     <div class="col-sm-5">
                         <input type="password" class="input form-control" name="psw2"id="inputPassword4" placeholder="Password" onchange="validatePassword()" required>
                         <font color="red"><label id="passwordErrorMsg"></label></font>
                     </div>
                 </div>
                  <br><br>
-                 <button class="btn btn-success" type ="submit" name="enviar" value="Register">Register </button>
+                 <button class="btn btn-success" type ="submit" name="enviar" value="Register">Regístrate</button>
 		    </form>
         </div>
 	</div>
