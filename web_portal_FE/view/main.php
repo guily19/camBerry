@@ -115,7 +115,7 @@
         <h3 class"alert_message" ng-show="noAlarms">No dispones de alarmas</h3>
         <div ng-hide="noAlarms" ng-repeat="alarm in alarms"> 
           <div class="camera_content">
-            <img class="camera_image" src='getAlarmImage.php?file='+{{alram}}+''>
+            <img class="camera_image" ng-src='getAlarmImage.php?file={{alram}}'>
             <h2 class="camera_site">{{alarm}}</h2>
           </div>
         </div>
