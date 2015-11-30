@@ -118,7 +118,7 @@
             <img class="alarm_image" ng-src="getAlarmImage.php?img={{alarm}}">
           </div> -->
           <video width="320" height="240" controls>
-            <source ng-src="getAlarmImage.php?img={{alarm}}" type="video/mp4">
+            <source src="getAlarmImage.php?img={{alarm}}" type="video/mp4">
             Your browser does not support the video tag.
           </video>
         </div>
