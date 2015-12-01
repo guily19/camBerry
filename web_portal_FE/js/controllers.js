@@ -60,17 +60,19 @@
 
 		$scope.getAlarmsInit = function (){
 			$scope.showView = -1;
+			var aux = [];
 			$http.post('alarms.php')
 			.success(function(data){
 			    if(data === "undefined" || data.length === 0){
 					//si data no esta definido o su size es 0 entences no tenemos nuevas alarmas
 			    	$scope.noAlarms = true;
 			    } else {
-			    	$scope.alarms = data;
-			    	for(var i = 0; i < $scope.alarms.length; ++i){
+			    	$scope.aux = data;
+			    	console.log($scope.aux);
+			    	for(var i = 0; i < $scope.aux.length; ++i){
 			    		$http.get('getAlarmImage.php', {
         					params: {
-            					img: String($scope.alarms[i])
+            					img: String($scope.aux[i])
         					}
      					})
 			    			.success(function(img){
@@ -79,6 +81,18 @@
 			    			.error(function(err){
 			    				console.log("Error :",err);
 			    			})
+			    		if($scope.aux[i].indexOf(".jpg") !== -1) {
+			    			var obj = {
+			    				url: $scope.aux[i],
+			    				type: "img"
+			    			}
+			    		} else {
+			    			var obj = {
+			    				url: $scope.aux[i],
+			    				type: "video"
+			    			}
+			    		}
+			    		$scope.alarms.push(obj);
 			    	}
 			    }
 			    $scope.showView = 2;
