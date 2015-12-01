@@ -114,6 +114,7 @@
       <div ng-show="showView === 2 && !videoMode" class="personal_cameras">
         <h1 class="subtitle">Alarmas!</h1>
         <h3 class"alert_message" ng-show="noAlarms">No dispones de alarmas</h3>
+        <h3>Imagenes:</h3>
         <div ng-hide="noAlarms" ng-repeat="alarm in alarms | filter: { type : 'img'}"> 
           <div class="camera_content">
             <!-- <video width="320" height="240" controls>
@@ -123,12 +124,13 @@
             <img class="alarm_image" ng-src="getAlarmImage.php?img={{alarm.url}}">
           </div>
         </div>
+        <h3>Videos:</h3>
         <div ng-hide="noAlarms" ng-repeat="alarm in alarms | filter: { type : 'video' }"> 
           <div class="camera_content">
-            <video width="320" height="240" controls>
+            <<!-- video width="320" height="240" controls>
               <source src="getAlarmImage.php?img={{alarm.url}}" type="video/mp4">
               Your browser does not support the video tag.
-            </video>
+            </video> -->
           </div>
         </div>
       </div>
