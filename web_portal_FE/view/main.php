@@ -127,7 +127,7 @@
         <h3>Videos:</h3>
         <div ng-hide="noAlarms" ng-repeat="alarm in alarms | filter: { type : 'video' }"> 
           <div class="camera_content">
-            <video ng-src="getAlarmImage.php?img={{alarm.url}}" width="320" height="240" controls>
+            <video ng-src="getAlarmImage.php?img={{alarm.url}}" controls>
               <!-- <source ng-src="getAlarmImage.php?img={{alarm.url}}" type="video/mp4"> -->
               Your browser does not support the video tag.
             </video>
