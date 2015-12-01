@@ -16,7 +16,7 @@
   }
 
     if($_POST["cams"]){
-      $cams = mysql_real_escape_string($_POST["cams"]);
+      $cams = $_POST["cams"];
       foreach ($cams as $site){
         $query = "DELETE FROM Cameras WHERE owner= '".$username."' AND site='".$site."'";
      

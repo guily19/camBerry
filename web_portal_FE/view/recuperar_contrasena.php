@@ -42,6 +42,7 @@
     ?>
 <head>
     <title> Password Recovery </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link rel="stylesheet" type="text/css" href="css/register.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 
@@ -61,34 +62,46 @@
 
 </head>
 <body>
-<nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container ProductImage">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">CamBerry</a>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.php">CamBerry</a>
         </div>
-    </div>
-</nav>
+        <div id="navbar" class="navbar-collapse collapse">
+          <form action="index.php" method="POST" class="navbar-form navbar-right">
+            <div class="form-group">
+              <input type="text" placeholder="Email" name="Email"  class="form-control" required>
+            </div>
+            <div class="form-group">
+              <input type="password" placeholder="Password" name= "password"  class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-success">Entrar</button>
+            <button type="button" class="btn btn-danger"  onclick = "location='/recuperar_contrasena.php'" >Olvidó su contraseña?</button>
+          </form>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </nav>
 <div class="main_content">
-    <h1 class="title">Password Recovery</h1>
+    <h1 class="title">Recuperación de contraseña</h1>
     <br><br>
     <div class="form_wrapper">
         <div>
             <form  class="form-horizontal" action="<?=$_SERVER['PHP_SELF']?>" method="post">
                 <div class="form-group">
-                    <label for="inputUser3" class="col-sm-4 control-label">USER--></label>
+                    <label for="inputUser3" class="col-sm-4 control-label">USUARIO: </label>
                     <div class="col-sm-5">
                         <input type="text" class="input form-control" name="user" id="inputUser3" placeholder="User" onchange="validateUsername()" required>
                         <font color="red"><label id="usernameErrorMsg"></label></font>
                     </div>
                 </div>
                  <br><br>
-                 <button class="btn btn-success" type ="submit" name="enviar" value="Recover">Recover </button>
+                 <button class="btn btn-success" type ="submit" name="enviar" value="Recover">Recuperar</button>
             </form>
         </div>
     </div>

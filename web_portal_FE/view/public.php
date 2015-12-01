@@ -25,7 +25,7 @@
     $reg = mysql_query($query);
     }
     if($_POST["cams"]){
-      $cams = mysql_real_escape_string($_POST["cams"]);
+      $cams = $_POST["cams"];
       foreach ($cams as $site){
         $query = "UPDATE Cameras SET public = 1 WHERE owner= '".$username."' AND site='".$site."'";
         $reg = mysql_query($query);
@@ -33,7 +33,7 @@
     } //TODO
       //error_log("check that the params are correct");
       //Add camera
-      error_log("There are all params to save camera");
+      error_log("$query");
   	//while ($id = mysql_fetch_assoc($cameras)) {
 
   //	$query = "UPDATE Cameras SET public = 1 WHERE id='".$id."'";
