@@ -114,7 +114,7 @@
       <div ng-show="showView === 2 && !videoMode" class="personal_cameras">
         <h1 class="subtitle">Alarmas!</h1>
         <h3 class"alert_message" ng-show="noAlarms">No dispones de alarmas</h3>
-        <div ng-hide="noAlarms" ng-repeat="alarm in alarms | filter: {{alarm.type}} === 'img'"> 
+        <div ng-hide="noAlarms" ng-repeat="alarm in alarms | filter: { type : 'img'}"> 
           <div class="camera_content">
             <!-- <video width="320" height="240" controls>
               <source src="getAlarmImage.php?img={{alarm}}" type="video/mp4">
@@ -123,7 +123,7 @@
             <img class="alarm_image" ng-src="getAlarmImage.php?img={{alarm.url}}">
           </div>
         </div>
-        <div ng-hide="noAlarms" ng-repeat="alarm in alarms | filter: {{alarm.type}} === 'video'"> 
+        <div ng-hide="noAlarms" ng-repeat="alarm in alarms | filter: { type : 'video' }"> 
           <div class="camera_content">
             <video width="320" height="240" controls>
               <source src="getAlarmImage.php?img={{alarm.url}}" type="video/mp4">
