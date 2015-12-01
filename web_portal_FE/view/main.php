@@ -124,10 +124,14 @@
             <img class="alarm_image" ng-src="getAlarmImage.php?img={{alarm.url}}">
           </div>
         </div>
+        <br>
+        <br>
+        <br>
+        <br>
         <h3>Videos:</h3>
         <div ng-hide="noAlarms" ng-repeat="alarm in alarms | filter: { type : 'video' }"> 
           <div class="camera_content">
-            <video ng-src="getAlarmImage.php?img={{alarm.url}}" controls></video>
+            <!-- <video ng-src="getAlarmImage.php?img={{alarm.url}}" controls></video> -->
               <!-- <source ng-src="getAlarmImage.php?img={{alarm.url}}" type="video/mp4"> -->
           </div>
         </div>
