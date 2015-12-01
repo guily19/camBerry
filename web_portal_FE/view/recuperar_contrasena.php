@@ -71,7 +71,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">CamBerry</a>
+            <a class="navbar-brand" href="index.php">CamBerry</a>
         </div>
     </div>
 </nav>
@@ -82,14 +82,14 @@
         <div>
             <form  class="form-horizontal" action="<?=$_SERVER['PHP_SELF']?>" method="post">
                 <div class="form-group">
-                    <label for="inputUser3" class="col-sm-4 control-label">USUARIO--></label>
+                    <label for="inputUser3" class="col-sm-4 control-label">USUARIO: </label>
                     <div class="col-sm-5">
                         <input type="text" class="input form-control" name="user" id="inputUser3" placeholder="User" onchange="validateUsername()" required>
                         <font color="red"><label id="usernameErrorMsg"></label></font>
                     </div>
                 </div>
                  <br><br>
-                 <button class="btn btn-success" type ="submit" name="enviar" value="Recover">Recover </button>
+                 <button class="btn btn-success" type ="submit" name="enviar" value="Recover">Recuperar</button>
             </form>
         </div>
     </div>
