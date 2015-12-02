@@ -14,7 +14,7 @@
 		$scope.videoModeButtonText = "Video Mode";
 		$scope.showView = -1;
 		$scope.noAlarms = true;
-
+		$scope.numAlarms = 0;
 		$scope.alarms =[];
 		$scope.cameras = [];
 		$scope.otherCameras = [];
@@ -86,6 +86,7 @@
 			    				url: $scope.aux[i],
 			    				type: "img"
 			    			}
+			    			++$scope.numAlarms;
 			    		} else {
 			    			var obj = {
 			    				url: $scope.aux[i],
@@ -157,7 +158,7 @@
 		$scope.loadVideo = function(index, url){
 			if(index !== undefined){
 				var myVideo = document.getElementsByTagName('video')[index];
-				myVideo.src = "getAlarmImage.php?img="+url;
+				myVideo.src = "getAlarmImage.php?img="+$scope.alarms[index + $scope.numAlarms];
 				myVideo.load();
 				myVideo.play();
 			}
