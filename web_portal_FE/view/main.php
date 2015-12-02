@@ -121,9 +121,9 @@
           </div>
         </div>
         <h3 class="other_cameras_user" >Videos:</h3>
-        <div ng-hide="noAlarms" ng-repeat="alarm in alarms | filter: { type : 'video' }"> 
-          <div class="video_content" ng-click="loadVideo($index)">
-            <video controls></video>
+        <div ng-hide="noAlarms" ng-repeat="alarm in alarms | filter: { type : 'gif' }"> 
+          <div class="camera_content">
+            <img class="alarm_image" ng-src="getAlarmImage.php?img={{alarm.url}}">
           </div>
         </div>
       </div>
