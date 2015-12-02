@@ -154,11 +154,13 @@
 			--$scope.numCamerasOthers;
 		}
 
-		$scope.loadVideo = function(index){
-			var myVideo = document.getElementsByTagName('video')[0];
-			myVideo.src = vidURL;
-			myVideo.load();
-			myVideo.play();
+		$scope.loadVideo = function(index, url){
+			if(index === undefined){
+				var myVideo = document.getElementsByTagName('video')[index];
+				myVideo.src = vidURL;
+				myVideo.load();
+				myVideo.play();
+			}
 		}
 
 		$scope.menuOptionClicked = function (index){
