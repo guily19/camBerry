@@ -26,7 +26,7 @@
                     $sql = mysql_query("UPDATE Users SET PASSWORD='".$psw."' WHERE USER='".$user."'");
                     if($sql) {
                        echo "<h1><b> Cambio completado </b></h1><br>";
-                       echo "<h3>Contraseña cambiada correctamente. Volver a <b><a href='main.php'>Camberry!</a></b></h3>";
+                       echo "<h3>Contrasena cambiada correctamente. Volver a <b><a href='main.php'>Camberry!</a></b></h3>";
                        echo "<center><br><hr><h3><br>Ir a <b><a href='index.php'>Inicio</a></b></h3></center>";
                     }else {
                         echo "Error: No se pudo cambiar la contraseña. <a href='javascript:history.back();'>Reintentar</a>";

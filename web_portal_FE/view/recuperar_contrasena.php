@@ -31,7 +31,7 @@
                     $enviar_email = mail($email,$asunto,$mensaje,$cabeceras);
                     if($enviar_email) {
                        echo "<h1><b> Recuperación Completada </b></h1><br>";
-                       echo "<h3>Contraseña reestablecida correctamente. Acceda a <b><a href='index.php'>Camberry!</a></b></h3>";
+                       echo "<h3>Contrasena reestablecida correctamente. Acceda a <b><a href='index.php'>Camberry!</a></b></h3>";
                        echo "<center><br><hr><h3><br>Ir a <b><a href='index.php'>Inicio</a></b></h3></center>";
                     }else {
                         echo "No se ha podido enviar el email. <a href='javascript:history.back();'>Reintentar</a>";
