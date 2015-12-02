@@ -30,7 +30,7 @@
                     $cabeceras = $cabeceras."Content-Type: text/html";
                     $enviar_email = mail($email,$asunto,$mensaje,$cabeceras);
                     if($enviar_email) {
-                       echo "<h1><b> Recuperación Completada </b></h1><br>";
+                       echo "<h1><b> Recuperacion Completada </b></h1><br>";
                        echo "<h3>Contrasena reestablecida correctamente. Acceda a <b><a href='index.php'>Camberry!</a></b></h3>";
                        echo "<center><br><hr><h3><br>Ir a <b><a href='index.php'>Inicio</a></b></h3></center>";
                     }else {
