@@ -122,7 +122,7 @@
         </div>
         <h3>Videos:</h3>
         <div ng-hide="noAlarms" ng-repeat="alarm in alarms | filter: { type : 'video' }"> 
-          <div class="video_content" ng-click="loadVideo($index,"'"{{alarm.url}}"'")">
+          <div class="video_content" ng-click="loadVideo($index,'{{alarm.url}}')">
             <video id="video_$index" controls></video>
           </div>
         </div>
