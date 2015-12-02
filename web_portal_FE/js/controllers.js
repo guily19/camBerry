@@ -96,12 +96,12 @@
 			    		$scope.alarms.push(obj);
 			    	}
 			    }
-			    $scope.showView = 2;
+			    //$scope.showView = 2;
 			})
 			.error(function (err) {
 			    console.log("Error: ",err);
 			    $scope.noAlarms = true;
-			    $scope.showView = 2;
+			    //$scope.showView = 2;
 			})
 		}
 
