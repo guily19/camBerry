@@ -158,7 +158,7 @@
 		$scope.loadVideo = function(index, url){
 			if(index !== undefined){
 				var myVideo = document.getElementsByTagName('video')[index];
-				myVideo.src = "getAlarmImage.php?img="+$scope.alarms[index + $scope.numAlarms];
+				myVideo.src = "getAlarmImage.php?img="+$scope.alarms[index + $scope.numAlarms].url;
 				myVideo.load();
 				myVideo.play();
 			}
