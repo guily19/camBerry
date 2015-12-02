@@ -68,7 +68,7 @@
 			    	$scope.noAlarms = true;
 			    } else {
 			    	$scope.aux = data;
-			    	console.log($scope.aux);
+			    	//console.log($scope.aux);
 			    	for(var i = 0; i < $scope.aux.length; ++i){
 			    		$http.get('getAlarmImage.php', {
         					params: {
@@ -155,7 +155,7 @@
 			--$scope.numCamerasOthers;
 		}
 
-		$scope.loadVideo = function(index, url){
+		$scope.loadVideo = function(index){
 			if(index !== undefined){
 				var myVideo = document.getElementsByTagName('video')[index];
 				myVideo.src = "getAlarmImage.php?img="+$scope.alarms[index + $scope.numAlarms].url;
