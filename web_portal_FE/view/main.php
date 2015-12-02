@@ -114,15 +114,15 @@
       <div ng-show="showView === 2 && !videoMode" class="others_cameras">
         <h1 class="subtitle">Alarmas!</h1>
         <h3 class"alert_message" ng-show="noAlarms">No dispones de alarmas</h3>
-        <div style="display : block;">
-          <h3 class="other_cameras_user">Imagenes:</h3>
-          <div class="camera_content" ng-hide="noAlarms" ng-repeat="alarm in alarms | filter: { type : 'img'}"> 
-            <img class="camera_image alarm_image" ng-src="getAlarmImage.php?img={{alarm.url}}">
-          </div>
-        </div>
         <div dstyle="display : block;">
           <h3 class="other_cameras_user">Videos:</h3>
           <div class="camera_content" ng-hide="noAlarms" ng-repeat="alarm in alarms | filter: { type : 'gif' }"> 
+            <img class="camera_image alarm_image" ng-src="getAlarmImage.php?img={{alarm.url}}">
+          </div>
+        </div>
+        <div style="display : block;">
+          <h3 class="other_cameras_user">Imagenes:</h3>
+          <div class="camera_content" ng-hide="noAlarms" ng-repeat="alarm in alarms | filter: { type : 'img'}"> 
             <img class="camera_image alarm_image" ng-src="getAlarmImage.php?img={{alarm.url}}">
           </div>
         </div>
