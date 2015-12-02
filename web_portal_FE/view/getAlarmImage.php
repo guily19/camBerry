@@ -14,7 +14,7 @@
 	if(!empty($_GET["img"])){
 		//header('Content-type: image/jpg');
 		//header("Content-Type: application/x-shockwave-flash",true);
-		if(strpos($_GET['img'], ".jpg"){
+		if(strpos($_GET['img'], ".jpg") !== false){
 			header('Content-type: image/jpg');
 			readfile($_GET["img"]);
 		}else{
