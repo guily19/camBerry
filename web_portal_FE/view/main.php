@@ -111,7 +111,7 @@
           </div>
         </div>
       </div>
-      <div ng-show="showView === 2 && !videoMode" class="personal_cameras">
+      <div ng-show="showView === 2 && !videoMode" class="others_cameras">
         <h1 class="subtitle">Alarmas!</h1>
         <h3 class"alert_message" ng-show="noAlarms">No dispones de alarmas</h3>
         <h3 class="other_cameras_user">Imagenes:</h3>
