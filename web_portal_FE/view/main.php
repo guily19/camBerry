@@ -124,7 +124,7 @@
         <div ng-hide="noAlarms" ng-repeat="alarm in alarms | filter: { type : 'video' }"> 
           <div class="camera_content">
             <video controls>
-              <source ng-src="getAlarmImage.php?img={{alarm.url}}" type"video/mp4">
+              <source src="getAlarmImage.php?img={{alarm.url}}" type"video/mp4">
             </video>
           </div>
         </div>
