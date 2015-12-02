@@ -117,7 +117,7 @@
         <div dstyle="display : block;">
           <h3 class="other_cameras_user">Videos:</h3>
           <div class="camera_content" ng-hide="noAlarms" ng-repeat="alarm in alarms | filter: { type : 'gif' }"> 
-            <img class="camera_image alarm_image" ng-src="getAlarmImage.php?img={{alarm.url}}">
+            <img width="250px" height="200px" class="camera_image alarm_image" ng-src="getAlarmImage.php?img={{alarm.url}}">
           </div>
         </div>
         <div style="display : block;">
