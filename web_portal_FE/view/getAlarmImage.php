@@ -14,8 +14,13 @@
 	if(!empty($_GET["img"])){
 		//header('Content-type: image/jpg');
 		//header("Content-Type: application/x-shockwave-flash",true);
-		header('Content-type: video/mp4');
-		readfile($_GET["img"]);
+		if(strpos($_GET['img'], ".jpg"){
+			header('Content-type: image/jpg');
+			readfile($_GET["img"]);
+		}else{
+			header('Content-type: video/mp4');
+			readfile($_GET["img"]);
+		}
 	} else {
 		error_log("No image path param to get Image");
 	}
