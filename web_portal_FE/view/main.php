@@ -116,11 +116,11 @@
         <h3 class"alert_message" ng-show="noAlarms">No dispones de alarmas</h3>
         <h3 class="other_cameras_user">Imagenes:</h3>
         <div class="camera_content" ng-hide="noAlarms" ng-repeat="alarm in alarms | filter: { type : 'img'}"> 
-          <img class="alarm_image" ng-src="getAlarmImage.php?img={{alarm.url}}">
+          <img class="camera_image alarm_image" ng-src="getAlarmImage.php?img={{alarm.url}}">
         </div>
         <h3 class="other_cameras_user">Videos:</h3>
         <div class="camera_content" ng-hide="noAlarms" ng-repeat="alarm in alarms | filter: { type : 'gif' }"> 
-          <img class="alarm_image" ng-src="getAlarmImage.php?img={{alarm.url}}">
+          <img class="camera_image alarm_image" ng-src="getAlarmImage.php?img={{alarm.url}}">
         </div>
       </div>
       <div ng-show="showView === 3" class="personal_cameras">
