@@ -123,7 +123,7 @@
         <h3 class="other_cameras_user" >Videos:</h3>
         <div ng-hide="noAlarms" ng-repeat="alarm in alarms | filter: { type : 'video' }"> 
           <div class="video_content" ng-click="loadVideo($index)">
-            <video id="video_$index" controls></video>
+            <video controls></video>
           </div>
         </div>
       </div>
