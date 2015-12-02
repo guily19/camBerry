@@ -81,7 +81,7 @@
 			    			.error(function(err){
 			    				console.log("Error :",err);
 			    			})
-			    		if($scope.aux[i].indexOf(".jpg") !== -1 || $scope.aux[i].indexOf(".gif") !== -1 ) {
+			    		if($scope.aux[i].indexOf(".jpg") !== -1) {
 			    			var obj = {
 			    				url: $scope.aux[i],
 			    				type: "img"
@@ -90,7 +90,7 @@
 			    		} else {
 			    			var obj = {
 			    				url: $scope.aux[i],
-			    				type: "video"
+			    				type: "gif"
 			    			}
 			    		}
 			    		$scope.alarms.push(obj);
